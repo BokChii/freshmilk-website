@@ -1,0 +1,125 @@
+/* =========================================
+   FreshMilk Design Tokens — LIVE LAB (BOLD)
+   ========================================= */
+
+:root {
+  /* Brand */
+  --brand:        #2684FF;
+  --brand-hover:  #1E6AD6;
+  --brand-soft:   #EAF3FF;
+  --brand-line:   #C6DEFF;
+
+  /* Signal — LIVE / EXP 강조용 (BOLD 8%) */
+  --signal:       #FF2D87;
+  --signal-hover: #E61E74;
+  --signal-soft:  #FFE5F0;
+  --signal-line:  #FFC2DA;
+
+  /* Status */
+  --ok:           #16A34A;
+  --warn:         #F59E0B;
+
+  /* Neutrals — Light (명함 톤) */
+  --bg:           #FFFFFF;
+  --surface:      #F7F9FB;
+  --surface-2:    #F1F4F8;
+  --border:       #ECEFF3;
+  --border-soft:  #F4F6F9;
+  --border-strong:#D7DEE6;
+
+  --text:         #0F1115;
+  --text-muted:   #6B7280;
+  --text-subtle:  #9AA3AF;
+  --text-inverse: #FFFFFF;
+
+  /* Typography */
+  --font-sans: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
+               system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Display sizes */
+  --fs-hero:   clamp(44px, 7vw, 104px);
+  --fs-h2:     clamp(30px, 4vw, 52px);
+  --fs-h3:     clamp(22px, 2.4vw, 32px);
+  --fs-body:   16px;
+  --fs-small:  14px;
+  --fs-label:  12px;
+
+  /* Spacing / Layout */
+  --container: 1240px;
+  --section-py: clamp(80px, 11vw, 160px);
+  --gutter:    clamp(20px, 4vw, 48px);
+  --gap-xs:    8px;
+  --gap-sm:    12px;
+  --gap-md:    20px;
+  --gap-lg:    32px;
+  --gap-xl:    56px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(15, 17, 21, 0.04), 0 1px 1px rgba(15, 17, 21, 0.03);
+  --shadow-md: 0 8px 24px -10px rgba(15, 17, 21, 0.12), 0 2px 6px -2px rgba(15, 17, 21, 0.06);
+  --shadow-lg: 0 24px 48px -16px rgba(15, 17, 21, 0.18), 0 6px 12px -6px rgba(15, 17, 21, 0.08);
+  --shadow-brand: 0 12px 32px -10px rgba(38, 132, 255, 0.45);
+  --shadow-signal: 0 12px 32px -10px rgba(255, 45, 135, 0.45);
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:    180ms;
+  --dur-med:     360ms;
+  --dur-slow:    720ms;
+
+  /* z-index scale */
+  --z-bg:     0;
+  --z-base:   1;
+  --z-elev:   10;
+  --z-nav:    50;
+  --z-cursor: 80;
+  --z-modal:  100;
+
+  /* Header */
+  --header-h:  64px;
+  color-scheme: light;
+}
+
+/* Dark mode (system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:          #0B0D10;
+    --surface:     #14171C;
+    --surface-2:   #1A1E25;
+    --border:      #232830;
+    --border-soft: #1A1E25;
+    --border-strong: #2E3540;
+
+    --text:        #F2F4F7;
+    --text-muted:  #A0A6B0;
+    --text-subtle: #6B7280;
+
+    --brand-soft:  #0F2542;
+    --brand-line:  #1F4480;
+    --signal-soft: #2A0E1C;
+    --signal-line: #5C1A3A;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 24px -10px rgba(0, 0, 0, 0.6), 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 24px 48px -16px rgba(0, 0, 0, 0.7), 0 6px 12px -6px rgba(0, 0, 0, 0.4);
+
+    color-scheme: dark;
+  }
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

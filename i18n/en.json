@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "FreshMilk | A team breaking lines, finding possibility in the market",
+    "description": "Fusing technology and content trends to bring delight to people. Storit, tolli, Picktory, econoup — four experiments from a Pohang-based content studio."
+  },
+  "brand": {
+    "name": "FreshMilk"
+  },
+  "nav": {
+    "about": "About",
+    "how": "How we work",
+    "projects": "Projects",
+    "team": "Team",
+    "lab": "Lab Notes",
+    "contact": "Contact",
+    "menuLabel": "Open menu"
+  },
+  "header": {
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "title": "Break the line.<br>Let the market <em class=\"accent\">define</em> us.",
+    "subtitle": "Fusing technology and content trends to bring delight to people. Every day, we ask the market for an answer.",
+    "ctaPrimary": "See what we're making",
+    "ctaSecondary": "Meet the team",
+    "expTitle": "EXP INDEX",
+    "expSubtitle": "Experiments in motion",
+    "expStatus": "Coming Soon",
+    "expFootnote": "* working title — even the name is decided by the market."
+  },
+  "about": {
+    "heading": "Where technology meets content,<br>we drop new hypotheses every day.",
+    "missionLabel": "MISSION",
+    "missionText": "Fuse the trends of technology and content to bring delight to people.",
+    "visionLabel": "VISION",
+    "visionText": "The content platform you visit every day.",
+    "storyLabel": "STORY",
+    "storyP1": "Founded in December 2025 at the Handong University business incubator. We are walking, step by step, toward the content platform people visit every day.",
+    "storyP2": "Running four experiments in parallel — listening to the market, applying fast, learning faster.",
+    "statProjectsLabel": "Projects in motion",
+    "statTeamLabel": "Team members",
+    "statFoundedLabel": "Founded"
+  },
+  "how": {
+    "heading": "This is how we work.",
+    "subheading": "Three values. Six principles. The operating system for every experiment.",
+    "value1Title": "Erase the lines. Pursue boundless creativity.",
+    "value1Text": "We refuse to be trapped by old frames. Every idea is respected. We challenge what looks impossible — first.",
+    "value2Title": "We don't set our own limits. The market decides.",
+    "value2Text": "We don't pre-judge our value. Every idea ships as an experiment first, then evolves from the result.",
+    "value3Title": "Speed — ship · validate · fail · pivot → win fast.",
+    "value3Text": "Speed is the amount of learning. We trust ship counts over perfection and data over confidence.",
+    "principlesLabel": "// CODE OF CONDUCT · 06 RULES",
+    "p1Title": "No limits on ideas",
+    "p1Text": "We ask \"how could it work?\" first. Every proposal is logged and revisited regularly.",
+    "p2Title": "The market sets the limits",
+    "p2Text": "Ship an MVP fast. Discard private convictions that the market hasn't validated.",
+    "p3Title": "Execution matters most",
+    "p3Text": "A shipped iteration beats a perfect plan. Experiment small, share results.",
+    "p4Title": "We take ownership",
+    "p4Text": "We own what we ship. Problems surface immediately, and we solve them together.",
+    "p5Title": "We grow as a team",
+    "p5Text": "Feedback is for improvement, never blame. Failure becomes the next asset.",
+    "p6Title": "Open, transparent comms",
+    "p6Text": "Default to sharing. The why and how of decisions are visible to all."
+  },
+  "projects": {
+    "heading": "Four experiments, one mission.",
+    "subheading": "Parallel attempts toward the content platform people visit every day. All in design + app development.",
+    "mainName": "Storit",
+    "mainTagline": "Storit · Webtoon quiz reward fandom community",
+    "mainCopy": "From reading webtoons to playing them. A community where you solve quizzes, earn rewards, and meet people who love the same stories.",
+    "mainTag1": "Webtoon",
+    "mainTag2": "Quiz",
+    "mainTag3": "Community",
+    "mainTag4": "Rewards",
+    "p2Name": "tolli",
+    "p2Copy": "A daily verse, at your fingertips. A game-like service for memorizing the Bible.",
+    "p2Tag1": "Content",
+    "p2Tag2": "Habit",
+    "p3Name": "Picktory",
+    "p3Copy": "K-content, watched by guessing. A platform where prediction and reasoning bring fans together.",
+    "p3Tag1": "K-content",
+    "p3Tag2": "Fandom · Prediction",
+    "p4Name": "econoup",
+    "p4WorkingTitle": "(working title)",
+    "p4Copy": "Economics, five minutes a day — Duolingo style. A habit-forming way to learn money.",
+    "p4Tag1": "Economy",
+    "p4Tag2": "Learning · Habit",
+    "disclaimer": "* working title — even the name is decided by the market."
+  },
+  "team": {
+    "heading": "People first, then experiments.",
+    "subheading": "Two co-founders running experiments together.",
+    "m1Name": "Kangsan Kim",
+    "m1Role": "CEO · Co-founder",
+    "m2Name": "Dongshin Kim",
+    "m2Role": "Head of Planning · Co-founder"
+  },
+  "lab": {
+    "subtitle": "Experiments, retrospectives, failures, and pivots. A record of what we are learning — soon to be public."
+  },
+  "contact": {
+    "heading": "We're looking for people to experiment with us.",
+    "subtitle": "Partnerships, product collabs, and general inquiries are all welcome. Email is the fastest route.",
+    "channelGeneralLabel": "GENERAL · BUSINESS",
+    "channelProductLabel": "PRODUCT · PLANNING",
+    "channelAddressLabel": "ADDRESS",
+    "cardTitle": "Send an email",
+    "cardBtn1": "Email Kangsan (CEO)",
+    "cardBtn2": "Email Dongshin (Planning)",
+    "address": "Handong Univ. Business Incubator, Student Startup Space (10),<br>558 Handong-ro, Heunghae-eup, Buk-gu, Pohang, Gyeongbuk, Korea"
+  },
+  "footer": {
+    "slogan": "A team breaking lines and finding possibility in the market.",
+    "liveLabel": "LAST UPDATED · 2026.05.17",
+    "exploreTitle": "EXPLORE",
+    "businessTitle": "BUSINESS",
+    "bizName": "FreshMilk",
+    "bizCeoLabel": "CEO",
+    "bizCeoValue": "Kangsan Kim",
+    "bizFoundedLabel": "Founded",
+    "bizFoundedValue": "2025.12.08",
+    "bizIdLabel": "Business ID",
+    "bizIdValue": "107-20-94694",
+    "bizIndustryLabel": "Industry",
+    "bizIndustryValue": "Information & Communication",
+    "bizTypeLabel": "Type",
+    "bizTypeValue": "Application software development & supply",
+    "bizAddressLabel": "Address",
+    "bizAddressValue": "Handong Univ. Business Incubator, Student Startup Space (10), 558 Handong-ro, Heunghae-eup, Buk-gu, Pohang, Gyeongbuk, Korea",
+    "copyright": "© 2026 FreshMilk. All rights reserved.",
+    "madeWith": "Made in Pohang"
+  }
+}

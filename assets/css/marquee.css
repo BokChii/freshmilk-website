@@ -1,0 +1,71 @@
+/* =========================================
+   Marquee (LIVE LAB signature)
+   ========================================= */
+
+.marquee {
+  overflow: hidden;
+  border-block: 1px solid var(--border);
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.marquee--inverse {
+  background: var(--text);
+  color: var(--text-inverse);
+  border-color: transparent;
+}
+
+.marquee__viewport {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee--reverse .marquee__viewport {
+  animation-direction: reverse;
+}
+
+.marquee__track {
+  display: inline-flex;
+  align-items: center;
+  gap: 48px;
+  padding: 14px 24px;
+}
+
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.marquee__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
+  flex: 0 0 auto;
+}
+
+.marquee__item--accent { color: var(--signal); }
+.marquee--inverse .marquee__item--accent { color: var(--signal); }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Pause on hover for accessibility */
+@media (hover: hover) {
+  .marquee:hover .marquee__viewport {
+    animation-play-state: paused;
+  }
+}

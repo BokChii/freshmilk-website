@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2684FF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0B0D10" media="(prefers-color-scheme: dark)" />
+  <title>프레시밀크 | 경계를 허물고, 시장에서 가능성을 찾는 팀</title>
+  <meta name="description" content="기술과 콘텐츠의 트렌드를 융합해 사람들에게 즐거움을 전합니다. 스토릿·tolli·픽토리·econoup, 4가지 실험을 굴리는 콘텐츠 스튜디오." />
+  <link rel="canonical" href="https://freshmilk.kr/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FreshMilk" />
+  <meta property="og:title" content="프레시밀크 | 경계를 허물고, 시장에서 가능성을 찾는 팀" />
+  <meta property="og:description" content="기술과 콘텐츠의 트렌드를 융합해 사람들에게 즐거움을 전합니다." />
+  <meta property="og:url" content="https://freshmilk.kr/" />
+  <meta property="og:image" content="https://freshmilk.kr/assets/img/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="프레시밀크" />
+  <meta name="twitter:description" content="경계를 허물고, 시장에서 가능성을 찾는 팀." />
+  <meta name="twitter:image" content="https://freshmilk.kr/assets/img/og-image.svg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/img/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/marquee.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  <!-- ===== Skip link ===== -->
+  <a href="#main" class="visually-hidden" style="position:fixed;top:8px;left:8px;padding:8px 12px;background:#fff;border:1px solid var(--border);border-radius:8px;z-index:1000;transform:translateY(-200%);transition:transform .2s" onfocus="this.style.transform='translateY(0)'" onblur="this.style.transform='translateY(-200%)'">콘텐츠로 건너뛰기</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__row">
+      <a class="brand" href="#top" aria-label="FreshMilk">
+        <span class="brand__mark" aria-hidden="true">F</span>
+        <span class="brand__text" data-i18n="brand.name">프레시밀크</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about" data-i18n="nav.about">회사 소개</a></li>
+          <li><a class="nav__link" href="#how" data-i18n="nav.how">일하는 방식</a></li>
+          <li><a class="nav__link" href="#projects" data-i18n="nav.projects">프로젝트</a></li>
+          <li><a class="nav__link" href="#team" data-i18n="nav.team">팀</a></li>
+          <li><a class="nav__link" href="#lab" data-i18n="nav.lab">실험 노트</a></li>
+          <li><a class="nav__link" href="#contact" data-i18n="nav.contact">문의</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-toggle__btn" data-lang-btn="ko" aria-pressed="true">KO</button>
+          <button class="lang-toggle__btn" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn--sm btn--ghost" href="#contact" data-i18n="header.cta">문의하기</a>
+        <button class="menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label:nav.menuLabel">
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Mobile menu drawer ===== -->
+  <aside class="mobile-menu" data-mobile-menu aria-label="Mobile navigation">
+    <a href="#about" data-i18n="nav.about">회사 소개</a>
+    <a href="#how" data-i18n="nav.how">일하는 방식</a>
+    <a href="#projects" data-i18n="nav.projects">프로젝트</a>
+    <a href="#team" data-i18n="nav.team">팀</a>
+    <a href="#lab" data-i18n="nav.lab">실험 노트</a>
+    <a href="#contact" data-i18n="nav.contact">문의</a>
+  </aside>
+
+  <main id="main">
+
+    <!-- ===== Top marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__viewport">
+        <div class="marquee__track">
+          <span class="marquee__item">SHIP FAST<span class="marquee__dot"></span></span>
+          <span class="marquee__item">FRESH DAILY<span class="marquee__dot"></span></span>
+          <span class="marquee__item marquee__item--accent">MARKET DECIDES<span class="marquee__dot"></span></span>
+          <span class="marquee__item">BREAK THE LINE<span class="marquee__dot"></span></span>
+          <span class="marquee__item">LEARN FASTER<span class="marquee__dot"></span></span>
+          <span class="marquee__item">STAY HUNGRY<span class="marquee__dot"></span></span>
+          <span class="marquee__item marquee__item--accent">EXP IN MOTION<span class="marquee__dot"></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero gridbg" id="top" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="meta reveal">
+              <span class="dot dot--building dot--pulse" aria-hidden="true"></span>
+              // FRESHMILK · LIVE LAB · EST 2025.12
+            </p>
+            <h1 class="hero__title reveal" id="hero-title" data-i18n-html="hero.title">
+              경계를 허물고,<br>시장이 우리를<br><em class="accent">정의하게</em> 합니다.
+            </h1>
+            <p class="hero__lead reveal" data-i18n="hero.subtitle">
+              기술과 콘텐츠의 트렌드를 융합해 사람들에게 즐거움을 전합니다. 우리는 매일, 시장에 답을 묻습니다.
+            </p>
+            <div class="hero__ctas reveal">
+              <a class="btn btn--primary" href="#projects">
+                <span data-i18n="hero.ctaPrimary">우리가 만드는 것 보기</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn--ghost" href="#team" data-i18n="hero.ctaSecondary">팀 만나보기</a>
+            </div>
+          </div>
+
+          <aside class="exp-index reveal" aria-label="Experiment index">
+            <div class="exp-index__head">
+              <span class="meta meta--brand" data-i18n="hero.expTitle">EXP INDEX</span>
+              <span class="meta" data-i18n="hero.expSubtitle">현재 진행 중인 실험</span>
+            </div>
+            <div class="exp-index__list">
+              <a class="exp-row" href="#projects" aria-label="EXP 01 Storit">
+                <span class="exp-row__num">EXP 01</span>
+                <span class="exp-row__name">스토릿 <small>STORIT</small></span>
+                <span class="exp-row__status">
+                  <span class="dot dot--building" aria-hidden="true"></span>
+                  <span data-i18n="hero.expStatus">Coming Soon</span>
+                </span>
+              </a>
+              <a class="exp-row" href="#projects" aria-label="EXP 02 tolli">
+                <span class="exp-row__num">EXP 02</span>
+                <span class="exp-row__name">tolli</span>
+                <span class="exp-row__status">
+                  <span class="dot dot--building" aria-hidden="true"></span>
+                  <span data-i18n="hero.expStatus">Coming Soon</span>
+                </span>
+              </a>
+              <a class="exp-row" href="#projects" aria-label="EXP 03 Picktory">
+                <span class="exp-row__num">EXP 03</span>
+                <span class="exp-row__name">픽토리 <small>PICKTORY</small></span>
+                <span class="exp-row__status">
+                  <span class="dot dot--building" aria-hidden="true"></span>
+                  <span data-i18n="hero.expStatus">Coming Soon</span>
+                </span>
+              </a>
+              <a class="exp-row" href="#projects" aria-label="EXP 04 econoup">
+                <span class="exp-row__num">EXP 04</span>
+                <span class="exp-row__name">econoup <small>*</small></span>
+                <span class="exp-row__status">
+                  <span class="dot dot--ideating dot--pulse" aria-hidden="true"></span>
+                  <span data-i18n="hero.expStatus">Coming Soon</span>
+                </span>
+              </a>
+            </div>
+            <p class="exp-index__footnote" data-i18n="hero.expFootnote">* working title — 이름조차 시장이 결정합니다.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Bottom marquee (reverse) ===== -->
+    <div class="marquee marquee--reverse" aria-hidden="true">
+      <div class="marquee__viewport">
+        <div class="marquee__track">
+          <span class="marquee__item">04 EXPERIMENTS<span class="marquee__dot"></span></span>
+          <span class="marquee__item">02 FOUNDERS<span class="marquee__dot"></span></span>
+          <span class="marquee__item marquee__item--accent">01 MISSION<span class="marquee__dot"></span></span>
+          <span class="marquee__item">DAILY CONTENT<span class="marquee__dot"></span></span>
+          <span class="marquee__item">FANDOM × TECH<span class="marquee__dot"></span></span>
+          <span class="marquee__item marquee__item--accent">SHIP · LEARN · PIVOT<span class="marquee__dot"></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <div class="container">
+        <header class="section__head">
+          <span class="meta reveal">// CHAPTER 01 · WHO WE ARE</span>
+          <h2 class="h2 reveal" id="about-h" data-i18n-html="about.heading">기술과 콘텐츠가 만나는 자리에서,<br>매일 새로운 가설을 던집니다.</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__mv">
+            <div class="mv-card reveal">
+              <span class="meta" data-i18n="about.missionLabel">MISSION</span>
+              <p class="mv-card__text" data-i18n="about.missionText">기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움을 전한다.</p>
+            </div>
+            <div class="mv-card mv-card--vision reveal">
+              <span class="meta" data-i18n="about.visionLabel">VISION</span>
+              <p class="mv-card__text" data-i18n="about.visionText">매일 찾는 콘텐츠 플랫폼.</p>
+            </div>
+          </div>
+          <div class="about__story reveal">
+            <span class="meta" style="margin-bottom:14px;display:block" data-i18n="about.storyLabel">STORY</span>
+            <p data-i18n="about.storyP1">2025년 12월, 한동대학교 창업보육센터에서 시작했습니다. 우리는 "매일 찾는 콘텐츠 플랫폼"을 향해 한 걸음씩 나아가고 있습니다.</p>
+            <p data-i18n="about.storyP2">4가지 실험을 동시에 굴리며 시장의 답을 듣고, 빠르게 적용하고, 더 빠르게 배웁니다.</p>
+          </div>
+        </div>
+
+        <div class="about__stats">
+          <div class="stat reveal">
+            <span class="stat__num" data-counter="4">0</span>
+            <span class="stat__label" data-i18n="about.statProjectsLabel">Projects in motion</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__num" data-counter="2">0</span>
+            <span class="stat__label" data-i18n="about.statTeamLabel">Team members</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__num" data-counter="2025.12" data-counter-duration="1400">2025.01</span>
+            <span class="stat__label" data-i18n="about.statFoundedLabel">Founded</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How we work ===== -->
+    <section class="section section--surface gridbg" id="how" aria-labelledby="how-h">
+      <div class="container">
+        <header class="section__head">
+          <span class="meta reveal">// CHAPTER 02 · OPERATING PRINCIPLES</span>
+          <h2 class="h2 reveal" id="how-h" data-i18n="how.heading">우리는 이렇게 일합니다.</h2>
+          <p class="lead reveal" data-i18n="how.subheading">세 가지 가치, 여섯 가지 원칙. 모든 실험의 운영 체제.</p>
+        </header>
+
+        <div class="values">
+          <article class="value-card reveal">
+            <span class="value-card__num">01</span>
+            <h3 class="value-card__title" data-i18n="how.value1Title">경계를 허물고, 무한한 창의성을 추구한다.</h3>
+            <p class="value-card__text" data-i18n="how.value1Text">우리는 기존의 틀에 갇히지 않습니다. 모든 아이디어는 존중받고, 불가능해 보이는 것에도 일단 도전합니다.</p>
+          </article>
+          <article class="value-card reveal">
+            <span class="value-card__num">02</span>
+            <h3 class="value-card__title" data-i18n="how.value2Title">우리가 정하는 한계는 없다. 시장이 판단한다.</h3>
+            <p class="value-card__text" data-i18n="how.value2Text">스스로 가치를 제한하지 않습니다. 어떤 아이디어든 먼저 실험하고, 결과를 바탕으로 발전시킵니다.</p>
+          </article>
+          <article class="value-card reveal">
+            <span class="value-card__num">03</span>
+            <h3 class="value-card__title" data-i18n="how.value3Title">스피드 — 빠른 적용·검증·실패·피봇 → 빠른 성공.</h3>
+            <p class="value-card__text" data-i18n="how.value3Text">속도는 곧 학습의 양입니다. 우리는 완벽보다 출시 횟수를, 자신감보다 데이터를 신뢰합니다.</p>
+          </article>
+        </div>
+
+        <div class="principles">
+          <h3 class="principles__title reveal" data-i18n="how.principlesLabel">// CODE OF CONDUCT · 06 RULES</h3>
+          <div class="principles__grid">
+            <article class="principle reveal">
+              <span class="principle__num">01</span>
+              <div>
+                <h4 class="principle__title" data-i18n="how.p1Title">아이디어에는 제한이 없다</h4>
+                <p class="principle__text" data-i18n="how.p1Text">"어떻게 하면 가능할까?"를 먼저 묻습니다. 모든 제안은 기록되고 정기적으로 검토됩니다.</p>
+              </div>
+            </article>
+            <article class="principle reveal">
+              <span class="principle__num">02</span>
+              <div>
+                <h4 class="principle__title" data-i18n="how.p2Title">한계는 시장이 정한다</h4>
+                <p class="principle__text" data-i18n="how.p2Text">MVP로 빠르게 시장에 던지고, 검증되지 않은 개인적 확신은 과감히 버립니다.</p>
+              </div>
+            </article>
+            <article class="principle reveal">
+              <span class="principle__num">03</span>
+              <div>
+                <h4 class="principle__title" data-i18n="how.p3Title">실행이 가장 중요하다</h4>
+                <p class="principle__text" data-i18n="how.p3Text">완벽한 계획보다 빠른 실행입니다. 작게라도 실험하고, 결과를 반드시 공유합니다.</p>
+              </div>
+            </article>
+            <article class="principle reveal">
+              <span class="principle__num">04</span>
+              <div>
+                <h4 class="principle__title" data-i18n="how.p4Title">책임감을 가지고 일한다</h4>
+                <p class="principle__text" data-i18n="how.p4Text">맡은 일은 끝까지 책임집니다. 문제는 숨기지 않고 즉시 공유하며, 함께 해결합니다.</p>
+              </div>
+            </article>
+            <article class="principle reveal">
+              <span class="principle__num">05</span>
+              <div>
+                <h4 class="principle__title" data-i18n="how.p5Title">성장하는 팀이 된다</h4>
+                <p class="principle__text" data-i18n="how.p5Text">피드백은 비난이 아닌 개선의 관점입니다. 실패는 다음 도전의 자산입니다.</p>
+              </div>
+            </article>
+            <article class="principle reveal">
+              <span class="principle__num">06</span>
+              <div>
+                <h4 class="principle__title" data-i18n="how.p6Title">열린 소통과 투명성</h4>
+                <p class="principle__text" data-i18n="how.p6Text">정보는 공유가 원칙. 의사결정의 과정과 이유를 모두가 이해할 수 있도록 설명합니다.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects" aria-labelledby="projects-h">
+      <div class="container">
+        <header class="section__head">
+          <span class="meta reveal">// CHAPTER 03 · EXPERIMENTS IN MOTION</span>
+          <h2 class="h2 reveal" id="projects-h" data-i18n="projects.heading">4가지 실험, 하나의 미션.</h2>
+          <p class="lead reveal" data-i18n="projects.subheading">매일 찾는 콘텐츠 플랫폼을 향한 동시 다발적 시도들. 모두 디자인 + 앱 개발 중.</p>
+        </header>
+
+        <article class="project-main reveal">
+          <div class="project-main__body">
+            <div class="project-main__head">
+              <span class="meta meta--brand">
+                <span class="dot dot--building dot--pulse" aria-hidden="true"></span>
+                // EXP 01 · STATUS: BUILDING · MAIN
+              </span>
+              <h3 class="project-main__name">
+                <span data-i18n="projects.mainName">스토릿</span>
+                <small data-i18n="projects.mainTagline">Storit · 웹툰 퀴즈 리워드 팬덤 커뮤니티</small>
+              </h3>
+            </div>
+            <p class="project-main__copy" data-i18n="projects.mainCopy">읽는 웹툰에서, 즐기는 웹툰으로. 퀴즈를 풀고 리워드를 받으며, 같은 웹툰을 사랑하는 사람들이 모이는 커뮤니티.</p>
+            <div class="project-main__tags">
+              <span class="chip chip--brand" data-i18n="projects.mainTag1">웹툰</span>
+              <span class="chip" data-i18n="projects.mainTag2">퀴즈</span>
+              <span class="chip" data-i18n="projects.mainTag3">커뮤니티</span>
+              <span class="chip" data-i18n="projects.mainTag4">리워드</span>
+            </div>
+          </div>
+          <div class="project-main__art" aria-hidden="true">
+            <img src="/assets/img/projects/storit.svg" alt="" loading="lazy" />
+          </div>
+        </article>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-card__art" aria-hidden="true">
+              <img src="/assets/img/projects/tolli.svg" alt="" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <span class="meta">
+                <span class="dot dot--building" aria-hidden="true"></span>
+                // EXP 02 · BUILDING
+              </span>
+              <h3 class="project-card__name"><span data-i18n="projects.p2Name">tolli</span></h3>
+              <p class="project-card__copy" data-i18n="projects.p2Copy">매일의 말씀, 손끝의 암송. 성경 암송을 게임처럼 만드는 서비스.</p>
+              <div class="project-card__foot">
+                <span class="chip" data-i18n="projects.p2Tag1">콘텐츠</span>
+                <span class="chip" data-i18n="projects.p2Tag2">습관</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__art" aria-hidden="true">
+              <img src="/assets/img/projects/picktory.svg" alt="" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <span class="meta">
+                <span class="dot dot--building" aria-hidden="true"></span>
+                // EXP 03 · BUILDING
+              </span>
+              <h3 class="project-card__name"><span data-i18n="projects.p3Name">픽토리</span> <small>Picktory</small></h3>
+              <p class="project-card__copy" data-i18n="projects.p3Copy">맞히는 재미로 보는 K-콘텐츠. 추리와 예측으로 팬덤이 모이는 플랫폼.</p>
+              <div class="project-card__foot">
+                <span class="chip" data-i18n="projects.p3Tag1">K-콘텐츠</span>
+                <span class="chip" data-i18n="projects.p3Tag2">팬덤·예측</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__art" aria-hidden="true">
+              <img src="/assets/img/projects/econoup.svg" alt="" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <span class="meta meta--accent">
+                <span class="dot dot--ideating dot--pulse" aria-hidden="true"></span>
+                // EXP 04 · IDEATING
+              </span>
+              <h3 class="project-card__name"><span data-i18n="projects.p4Name">econoup</span> <small data-i18n="projects.p4WorkingTitle">(working title)</small></h3>
+              <p class="project-card__copy" data-i18n="projects.p4Copy">경제를 매일 5분, 듀오링고처럼. 습관이 되는 경제 학습 서비스.</p>
+              <div class="project-card__foot">
+                <span class="chip chip--signal" data-i18n="projects.p4Tag1">경제</span>
+                <span class="chip" data-i18n="projects.p4Tag2">학습·습관</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="disclaimer reveal" data-i18n="projects.disclaimer">* working title — 이름조차 시장이 결정합니다.</p>
+      </div>
+    </section>
+
+    <!-- ===== Team ===== -->
+    <section class="section section--surface" id="team" aria-labelledby="team-h">
+      <div class="container">
+        <header class="section__head">
+          <span class="meta reveal">// CHAPTER 04 · PEOPLE</span>
+          <h2 class="h2 reveal" id="team-h" data-i18n="team.heading">사람이 먼저, 그다음 실험.</h2>
+          <p class="lead reveal" data-i18n="team.subheading">같이 실험하는 두 명의 공동 창업자.</p>
+        </header>
+
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <div class="team-card__avatar">
+              <img src="/assets/img/team/kgsan.svg" alt="Kangsan Kim avatar" />
+            </div>
+            <div class="team-card__body">
+              <p class="team-card__name" data-i18n="team.m1Name">김강산</p>
+              <p class="team-card__role" data-i18n="team.m1Role">CEO · Co-founder</p>
+              <p class="team-card__line">
+                <span class="dot dot--brand" style="background:var(--brand)" aria-hidden="true"></span>
+                <a href="mailto:kgsan@freshmilk.kr">kgsan@freshmilk.kr</a>
+              </p>
+              <p class="team-card__line">
+                <span class="dot" style="background:var(--text-subtle)" aria-hidden="true"></span>
+                <a href="tel:+821044437876">010-4443-7876</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="team-card reveal">
+            <div class="team-card__avatar">
+              <img src="/assets/img/team/kdshin.svg" alt="Dongshin Kim avatar" />
+            </div>
+            <div class="team-card__body">
+              <p class="team-card__name" data-i18n="team.m2Name">김동신</p>
+              <p class="team-card__role" data-i18n="team.m2Role">기획팀장 · Co-founder</p>
+              <p class="team-card__line">
+                <span class="dot dot--brand" style="background:var(--brand)" aria-hidden="true"></span>
+                <a href="mailto:kdshin@freshmilk.kr">kdshin@freshmilk.kr</a>
+              </p>
+              <p class="team-card__line">
+                <span class="dot" style="background:var(--text-subtle)" aria-hidden="true"></span>
+                <a href="tel:+821066883248">010-6688-3248</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Lab Notes ===== -->
+    <section class="section lab" id="lab" aria-labelledby="lab-h">
+      <div class="container">
+        <div class="lab__grid">
+          <div class="lab__copy">
+            <span class="meta meta--inverse reveal">
+              <span class="dot" style="background:#fff" aria-hidden="true"></span>
+              // CHAPTER 05 · LAB NOTES · LIVE SOON
+            </span>
+            <h2 class="lab__title reveal" id="lab-h">EXP LOG — INCOMING.</h2>
+            <p class="lab__sub reveal" data-i18n="lab.subtitle">실험과 회고, 실패와 피봇의 기록. 우리가 무엇을 배우고 있는지 곧 공개합니다.</p>
+          </div>
+          <div class="lab__skeletons reveal" aria-hidden="true">
+            <div class="skeleton">
+              <div class="skeleton__line"></div>
+              <div class="skeleton__line"></div>
+              <div class="skeleton__line"></div>
+            </div>
+            <div class="skeleton">
+              <div class="skeleton__line"></div>
+              <div class="skeleton__line"></div>
+              <div class="skeleton__line"></div>
+            </div>
+            <div class="skeleton">
+              <div class="skeleton__line"></div>
+              <div class="skeleton__line"></div>
+              <div class="skeleton__line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact" aria-labelledby="contact-h">
+      <div class="container">
+        <header class="section__head">
+          <span class="meta reveal">// CHAPTER 06 · GET IN TOUCH</span>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__copy reveal">
+            <h2 class="h2" id="contact-h" data-i18n="contact.heading">같이 실험할 사람을 찾고 있습니다.</h2>
+            <p data-i18n="contact.subtitle">사업 제휴, 제품 협업, 일반 문의 모두 환영해요. 가장 빠른 길은 메일입니다.</p>
+
+            <div class="contact__channels">
+              <div class="channel">
+                <span class="channel__tag" data-i18n="contact.channelGeneralLabel">GENERAL · BUSINESS</span>
+                <span class="channel__value"><a href="mailto:kgsan@freshmilk.kr">kgsan@freshmilk.kr</a></span>
+              </div>
+              <div class="channel">
+                <span class="channel__tag" data-i18n="contact.channelProductLabel">PRODUCT · PLANNING</span>
+                <span class="channel__value"><a href="mailto:kdshin@freshmilk.kr">kdshin@freshmilk.kr</a></span>
+              </div>
+              <div class="channel">
+                <span class="channel__tag" data-i18n="contact.channelAddressLabel">ADDRESS</span>
+                <span class="channel__value" data-i18n-html="contact.address">경상북도 포항시 북구 흥해읍 한동로 558,<br>한동대학교 창업보육센터 학생창업공간(10)</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="contact__card reveal">
+            <span class="meta meta--brand">
+              <span class="dot dot--live" aria-hidden="true"></span>
+              <span data-i18n="contact.cardTitle">메일 보내기</span>
+            </span>
+            <div class="contact__buttons">
+              <a class="btn btn--primary" href="mailto:kgsan@freshmilk.kr">
+                <span data-i18n="contact.cardBtn1">Kangsan (CEO)에게 메일</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn--ghost" href="mailto:kdshin@freshmilk.kr" data-i18n="contact.cardBtn2">Dongshin (Planning)에게 메일</a>
+            </div>
+            <div class="contact__address">
+              <strong data-i18n="contact.channelAddressLabel">ADDRESS</strong>
+              <p data-i18n-html="contact.address">경상북도 포항시 북구 흥해읍 한동로 558,<br>한동대학교 창업보육센터 학생창업공간(10)</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#top" aria-label="FreshMilk">
+            <span class="brand__mark" aria-hidden="true">F</span>
+            <span class="brand__text" data-i18n="brand.name">프레시밀크</span>
+          </a>
+          <p class="footer__slogan" data-i18n="footer.slogan">경계를 허물고, 시장에서 가능성을 찾는 팀.</p>
+          <span class="footer__live">
+            <span class="dot dot--live dot--pulse" aria-hidden="true"></span>
+            <span data-i18n="footer.liveLabel">LAST UPDATED · 2026.05.17</span>
+          </span>
+        </div>
+
+        <div class="footer__links">
+          <h4 data-i18n="footer.exploreTitle">EXPLORE</h4>
+          <a href="#about" data-i18n="nav.about">회사 소개</a>
+          <a href="#how" data-i18n="nav.how">일하는 방식</a>
+          <a href="#projects" data-i18n="nav.projects">프로젝트</a>
+          <a href="#team" data-i18n="nav.team">팀</a>
+          <a href="#lab" data-i18n="nav.lab">실험 노트</a>
+          <a href="#contact" data-i18n="nav.contact">문의</a>
+        </div>
+
+        <div class="footer__business">
+          <h4 data-i18n="footer.businessTitle">BUSINESS</h4>
+          <dl>
+            <dt>NAME</dt>
+            <dd data-i18n="footer.bizName">프레시밀크 (FreshMilk)</dd>
+            <dt data-i18n="footer.bizCeoLabel">대표</dt>
+            <dd data-i18n="footer.bizCeoValue">김강산</dd>
+            <dt data-i18n="footer.bizFoundedLabel">개업</dt>
+            <dd data-i18n="footer.bizFoundedValue">2025.12.08</dd>
+            <dt data-i18n="footer.bizIdLabel">사업자번호</dt>
+            <dd data-i18n="footer.bizIdValue">107-20-94694</dd>
+            <dt data-i18n="footer.bizIndustryLabel">업태</dt>
+            <dd data-i18n="footer.bizIndustryValue">정보통신업</dd>
+            <dt data-i18n="footer.bizTypeLabel">종목</dt>
+            <dd data-i18n="footer.bizTypeValue">응용 소프트웨어 개발 및 공급업</dd>
+            <dt data-i18n="footer.bizAddressLabel">주소</dt>
+            <dd data-i18n="footer.bizAddressValue">경상북도 포항시 북구 흥해읍 한동로 558, 한동대학교 창업보육센터 학생창업공간(10)</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span data-i18n="footer.copyright">© 2026 FreshMilk. All rights reserved.</span>
+        <span data-i18n="footer.madeWith">Made in Pohang</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/assets/js/i18n.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/nav.js" defer></script>
+  <script src="/assets/js/cursor.js" defer></script>
+</body>
+</html>
