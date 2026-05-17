@@ -86,13 +86,14 @@
   --dur-med:     360ms;
   --dur-slow:    720ms;
 
-  /* z-index scale */
+  /* z-index scale (grain is high so it sits over page chrome; cursor FX must sit above grain) */
   --z-bg:     0;
   --z-base:   1;
   --z-elev:   10;
   --z-nav:    50;
-  --z-cursor: 80;
-  --z-modal:  100;
+  --z-grain:  9999;
+  --z-cursor: 10000;
+  --z-modal:  10001;
 
   /* Header */
   --header-h:  64px;

@@ -144,10 +144,10 @@
     const dark = isDarkScheme();
     for (const p of particles) {
       const speed = Math.hypot(p.vx, p.vy);
-      const r = 0.55 + Math.min(2.1, speed * 1.8);
+      const r = 0.65 + Math.min(2.4, speed * 2);
       const a = dark
-        ? 0.12 + Math.min(0.38, speed * 0.045)
-        : 0.08 + Math.min(0.22, speed * 0.035);
+        ? 0.16 + Math.min(0.42, speed * 0.05)
+        : 0.11 + Math.min(0.28, speed * 0.04);
       ctx.beginPath();
       ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
       ctx.fillStyle = dark ? `rgba(255,255,255,${a})` : `rgba(37,112,242,${a})`;
