@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "프레시밀크 | 경계를 허물고, 시장에서 가능성을 찾는 팀",
-    "description": "기술과 콘텐츠의 트렌드를 융합해 사람들에게 즐거움을 전합니다. 스토릿·tolli·픽토리·econoup, 4가지 실험을 굴리는 콘텐츠 스튜디오."
+    "description": "기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전합니다. 스토릿·tolli·픽토리·econoup, 네 가지 실험을 돌리는 포항 기반 콘텐츠 스튜디오."
   },
   "brand": {
     "name": "프레시밀크"
@@ -21,25 +21,25 @@
   "hero": {
     "kicker": "FRESHMILK / LIVE LAB",
     "title": "경계를 허물고,<br>시장이 우리를<br><span class=\"hero__line-accent\"><span class=\"hero__serif\">정의</span>하게 합니다.</span>",
-    "subtitle": "기술과 콘텐츠의 트렌드를 융합해 사람들에게 즐거움을 전합니다. 우리는 매일, 시장에 답을 묻습니다.",
+    "subtitle": "기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전합니다. 우리는 매일, 시장에 답을 묻습니다.",
     "ctaPrimary": "우리가 만드는 것 보기",
     "ctaSecondary": "팀 만나보기",
     "expTitle": "EXP INDEX",
     "expSubtitle": "현재 진행 중인 실험",
     "expStatus": "Coming Soon",
-    "expFootnote": "* working title — 이름조차 시장이 결정합니다.",
+    "expFootnote": "* 가칭(working title) — 이름까지 시장이 정합니다.",
     "annotation": "↳ 매일 하나의 가설"
   },
   "about": {
     "metaLabel": "WHO WE ARE",
     "heading": "기술과 콘텐츠가 만나는 자리에서,<br>매일 새로운 가설을 던집니다.",
     "missionLabel": "MISSION",
-    "missionText": "기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움을 전한다.",
+    "missionText": "기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전한다.",
     "visionLabel": "VISION",
     "visionText": "매일 찾는 콘텐츠 플랫폼.",
     "storyLabel": "STORY",
     "storyP1": "2025년 12월, 한동대학교 창업보육센터에서 시작했습니다. 우리는 \"매일 찾는 콘텐츠 플랫폼\"을 향해 한 걸음씩 나아가고 있습니다.",
-    "storyP2": "4가지 실험을 동시에 굴리며 시장의 답을 듣고, 빠르게 적용하고, 더 빠르게 배웁니다.",
+    "storyP2": "네 가지 실험을 동시에 돌리며 시장의 반응을 듣고, 빠르게 적용하고, 더 빠르게 배웁니다.",
     "timelineTitle": "TIMELINE",
     "tl1Date": "2025.12",
     "tl1Title": "사업자 등록",
@@ -80,7 +80,7 @@
     "p5Title": "성장하는 팀이 된다",
     "p5Text": "피드백은 비난이 아닌 개선의 관점입니다. 실패는 다음 도전의 자산입니다.",
     "p6Title": "열린 소통과 투명성",
-    "p6Text": "정보는 공유가 원칙. 의사결정의 과정과 이유를 모두가 이해할 수 있도록 설명합니다."
+    "p6Text": "정보 공유가 원칙입니다. 의사결정의 과정과 이유를 모두가 이해할 수 있게 설명합니다."
   },
   "projects": {
     "metaLabel": "EXPERIMENTS IN MOTION",
@@ -110,7 +110,7 @@
     "p4Status": "IDEATING",
     "p4Tag1": "경제",
     "p4Tag2": "학습·습관",
-    "disclaimer": "* working title — 이름조차 시장이 결정합니다."
+    "disclaimer": "* 가칭(working title) — 이름까지 시장이 정합니다."
   },
   "team": {
     "metaLabel": "PEOPLE",
@@ -118,14 +118,21 @@
     "subheading": "같이 실험하는 두 명의 공동 창업자.",
     "m1Name": "김강산",
     "m1Role": "CEO · Co-founder",
-    "m1Quote": "한계를 정하지 않으면, 시장이 더 멀리 데려갑니다.",
+    "m1Quote": "한계는 스스로 짓지 않는다. 답은 시장이 준다.",
     "m2Name": "김동신",
     "m2Role": "기획팀장 · Co-founder",
-    "m2Quote": "완벽한 기획보다, 빨리 배우는 기획."
+    "m2Quote": "완벽한 기획보다 빠르게 배우는 기획."
   },
   "lab": {
     "metaLabel": "LAB NOTES · LIVE SOON",
-    "subtitle": "실험과 회고, 실패와 피봇의 기록. 우리가 무엇을 배우고 있는지 곧 공개합니다."
+    "logTitle": "EXP LOG — INCOMING.",
+    "subtitle": "실험과 회고, 실패와 피봇의 기록. 무엇을 배우고 있는지 곧 공개합니다.",
+    "note1Title": "왜 웹툰에 퀴즈를 얹는가",
+    "note1Excerpt": "다음 화까지 남은 시간, 그걸 그냥 흘려보내긴 아깝다. 퀴즈가 그 틈을 메운다.",
+    "note2Title": "실패: 첫 와이어프레임은 폐기",
+    "note2Excerpt": "한 화면에 기능을 너무 많이 넣으려 했다. 다시 정한 규칙은 ‘한 화면, 한 행동’이다.",
+    "note3Title": "tolli 베타 첫 100명",
+    "note3Excerpt": "30일, 하루 한 절. 도달률과 이탈 지점을 한꺼번에 본다."
   },
   "contact": {
     "metaLabel": "GET IN TOUCH",
@@ -135,8 +142,8 @@
     "channelProductLabel": "PRODUCT · PLANNING",
     "channelAddressLabel": "ADDRESS",
     "cardTitle": "메일 보내기",
-    "cardBtn1": "Kangsan (CEO)에게 메일",
-    "cardBtn2": "Dongshin (Planning)에게 메일",
+    "cardBtn1": "김강산(대표)에게 메일",
+    "cardBtn2": "김동신(기획)에게 메일",
     "address": "경상북도 포항시 북구 흥해읍 한동로 558,<br>한동대학교 창업보육센터 학생창업공간(10)"
   },
   "footer": {

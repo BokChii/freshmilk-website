@@ -118,14 +118,21 @@
     "subheading": "Two co-founders running experiments together.",
     "m1Name": "Kangsan Kim",
     "m1Role": "CEO · Co-founder",
-    "m1Quote": "If we don't set our own limits, the market takes us further.",
+    "m1Quote": "We don't draw the limits first—the market answers.",
     "m2Name": "Dongshin Kim",
     "m2Role": "Head of Planning · Co-founder",
-    "m2Quote": "Faster to learn beats faster to perfect."
+    "m2Quote": "Plans that learn fast beat plans that chase perfect."
   },
   "lab": {
     "metaLabel": "LAB NOTES · LIVE SOON",
-    "subtitle": "Experiments, retrospectives, failures, and pivots. A record of what we are learning — soon to be public."
+    "logTitle": "EXP LOG — INCOMING.",
+    "subtitle": "Experiments, retrospectives, failures, and pivots. A record of what we are learning — soon to be public.",
+    "note1Title": "Why put quizzes on webtoons",
+    "note1Excerpt": "The gap between episodes is too good to waste. Quizzes fill that space with something light to do.",
+    "note2Title": "Failure: scrapped the first wireframe",
+    "note2Excerpt": "We tried to cram too much into one screen. New rule: one screen, one action.",
+    "note3Title": "tolli beta — first 100",
+    "note3Excerpt": "30 days, one verse a day. We'll read reach and drop-off together."
   },
   "contact": {
     "metaLabel": "GET IN TOUCH",
