@@ -1,45 +1,56 @@
 /* =========================================
-   FreshMilk Design Tokens — LIVE LAB (BOLD)
+   FreshMilk Design Tokens — LIVE LAB v2 (Editorial)
    ========================================= */
 
 :root {
   /* Brand */
-  --brand:        #2684FF;
-  --brand-hover:  #1E6AD6;
-  --brand-soft:   #EAF3FF;
-  --brand-line:   #C6DEFF;
+  --brand:        #2570F2;          /* slightly cooler/deeper cobalt */
+  --brand-hover:  #1A58C9;
+  --brand-soft:   #E8F0FF;
+  --brand-line:   #C2D8FF;
+  --brand-ink:    #0B2C6B;          /* deep ink for use on brand-soft surface */
 
-  /* Signal — LIVE / EXP 강조용 (BOLD 8%) */
+  /* Signal — LIVE / EXP 강조용 */
   --signal:       #FF2D87;
   --signal-hover: #E61E74;
   --signal-soft:  #FFE5F0;
   --signal-line:  #FFC2DA;
+  --signal-ink:   #6B0E3A;
 
   /* Status */
-  --ok:           #16A34A;
-  --warn:         #F59E0B;
+  --ok:           #1B9D52;
+  --warn:         #E78A0B;
 
-  /* Neutrals — Light (명함 톤) */
-  --bg:           #FFFFFF;
-  --surface:      #F7F9FB;
-  --surface-2:    #F1F4F8;
-  --border:       #ECEFF3;
-  --border-soft:  #F4F6F9;
-  --border-strong:#D7DEE6;
+  /* Neutrals — Light (paper tone) */
+  --bg:           #FBFAF6;          /* warm off-white (paper, not pure #FFF) */
+  --bg-pure:      #FFFFFF;
+  --surface:      #F4F2EB;          /* slightly warm cream surface */
+  --surface-2:    #EDEBE3;
+  --border:       #E6E2D7;
+  --border-soft:  #EFECE3;
+  --border-strong:#CFCABC;
 
-  --text:         #0F1115;
-  --text-muted:   #6B7280;
-  --text-subtle:  #9AA3AF;
+  --text:         #0E0F12;
+  --text-muted:   #5B6068;
+  --text-subtle:  #8E9099;
   --text-inverse: #FFFFFF;
 
+  /* Grid line (LIVE LAB graph paper) */
+  --grid-line:    rgba(15, 17, 21, 0.045);
+  --grid-line-strong: rgba(15, 17, 21, 0.085);
+
+  /* Ink (annotation / handwriting accent) */
+  --ink-red:      #C8262C;          /* manuscript redline */
+
   /* Typography */
-  --font-sans: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
-               system-ui, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans:    'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
+                  system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-display: 'Instrument Serif', 'Pretendard Variable', 'Pretendard', serif;
 
   /* Display sizes */
-  --fs-hero:   clamp(44px, 7vw, 104px);
-  --fs-h2:     clamp(30px, 4vw, 52px);
+  --fs-hero:   clamp(44px, 7.4vw, 112px);
+  --fs-h2:     clamp(30px, 4vw, 56px);
   --fs-h3:     clamp(22px, 2.4vw, 32px);
   --fs-body:   16px;
   --fs-small:  14px;
@@ -60,16 +71,17 @@
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  /* Elevation */
+  /* Elevation — toned down (no neon SaaS glow) */
   --shadow-sm: 0 1px 2px rgba(15, 17, 21, 0.04), 0 1px 1px rgba(15, 17, 21, 0.03);
-  --shadow-md: 0 8px 24px -10px rgba(15, 17, 21, 0.12), 0 2px 6px -2px rgba(15, 17, 21, 0.06);
-  --shadow-lg: 0 24px 48px -16px rgba(15, 17, 21, 0.18), 0 6px 12px -6px rgba(15, 17, 21, 0.08);
-  --shadow-brand: 0 12px 32px -10px rgba(38, 132, 255, 0.45);
-  --shadow-signal: 0 12px 32px -10px rgba(255, 45, 135, 0.45);
+  --shadow-md: 0 6px 20px -10px rgba(15, 17, 21, 0.10), 0 2px 6px -3px rgba(15, 17, 21, 0.05);
+  --shadow-lg: 0 18px 40px -18px rgba(15, 17, 21, 0.14), 0 4px 10px -6px rgba(15, 17, 21, 0.06);
+  --shadow-brand: 0 8px 22px -10px rgba(37, 112, 242, 0.22);
+  --shadow-signal: 0 8px 22px -10px rgba(255, 45, 135, 0.22);
 
   /* Motion */
   --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --dur-fast:    180ms;
   --dur-med:     360ms;
   --dur-slow:    720ms;
@@ -87,28 +99,35 @@
   color-scheme: light;
 }
 
-/* Dark mode (system preference) */
+/* Dark mode (system preference) — slightly blue-tinted, not flat black */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:          #0B0D10;
-    --surface:     #14171C;
-    --surface-2:   #1A1E25;
-    --border:      #232830;
-    --border-soft: #1A1E25;
-    --border-strong: #2E3540;
+    --bg:          #0A0D14;         /* deep ink-blue, not Vercel black */
+    --bg-pure:     #060810;
+    --surface:     #10141C;
+    --surface-2:   #161B24;
+    --border:      #23293A;
+    --border-soft: #1A1F2C;
+    --border-strong: #303749;
 
-    --text:        #F2F4F7;
-    --text-muted:  #A0A6B0;
-    --text-subtle: #6B7280;
+    --text:        #ECEDF1;
+    --text-muted:  #A3A8B4;
+    --text-subtle: #6A7184;
 
-    --brand-soft:  #0F2542;
-    --brand-line:  #1F4480;
+    --brand-soft:  #0E1F3F;
+    --brand-line:  #224990;
+    --brand-ink:   #B6D2FF;
     --signal-soft: #2A0E1C;
     --signal-line: #5C1A3A;
+    --signal-ink:  #FFB7D3;
+
+    /* Grid lines visible on dark */
+    --grid-line:        rgba(255, 255, 255, 0.05);
+    --grid-line-strong: rgba(255, 255, 255, 0.09);
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 8px 24px -10px rgba(0, 0, 0, 0.6), 0 2px 6px -2px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 24px 48px -16px rgba(0, 0, 0, 0.7), 0 6px 12px -6px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 20px -10px rgba(0, 0, 0, 0.55), 0 2px 6px -3px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 18px 40px -18px rgba(0, 0, 0, 0.65), 0 4px 10px -6px rgba(0, 0, 0, 0.4);
 
     color-scheme: dark;
   }

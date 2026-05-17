@@ -1,32 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Storit — webtoon panel strip">
   <defs>
-    <linearGradient id="storitBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#EAF3FF"/>
-      <stop offset="100%" stop-color="#FFE5F0"/>
-    </linearGradient>
+    <filter id="storitGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0"/>
+    </filter>
   </defs>
-  <rect width="640" height="400" fill="url(#storitBg)"/>
-  <!-- webtoon panels stack -->
-  <g transform="translate(80,60)">
-    <rect x="0" y="0" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#2684FF" stroke-width="2"/>
-    <rect x="0" y="135" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#2684FF" stroke-width="2"/>
-    <line x1="20" y1="40" x2="120" y2="40" stroke="#C6DEFF" stroke-width="3" stroke-linecap="round"/>
-    <line x1="20" y1="60" x2="100" y2="60" stroke="#C6DEFF" stroke-width="3" stroke-linecap="round"/>
-    <line x1="20" y1="80" x2="140" y2="80" stroke="#C6DEFF" stroke-width="3" stroke-linecap="round"/>
 
-    <line x1="20" y1="175" x2="120" y2="175" stroke="#FFC2DA" stroke-width="3" stroke-linecap="round"/>
-    <line x1="20" y1="195" x2="100" y2="195" stroke="#FFC2DA" stroke-width="3" stroke-linecap="round"/>
-    <line x1="20" y1="215" x2="140" y2="215" stroke="#FFC2DA" stroke-width="3" stroke-linecap="round"/>
+  <!-- Paper -->
+  <rect width="640" height="400" fill="#F4F2EB"/>
+  <rect width="640" height="400" filter="url(#storitGrain)"/>
+
+  <!-- Manuscript ruled lines (subtle horizontal lines, every 40px) -->
+  <g stroke="#0E0F12" stroke-width="0.5" opacity="0.06">
+    <line x1="0" y1="40"  x2="640" y2="40"/>
+    <line x1="0" y1="80"  x2="640" y2="80"/>
+    <line x1="0" y1="120" x2="640" y2="120"/>
+    <line x1="0" y1="160" x2="640" y2="160"/>
+    <line x1="0" y1="200" x2="640" y2="200"/>
+    <line x1="0" y1="240" x2="640" y2="240"/>
+    <line x1="0" y1="280" x2="640" y2="280"/>
+    <line x1="0" y1="320" x2="640" y2="320"/>
+    <line x1="0" y1="360" x2="640" y2="360"/>
   </g>
-  <!-- speech bubble Q -->
-  <g transform="translate(370,80)">
-    <circle cx="120" cy="120" r="110" fill="#FFFFFF" stroke="#FF2D87" stroke-width="3"/>
-    <text x="120" y="158" text-anchor="middle" font-family="'Pretendard Variable',sans-serif" font-size="120" font-weight="600" fill="#FF2D87">Q</text>
-    <path d="M55 200 L40 245 L85 220 Z" fill="#FFFFFF" stroke="#FF2D87" stroke-width="3"/>
+
+  <!-- Top meta label -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" fill="#5B6068" font-size="11" letter-spacing="2">
+    <text x="40" y="42">EXP/01 — STORIT.PAGE_01</text>
   </g>
-  <!-- echo rings -->
-  <g fill="none" stroke="#2684FF" stroke-width="1.5" opacity="0.6">
-    <circle cx="490" cy="200" r="148"/>
-    <circle cx="490" cy="200" r="180"/>
+
+  <!-- Vertical webtoon strip (3 panels) -->
+  <g transform="translate(40, 60)">
+    <!-- Panel 1: simple landscape -->
+    <rect x="0" y="0" width="240" height="86" fill="#FFFFFF" stroke="#0E0F12" stroke-width="2"/>
+    <g stroke="#0E0F12" stroke-width="1.5" fill="none">
+      <line x1="0" y1="64" x2="240" y2="64"/>
+      <path d="M 20 64 L 60 44 L 100 64 Z" fill="#0E0F12" opacity="0.85"/>
+      <path d="M 90 64 L 150 30 L 210 64 Z" fill="#0E0F12"/>
+    </g>
+    <text x="220" y="14" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#5B6068" letter-spacing="1" text-anchor="end">01</text>
+
+    <!-- Panel 2: silhouette character with dots -->
+    <rect x="0" y="100" width="240" height="86" fill="#FFFFFF" stroke="#0E0F12" stroke-width="2"/>
+    <g fill="#0E0F12">
+      <circle cx="60" cy="148" r="14"/>
+      <rect x="48" y="160" width="24" height="24" rx="2"/>
+    </g>
+    <g font-family="'Pretendard Variable',sans-serif" fill="#0E0F12" font-size="10" font-weight="500">
+      <text x="90" y="138">...</text>
+      <text x="90" y="156">읽었어?</text>
+      <text x="90" y="174">— 다음 화 떴음.</text>
+    </g>
+    <text x="220" y="114" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#5B6068" letter-spacing="1" text-anchor="end">02</text>
+
+    <!-- Panel 3: QUIZ — pink accent panel -->
+    <rect x="0" y="200" width="240" height="86" fill="#FF2D87" stroke="#0E0F12" stroke-width="2"/>
+    <text x="120" y="252" font-family="'Instrument Serif', serif" font-size="58" font-style="italic" fill="#FFFFFF" text-anchor="middle">Quiz?</text>
+    <text x="220" y="214" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#FFFFFF" letter-spacing="1" text-anchor="end" opacity="0.8">03</text>
+  </g>
+
+  <!-- Right side: large editorial text -->
+  <g transform="translate(310, 100)">
+    <text font-family="'Pretendard Variable',sans-serif" font-size="44" font-weight="200" fill="#0E0F12" letter-spacing="-1">
+      <tspan x="0" y="0">읽는 웹툰에서,</tspan>
+      <tspan x="0" y="52">즐기는 웹툰으로.</tspan>
+    </text>
+
+    <!-- Annotation (handwritten-feel) -->
+    <g transform="translate(0, 90)">
+      <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="#C8262C" letter-spacing="1" transform="rotate(-1.5)">
+        ↳ 퀴즈 · 리워드 · 커뮤니티
+      </text>
+    </g>
+
+    <!-- Tag row -->
+    <g transform="translate(0, 130)" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="#5B6068" letter-spacing="2">
+      <text>WEBTOON / QUIZ / FANDOM</text>
+    </g>
+
+    <!-- Decorative redline mark -->
+    <g transform="translate(0, 156)" stroke="#C8262C" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M 0 8 L 120 8" opacity="0.7"/>
+      <path d="M 116 4 L 124 8 L 116 12" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- Bottom margin tape -->
+  <g transform="translate(40, 372)" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#8E9099" letter-spacing="2">
+    <text>FRESHMILK · LAB NOTEBOOK · 01/04</text>
+    <text x="560" text-anchor="end">RUNNING ▸</text>
   </g>
 </svg>

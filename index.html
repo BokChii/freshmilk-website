@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/reset.css" />
@@ -53,12 +53,12 @@
 
       <nav class="nav" aria-label="Primary">
         <ul class="nav__list">
-          <li><a class="nav__link" href="#about" data-i18n="nav.about">회사 소개</a></li>
-          <li><a class="nav__link" href="#how" data-i18n="nav.how">일하는 방식</a></li>
-          <li><a class="nav__link" href="#projects" data-i18n="nav.projects">프로젝트</a></li>
-          <li><a class="nav__link" href="#team" data-i18n="nav.team">팀</a></li>
-          <li><a class="nav__link" href="#lab" data-i18n="nav.lab">실험 노트</a></li>
-          <li><a class="nav__link" href="#contact" data-i18n="nav.contact">문의</a></li>
+          <li><a class="nav__link" href="#about"><span class="nav__num">01</span><span data-i18n="nav.about">회사 소개</span></a></li>
+          <li><a class="nav__link" href="#how"><span class="nav__num">02</span><span data-i18n="nav.how">일하는 방식</span></a></li>
+          <li><a class="nav__link" href="#projects"><span class="nav__num">03</span><span data-i18n="nav.projects">프로젝트</span></a></li>
+          <li><a class="nav__link" href="#team"><span class="nav__num">04</span><span data-i18n="nav.team">팀</span></a></li>
+          <li><a class="nav__link" href="#lab"><span class="nav__num">05</span><span data-i18n="nav.lab">실험 노트</span></a></li>
+          <li><a class="nav__link" href="#contact"><span class="nav__num">06</span><span data-i18n="nav.contact">문의</span></a></li>
         </ul>
       </nav>
 
@@ -101,29 +101,31 @@
     <div class="marquee" aria-hidden="true">
       <div class="marquee__viewport">
         <div class="marquee__track">
-          <span class="marquee__item">SHIP FAST<span class="marquee__dot"></span></span>
-          <span class="marquee__item">FRESH DAILY<span class="marquee__dot"></span></span>
           <span class="marquee__item marquee__item--accent">MARKET DECIDES<span class="marquee__dot"></span></span>
+          <span class="marquee__item">매일이 가설<span class="marquee__dot"></span></span>
+          <span class="marquee__item">FRESH DAILY<span class="marquee__dot"></span></span>
+          <span class="marquee__item">이름은 시장이 정한다<span class="marquee__dot"></span></span>
           <span class="marquee__item">BREAK THE LINE<span class="marquee__dot"></span></span>
-          <span class="marquee__item">LEARN FASTER<span class="marquee__dot"></span></span>
-          <span class="marquee__item">STAY HUNGRY<span class="marquee__dot"></span></span>
           <span class="marquee__item marquee__item--accent">EXP IN MOTION<span class="marquee__dot"></span></span>
+          <span class="marquee__item">한동에서 세계로<span class="marquee__dot"></span></span>
+          <span class="marquee__item">EST · 2025.12<span class="marquee__dot"></span></span>
         </div>
       </div>
     </div>
 
     <!-- ===== Hero ===== -->
-    <section class="hero gridbg" id="top" aria-labelledby="hero-title">
+    <section class="hero gridbg gridbg--lg gridbg--cross" id="top" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero__grid">
           <div class="hero__copy">
             <p class="meta reveal">
               <span class="dot dot--building dot--pulse" aria-hidden="true"></span>
-              // FRESHMILK · LIVE LAB · EST 2025.12
+              <span>FRESHMILK</span><span class="meta__sep">/</span><span>LIVE LAB</span><span class="meta__sep">/</span><span>EST 2025.12</span>
             </p>
             <h1 class="hero__title reveal" id="hero-title" data-i18n-html="hero.title">
-              경계를 허물고,<br>시장이 우리를<br><em class="accent">정의하게</em> 합니다.
+              경계를 허물고,<br>시장이 우리를<br><span class="hero__line-accent"><span class="hero__serif">정의</span>하게 합니다.</span>
             </h1>
+            <p class="hero__annotation reveal" data-i18n="hero.annotation" aria-hidden="true">↳ 매일 하나의 가설</p>
             <p class="hero__lead reveal" data-i18n="hero.subtitle">
               기술과 콘텐츠의 트렌드를 융합해 사람들에게 즐거움을 전합니다. 우리는 매일, 시장에 답을 묻습니다.
             </p>
@@ -181,25 +183,26 @@
       </div>
     </section>
 
-    <!-- ===== Bottom marquee (reverse) ===== -->
-    <div class="marquee marquee--reverse" aria-hidden="true">
+    <!-- ===== Bottom marquee (reverse, inverse) ===== -->
+    <div class="marquee marquee--reverse marquee--inverse" aria-hidden="true">
       <div class="marquee__viewport">
         <div class="marquee__track">
-          <span class="marquee__item">04 EXPERIMENTS<span class="marquee__dot"></span></span>
-          <span class="marquee__item">02 FOUNDERS<span class="marquee__dot"></span></span>
-          <span class="marquee__item marquee__item--accent">01 MISSION<span class="marquee__dot"></span></span>
-          <span class="marquee__item">DAILY CONTENT<span class="marquee__dot"></span></span>
-          <span class="marquee__item">FANDOM × TECH<span class="marquee__dot"></span></span>
-          <span class="marquee__item marquee__item--accent">SHIP · LEARN · PIVOT<span class="marquee__dot"></span></span>
+          <span class="marquee__item">EXP/04<span class="marquee__dot"></span></span>
+          <span class="marquee__item">04 PROJECTS · 02 FOUNDERS · 01 MISSION<span class="marquee__dot"></span></span>
+          <span class="marquee__item marquee__item--accent">FANDOM × TECH<span class="marquee__dot"></span></span>
+          <span class="marquee__item">매일 찾는 콘텐츠 플랫폼<span class="marquee__dot"></span></span>
+          <span class="marquee__item">SHIP → LEARN → PIVOT<span class="marquee__dot"></span></span>
+          <span class="marquee__item marquee__item--accent">2025.12 · POHANG<span class="marquee__dot"></span></span>
+          <span class="marquee__item">아이디어에는 제한이 없다<span class="marquee__dot"></span></span>
         </div>
       </div>
     </div>
 
     <!-- ===== About ===== -->
-    <section class="section" id="about" aria-labelledby="about-h">
+    <section class="section gridbg" id="about" aria-labelledby="about-h">
       <div class="container">
         <header class="section__head">
-          <span class="meta reveal">// CHAPTER 01 · WHO WE ARE</span>
+          <span class="meta reveal"><span class="meta__index">01</span><span class="meta__sep">—</span><span data-i18n="about.metaLabel">WHO WE ARE</span></span>
           <h2 class="h2 reveal" id="about-h" data-i18n-html="about.heading">기술과 콘텐츠가 만나는 자리에서,<br>매일 새로운 가설을 던집니다.</h2>
         </header>
 
@@ -221,19 +224,43 @@
           </div>
         </div>
 
-        <div class="about__stats">
-          <div class="stat reveal">
-            <span class="stat__num" data-counter="4">0</span>
-            <span class="stat__label" data-i18n="about.statProjectsLabel">Projects in motion</span>
+        <div class="timeline reveal" aria-label="FreshMilk timeline">
+          <div class="timeline__head">
+            <span class="timeline__title" data-i18n="about.timelineTitle">TIMELINE</span>
+            <span class="timeline__rule" aria-hidden="true"></span>
           </div>
-          <div class="stat reveal">
-            <span class="stat__num" data-counter="2">0</span>
-            <span class="stat__label" data-i18n="about.statTeamLabel">Team members</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat__num" data-counter="2025.12" data-counter-duration="1400">2025.01</span>
-            <span class="stat__label" data-i18n="about.statFoundedLabel">Founded</span>
-          </div>
+          <ol class="timeline__list">
+            <li class="timeline__item is-done">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <span class="timeline__date" data-i18n="about.tl1Date">2025.12</span>
+              <span class="timeline__title-row" data-i18n="about.tl1Title">사업자 등록</span>
+              <span class="timeline__note" data-i18n="about.tl1Note">한동대 창업보육센터에서 출발</span>
+            </li>
+            <li class="timeline__item is-done">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <span class="timeline__date" data-i18n="about.tl2Date">2025.12</span>
+              <span class="timeline__title-row" data-i18n="about.tl2Title">EXP/01 — Storit 킥오프</span>
+              <span class="timeline__note" data-i18n="about.tl2Note">웹툰 퀴즈 리워드 커뮤니티 설계</span>
+            </li>
+            <li class="timeline__item is-done">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <span class="timeline__date" data-i18n="about.tl3Date">2026.01</span>
+              <span class="timeline__title-row" data-i18n="about.tl3Title">4 EXP 동시 운영</span>
+              <span class="timeline__note" data-i18n="about.tl3Note">tolli · 픽토리 · econoup 추가 설계 시작</span>
+            </li>
+            <li class="timeline__item is-now">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <span class="timeline__date" data-i18n="about.tl4Date">NOW</span>
+              <span class="timeline__title-row" data-i18n="about.tl4Title">디자인 + 앱 개발 진행</span>
+              <span class="timeline__note" data-i18n="about.tl4Note">모두 베타 직전, 매일 가설을 검증 중</span>
+            </li>
+            <li class="timeline__item is-next">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <span class="timeline__date" data-i18n="about.tl5Date">SOON</span>
+              <span class="timeline__title-row" data-i18n="about.tl5Title">첫 MVP 출시</span>
+              <span class="timeline__note" data-i18n="about.tl5Note">시장의 답을 듣고, 빠르게 피봇</span>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
@@ -242,7 +269,7 @@
     <section class="section section--surface gridbg" id="how" aria-labelledby="how-h">
       <div class="container">
         <header class="section__head">
-          <span class="meta reveal">// CHAPTER 02 · OPERATING PRINCIPLES</span>
+          <span class="meta reveal"><span class="meta__index">02</span><span class="meta__sep">—</span><span data-i18n="how.metaLabel">OPERATING PRINCIPLES</span></span>
           <h2 class="h2 reveal" id="how-h" data-i18n="how.heading">우리는 이렇게 일합니다.</h2>
           <p class="lead reveal" data-i18n="how.subheading">세 가지 가치, 여섯 가지 원칙. 모든 실험의 운영 체제.</p>
         </header>
@@ -266,7 +293,7 @@
         </div>
 
         <div class="principles">
-          <h3 class="principles__title reveal" data-i18n="how.principlesLabel">// CODE OF CONDUCT · 06 RULES</h3>
+          <h3 class="principles__title reveal" data-i18n="how.principlesLabel">CODE OF CONDUCT — 06 RULES</h3>
           <div class="principles__grid">
             <article class="principle reveal">
               <span class="principle__num">01</span>
@@ -319,7 +346,7 @@
     <section class="section" id="projects" aria-labelledby="projects-h">
       <div class="container">
         <header class="section__head">
-          <span class="meta reveal">// CHAPTER 03 · EXPERIMENTS IN MOTION</span>
+          <span class="meta reveal"><span class="meta__index">03</span><span class="meta__sep">—</span><span data-i18n="projects.metaLabel">EXPERIMENTS IN MOTION</span></span>
           <h2 class="h2 reveal" id="projects-h" data-i18n="projects.heading">4가지 실험, 하나의 미션.</h2>
           <p class="lead reveal" data-i18n="projects.subheading">매일 찾는 콘텐츠 플랫폼을 향한 동시 다발적 시도들. 모두 디자인 + 앱 개발 중.</p>
         </header>
@@ -329,7 +356,7 @@
             <div class="project-main__head">
               <span class="meta meta--brand">
                 <span class="dot dot--building dot--pulse" aria-hidden="true"></span>
-                // EXP 01 · STATUS: BUILDING · MAIN
+                <span>EXP/01</span><span class="meta__sep">·</span><span data-i18n="projects.mainStatus">BUILDING · MAIN</span>
               </span>
               <h3 class="project-main__name">
                 <span data-i18n="projects.mainName">스토릿</span>
@@ -357,7 +384,7 @@
             <div class="project-card__body">
               <span class="meta">
                 <span class="dot dot--building" aria-hidden="true"></span>
-                // EXP 02 · BUILDING
+                <span>EXP/02</span><span class="meta__sep">·</span><span data-i18n="projects.p2Status">BUILDING</span>
               </span>
               <h3 class="project-card__name"><span data-i18n="projects.p2Name">tolli</span></h3>
               <p class="project-card__copy" data-i18n="projects.p2Copy">매일의 말씀, 손끝의 암송. 성경 암송을 게임처럼 만드는 서비스.</p>
@@ -375,7 +402,7 @@
             <div class="project-card__body">
               <span class="meta">
                 <span class="dot dot--building" aria-hidden="true"></span>
-                // EXP 03 · BUILDING
+                <span>EXP/03</span><span class="meta__sep">·</span><span data-i18n="projects.p3Status">BUILDING</span>
               </span>
               <h3 class="project-card__name"><span data-i18n="projects.p3Name">픽토리</span> <small>Picktory</small></h3>
               <p class="project-card__copy" data-i18n="projects.p3Copy">맞히는 재미로 보는 K-콘텐츠. 추리와 예측으로 팬덤이 모이는 플랫폼.</p>
@@ -393,7 +420,7 @@
             <div class="project-card__body">
               <span class="meta meta--accent">
                 <span class="dot dot--ideating dot--pulse" aria-hidden="true"></span>
-                // EXP 04 · IDEATING
+                <span>EXP/04</span><span class="meta__sep">·</span><span data-i18n="projects.p4Status">IDEATING</span>
               </span>
               <h3 class="project-card__name"><span data-i18n="projects.p4Name">econoup</span> <small data-i18n="projects.p4WorkingTitle">(working title)</small></h3>
               <p class="project-card__copy" data-i18n="projects.p4Copy">경제를 매일 5분, 듀오링고처럼. 습관이 되는 경제 학습 서비스.</p>
@@ -413,7 +440,7 @@
     <section class="section section--surface" id="team" aria-labelledby="team-h">
       <div class="container">
         <header class="section__head">
-          <span class="meta reveal">// CHAPTER 04 · PEOPLE</span>
+          <span class="meta reveal"><span class="meta__index">04</span><span class="meta__sep">—</span><span data-i18n="team.metaLabel">PEOPLE</span></span>
           <h2 class="h2 reveal" id="team-h" data-i18n="team.heading">사람이 먼저, 그다음 실험.</h2>
           <p class="lead reveal" data-i18n="team.subheading">같이 실험하는 두 명의 공동 창업자.</p>
         </header>
@@ -426,6 +453,7 @@
             <div class="team-card__body">
               <p class="team-card__name" data-i18n="team.m1Name">김강산</p>
               <p class="team-card__role" data-i18n="team.m1Role">CEO · Co-founder</p>
+              <blockquote class="team-card__quote" data-i18n="team.m1Quote">한계를 정하지 않으면, 시장이 더 멀리 데려갑니다.</blockquote>
               <p class="team-card__line">
                 <span class="dot dot--brand" style="background:var(--brand)" aria-hidden="true"></span>
                 <a href="mailto:kgsan@freshmilk.kr">kgsan@freshmilk.kr</a>
@@ -444,6 +472,7 @@
             <div class="team-card__body">
               <p class="team-card__name" data-i18n="team.m2Name">김동신</p>
               <p class="team-card__role" data-i18n="team.m2Role">기획팀장 · Co-founder</p>
+              <blockquote class="team-card__quote" data-i18n="team.m2Quote">완벽한 기획보다, 빨리 배우는 기획.</blockquote>
               <p class="team-card__line">
                 <span class="dot dot--brand" style="background:var(--brand)" aria-hidden="true"></span>
                 <a href="mailto:kdshin@freshmilk.kr">kdshin@freshmilk.kr</a>
@@ -464,38 +493,59 @@
         <div class="lab__grid">
           <div class="lab__copy">
             <span class="meta meta--inverse reveal">
-              <span class="dot" style="background:#fff" aria-hidden="true"></span>
-              // CHAPTER 05 · LAB NOTES · LIVE SOON
+              <span class="dot dot--pulse" style="background:#fff" aria-hidden="true"></span>
+              <span class="meta__index">05</span><span class="meta__sep">—</span><span data-i18n="lab.metaLabel">LAB NOTES · LIVE SOON</span>
             </span>
             <h2 class="lab__title reveal" id="lab-h">EXP LOG — INCOMING.</h2>
             <p class="lab__sub reveal" data-i18n="lab.subtitle">실험과 회고, 실패와 피봇의 기록. 우리가 무엇을 배우고 있는지 곧 공개합니다.</p>
           </div>
-          <div class="lab__skeletons reveal" aria-hidden="true">
-            <div class="skeleton">
-              <div class="skeleton__line"></div>
-              <div class="skeleton__line"></div>
-              <div class="skeleton__line"></div>
-            </div>
-            <div class="skeleton">
-              <div class="skeleton__line"></div>
-              <div class="skeleton__line"></div>
-              <div class="skeleton__line"></div>
-            </div>
-            <div class="skeleton">
-              <div class="skeleton__line"></div>
-              <div class="skeleton__line"></div>
-              <div class="skeleton__line"></div>
-            </div>
+          <div class="lab__notes reveal" aria-hidden="true">
+            <article class="lab-note lab-note--1">
+              <header class="lab-note__head">
+                <span class="lab-note__num">NOTE/001</span>
+                <span class="lab-note__date">2026.02.14</span>
+              </header>
+              <h4 class="lab-note__title">왜 웹툰 + 퀴즈인가</h4>
+              <p class="lab-note__excerpt">독자는 다음 화를 기다리는 시간을 즐기고 싶어한다. 빈 시간을 채우는 것이 퀴즈인 이유 ━━━</p>
+              <footer class="lab-note__foot">
+                <span class="lab-note__tag">EXP/01</span>
+                <span class="lab-note__status">DRAFT</span>
+              </footer>
+            </article>
+            <article class="lab-note lab-note--2">
+              <header class="lab-note__head">
+                <span class="lab-note__num">NOTE/002</span>
+                <span class="lab-note__date">2026.03.02</span>
+              </header>
+              <h4 class="lab-note__title">실패: 첫 와이어프레임을 버렸다</h4>
+              <p class="lab-note__excerpt">너무 많은 기능을 한 화면에 담으려 했다. 다시: 한 화면, 한 동사.</p>
+              <footer class="lab-note__foot">
+                <span class="lab-note__tag">RETRO</span>
+                <span class="lab-note__status">SHARED</span>
+              </footer>
+            </article>
+            <article class="lab-note lab-note--3">
+              <header class="lab-note__head">
+                <span class="lab-note__num">NOTE/003</span>
+                <span class="lab-note__date">SOON</span>
+              </header>
+              <h4 class="lab-note__title">tolli 베타 첫 100명</h4>
+              <p class="lab-note__excerpt">손가락 하나로 한 절씩, 30일. 도달율과 이탈 지점을 같이 측정 ━━━</p>
+              <footer class="lab-note__foot">
+                <span class="lab-note__tag">EXP/02</span>
+                <span class="lab-note__status">PLANNED</span>
+              </footer>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===== Contact ===== -->
-    <section class="section" id="contact" aria-labelledby="contact-h">
+    <section class="section gridbg gridbg--lg" id="contact" aria-labelledby="contact-h">
       <div class="container">
         <header class="section__head">
-          <span class="meta reveal">// CHAPTER 06 · GET IN TOUCH</span>
+          <span class="meta reveal"><span class="meta__index">06</span><span class="meta__sep">—</span><span data-i18n="contact.metaLabel">GET IN TOUCH</span></span>
         </header>
 
         <div class="contact__grid">

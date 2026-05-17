@@ -1,19 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Picktory — prediction card stack">
   <defs>
-    <linearGradient id="picktoryBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFE5F0"/>
-      <stop offset="100%" stop-color="#EAF3FF"/>
-    </linearGradient>
+    <filter id="picktoryGrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0"/>
+    </filter>
+    <pattern id="picktoryDots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.8" fill="#0E0F12" opacity="0.18"/>
+    </pattern>
   </defs>
-  <rect width="640" height="400" fill="url(#picktoryBg)"/>
-  <!-- stacked cards (prediction) -->
-  <g transform="translate(200,80)">
-    <rect x="20" y="20" width="200" height="260" rx="16" fill="#FFFFFF" stroke="#C6DEFF" stroke-width="2" transform="rotate(-8 120 150)"/>
-    <rect x="20" y="20" width="200" height="260" rx="16" fill="#FFFFFF" stroke="#FFC2DA" stroke-width="2" transform="rotate(4 120 150)"/>
-    <rect x="20" y="20" width="200" height="260" rx="16" fill="#FFFFFF" stroke="#2684FF" stroke-width="3"/>
-    <!-- center card content: question mark -->
-    <text x="120" y="200" text-anchor="middle" font-family="'Pretendard Variable',sans-serif" font-size="180" font-weight="200" fill="#2684FF" letter-spacing="-4">?</text>
-    <!-- small heart pulse top right -->
-    <path d="M260 60 a 14 14 0 0 1 24 -8 a 14 14 0 0 1 24 8 c 0 14 -24 28 -24 28 s -24 -14 -24 -28 z" fill="#FF2D87"/>
+
+  <!-- Cream background with dotted pattern -->
+  <rect width="640" height="400" fill="#EDEBE3"/>
+  <rect width="640" height="400" fill="url(#picktoryDots)"/>
+  <rect width="640" height="400" filter="url(#picktoryGrain)"/>
+
+  <!-- Top meta -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#5B6068" letter-spacing="2">
+    <text x="40" y="42">EXP/03 — PICKTORY · PREDICT.04</text>
+  </g>
+
+  <!-- Card stack center-left (polaroid style) -->
+  <!-- Back card 4: rotated -10deg, faded -->
+  <g transform="translate(110, 120) rotate(-10)">
+    <rect x="0" y="0" width="160" height="200" fill="#FFFFFF" stroke="#0E0F12" stroke-width="2"/>
+    <rect x="14" y="14" width="132" height="132" fill="#CFCABC"/>
+    <text x="80" y="92" font-family="'Instrument Serif', serif" font-style="italic" font-size="68" fill="#0E0F12" text-anchor="middle" opacity="0.4">?</text>
+    <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#5B6068" letter-spacing="2">
+      <text x="14" y="166">PICK · 04</text>
+      <text x="14" y="184" opacity="0.6">— BAND_X / IDOL</text>
+    </g>
+  </g>
+
+  <!-- Mid card 3: rotated 6deg -->
+  <g transform="translate(160, 130) rotate(6)">
+    <rect x="0" y="0" width="160" height="200" fill="#FFFFFF" stroke="#0E0F12" stroke-width="2"/>
+    <rect x="14" y="14" width="132" height="132" fill="#E6E2D7"/>
+    <text x="80" y="100" font-family="'Instrument Serif', serif" font-style="italic" font-size="84" fill="#0E0F12" text-anchor="middle" opacity="0.65">?</text>
+    <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#5B6068" letter-spacing="2">
+      <text x="14" y="166">PICK · 03</text>
+      <text x="14" y="184" opacity="0.6">— SHOW / WINNER?</text>
+    </g>
+  </g>
+
+  <!-- Mid card 2: rotated -3deg -->
+  <g transform="translate(220, 116) rotate(-3)">
+    <rect x="0" y="0" width="160" height="200" fill="#FFFFFF" stroke="#0E0F12" stroke-width="2"/>
+    <rect x="14" y="14" width="132" height="132" fill="#FFE5F0"/>
+    <text x="80" y="104" font-family="'Instrument Serif', serif" font-style="italic" font-size="96" fill="#FF2D87" text-anchor="middle">?</text>
+    <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#5B6068" letter-spacing="2">
+      <text x="14" y="166">PICK · 02</text>
+      <text x="14" y="184" opacity="0.6">— DRAMA / TWIST</text>
+    </g>
+  </g>
+
+  <!-- Top card 1: front, brand colored, with pink check -->
+  <g transform="translate(284, 96) rotate(4)">
+    <rect x="0" y="0" width="160" height="200" fill="#FFFFFF" stroke="#0E0F12" stroke-width="2.5"/>
+    <rect x="14" y="14" width="132" height="132" fill="#2570F2"/>
+    <!-- Check mark -->
+    <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 46 84 L 70 108 L 116 56"/>
+    </g>
+    <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#0E0F12" letter-spacing="2">
+      <text x="14" y="166">PICK · 01</text>
+      <text x="14" y="184" font-weight="600">— CORRECT ✓</text>
+    </g>
+  </g>
+
+  <!-- Right side: vertical caption -->
+  <g transform="translate(500, 140)">
+    <text font-family="'Pretendard Variable',sans-serif" font-size="22" font-weight="300" fill="#0E0F12" letter-spacing="-0.5" line-height="1.2">
+      <tspan x="0" y="0">맞히는 재미로</tspan>
+      <tspan x="0" y="28">보는 K-콘텐츠.</tspan>
+    </text>
+    <g transform="translate(0, 56)">
+      <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="#C8262C" letter-spacing="1" transform="rotate(2)">
+        ↳ 추리 + 예측 = 팬덤
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom margin -->
+  <g transform="translate(40, 372)" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#8E9099" letter-spacing="2">
+    <text>FRESHMILK · LAB NOTEBOOK · 03/04</text>
+    <text x="560" text-anchor="end">★ STACKED</text>
   </g>
 </svg>

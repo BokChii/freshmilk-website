@@ -1,20 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Kangsan Kim - CEO">
   <defs>
-    <linearGradient id="kgsBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2684FF"/>
-      <stop offset="100%" stop-color="#1E6AD6"/>
-    </linearGradient>
-    <filter id="kgsNoise" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2"/>
-      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/>
+    <filter id="kgsGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0"/>
     </filter>
   </defs>
-  <rect width="240" height="240" fill="url(#kgsBg)"/>
-  <rect width="240" height="240" filter="url(#kgsNoise)"/>
-  <circle cx="200" cy="46" r="36" fill="#FF2D87" opacity="0.85"/>
-  <circle cx="40" cy="200" r="58" fill="#FFFFFF" opacity="0.12"/>
-  <g fill="#FFFFFF" font-family="'JetBrains Mono', ui-monospace, monospace">
-    <text x="24" y="200" font-size="84" font-weight="500" letter-spacing="-2">KGS</text>
-    <text x="24" y="226" font-size="12" letter-spacing="2" opacity="0.7">// CEO &#xB7; CO-FOUNDER</text>
+
+  <rect width="240" height="240" fill="#0B2C6B"/>
+  <rect width="240" height="240" filter="url(#kgsGrain)"/>
+
+  <!-- Tape-like corner (signal pink) -->
+  <rect x="-10" y="-4" width="60" height="22" fill="#FF2D87" transform="rotate(-8 -10 -4)" opacity="0.95"/>
+
+  <!-- Subtle grid lines (lab paper feel) -->
+  <g stroke="#FFFFFF" stroke-width="0.6" opacity="0.08">
+    <line x1="0" y1="60"  x2="240" y2="60"/>
+    <line x1="0" y1="120" x2="240" y2="120"/>
+    <line x1="0" y1="180" x2="240" y2="180"/>
+    <line x1="60"  y1="0" x2="60"  y2="240"/>
+    <line x1="120" y1="0" x2="120" y2="240"/>
+    <line x1="180" y1="0" x2="180" y2="240"/>
+  </g>
+
+  <!-- Huge serif italic K bleeding off edge -->
+  <text x="-12" y="208" font-family="'Instrument Serif', serif" font-style="italic" font-size="260" fill="#FFFFFF" opacity="0.95" letter-spacing="-6">K</text>
+
+  <!-- Mono signature lines on right -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" fill="#FFFFFF">
+    <text x="222" y="32" font-size="10" letter-spacing="2" text-anchor="end" opacity="0.7">EXP/01 &#8212; LEAD</text>
+    <text x="222" y="218" font-size="11" letter-spacing="2" text-anchor="end" font-weight="600">&#8212; KGSAN.</text>
+    <text x="222" y="232" font-size="9" letter-spacing="2" text-anchor="end" opacity="0.55">CEO &#xB7; CO-FOUNDER</text>
+  </g>
+
+  <!-- Hand-drawn signature swoop -->
+  <g fill="none" stroke="#FF2D87" stroke-width="2.2" stroke-linecap="round">
+    <path d="M 132 200 Q 156 192 180 200 Q 200 206 222 196" opacity="0.85"/>
   </g>
 </svg>
