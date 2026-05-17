@@ -1,6 +1,6 @@
 /* =========================================
    FreshMilk — cursor.js
-   - Canvas particle field: soft attractor + swirl ("vacuum / orbit" feel)
+   - Sparse particles in a slow ring around the cursor (polar orbit)
    - Desktop + fine pointer + min-width 961px (matches main.css)
    - Respects prefers-reduced-motion
    ========================================= */
@@ -20,8 +20,12 @@
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
-  const COUNT = 72;
-  const LERP_CORE = 0.2;
+  /** Small count: loose halo close to the pointer */
+  const COUNT = 14;
+  const R_MIN = 12;
+  const R_MAX = 38;
+  const LERP_CORE = 0.12;
+
   const particles = [];
 
   let dpr = 1;
@@ -35,28 +39,15 @@
   let isHover = false;
 
   function spawnParticle() {
-    const W = window.innerWidth;
-    const H = window.innerHeight;
-    const margin = 60;
-    const side = Math.floor(Math.random() * 4);
-    let x;
-    let y;
-    if (side === 0) {
-      x = Math.random() * W;
-      y = -margin;
-    } else if (side === 1) {
-      x = W + margin;
-      y = Math.random() * H;
-    } else if (side === 2) {
-      x = Math.random() * W;
-      y = H + margin;
-    } else {
-      x = -margin;
-      y = Math.random() * H;
-    }
-    const ang = Math.random() * Math.PI * 2;
-    const s = Math.random() * 0.35;
-    return { x, y, vx: Math.cos(ang) * s, vy: Math.sin(ang) * s };
+    const theta = Math.random() * Math.PI * 2;
+    const r = R_MIN + Math.random() * (R_MAX - R_MIN);
+    return {
+      theta,
+      r,
+      rT: R_MIN + Math.random() * (R_MAX - R_MIN),
+      spd: (Math.random() < 0.5 ? -1 : 1) * (0.0045 + Math.random() * 0.0045),
+      phase: Math.random() * Math.PI * 2,
+    };
   }
 
   function resize() {
@@ -113,64 +104,49 @@
     cx += (mx - cx) * LERP_CORE;
     cy += (my - cy) * LERP_CORE;
 
-    const pull = isHover ? 1.05 : 0.68;
-    const swirl = isHover ? 0.026 : 0.016;
-    const damp = isHover ? 0.972 : 0.978;
+    const hoverMul = isHover ? 1.28 : 1;
 
+    const t = performance.now() * 0.00035;
     for (const p of particles) {
-      const dx = cx - p.x;
-      const dy = cy - p.y;
-      const dist = Math.hypot(dx, dy) + 10;
-      const inv = (pull * 5200) / (dist * dist);
-      p.vx += dx * inv;
-      p.vy += dy * inv;
-      p.vx += -dy * swirl;
-      p.vy += dx * swirl;
-      p.vx *= damp;
-      p.vy *= damp;
-      p.x += p.vx;
-      p.y += p.vy;
-
-      if (dist < 11 + Math.random() * 7) {
-        Object.assign(p, spawnParticle());
-      }
-      if (p.x < -100 || p.x > w + 100 || p.y < -100 || p.y > h + 100) {
-        Object.assign(p, spawnParticle());
-      }
+      p.theta += p.spd * hoverMul + Math.sin(t + p.phase) * 0.00012;
+      p.r += (p.rT - p.r) * 0.028;
+    }
+    if (Math.random() < 0.002) {
+      const p = particles[(Math.random() * particles.length) | 0];
+      p.rT = R_MIN + Math.random() * (R_MAX - R_MIN);
     }
 
     ctx.clearRect(0, 0, w, h);
 
     const dark = isDarkScheme();
     for (const p of particles) {
-      const speed = Math.hypot(p.vx, p.vy);
-      const r = 0.65 + Math.min(2.4, speed * 2);
-      const a = dark
-        ? 0.16 + Math.min(0.42, speed * 0.05)
-        : 0.11 + Math.min(0.28, speed * 0.04);
+      const x = cx + Math.cos(p.theta) * p.r;
+      const y = cy + Math.sin(p.theta) * p.r;
+      const r = dark ? 0.9 : 0.75;
+      const a = dark ? 0.22 : 0.18;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = dark ? `rgba(255,255,255,${a})` : `rgba(37,112,242,${a})`;
       ctx.fill();
     }
 
     if (active) {
-      const coreR = isHover ? 5.5 : 3.8;
-      const ringR = isHover ? 22 : 16;
+      const coreR = isHover ? 4.2 : 3.2;
+      const ringR = isHover ? 18 : 14;
       ctx.beginPath();
       ctx.arc(cx, cy, ringR, 0, Math.PI * 2);
-      ctx.strokeStyle = isHover ? 'rgba(255,45,135,0.14)' : 'rgba(37,112,242,0.12)';
+      ctx.strokeStyle = isHover ? 'rgba(255,45,135,0.12)' : 'rgba(37,112,242,0.1)';
       ctx.lineWidth = 1;
       ctx.stroke();
 
       ctx.beginPath();
-      ctx.arc(cx, cy, coreR + 2.2, 0, Math.PI * 2);
-      ctx.fillStyle = isHover ? 'rgba(255,45,135,0.22)' : 'rgba(37,112,242,0.2)';
+      ctx.arc(cx, cy, coreR + 1.6, 0, Math.PI * 2);
+      ctx.fillStyle = isHover ? 'rgba(255,45,135,0.18)' : 'rgba(37,112,242,0.16)';
       ctx.fill();
 
       ctx.beginPath();
       ctx.arc(cx, cy, coreR, 0, Math.PI * 2);
-      ctx.fillStyle = isHover ? 'rgba(255,45,135,0.92)' : 'rgba(37,112,242,0.95)';
+      ctx.fillStyle = isHover ? 'rgba(255,45,135,0.9)' : 'rgba(37,112,242,0.92)';
       ctx.fill();
     }
 
