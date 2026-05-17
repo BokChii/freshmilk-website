@@ -1135,22 +1135,61 @@ body {
   transition: transform var(--dur-med) var(--ease-out);
   display: flex;
   flex-direction: column;
-  padding: 24px var(--gutter);
-  gap: 8px;
+  padding: 20px var(--gutter) 28px;
+  gap: 20px;
   border-bottom: 1px solid var(--border);
   visibility: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .mobile-menu.is-open {
   transform: translateY(0);
   visibility: visible;
 }
-.mobile-menu a {
-  padding: 14px 4px;
+.mobile-menu__nav { display: flex; flex-direction: column; }
+.mobile-menu__nav a {
+  padding: 16px 4px;
   border-bottom: 1px solid var(--border);
   font-size: 18px;
+  font-weight: 500;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.mobile-menu a:last-child { border-bottom: 0; }
+.mobile-menu__nav a:last-child { border-bottom: 0; }
+.mobile-menu__nav a::after {
+  content: "→";
+  font-family: var(--font-mono);
+  color: var(--text-subtle);
+  font-size: 16px;
+}
+
+.mobile-menu__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-strong);
+}
+
+.lang-toggle--block {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 13px;
+  padding: 4px;
+}
+.lang-toggle--block .lang-toggle__btn {
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.btn--block {
+  width: 100%;
+  padding: 16px 22px;
+  font-size: 16px;
+}
 
 /* =========================================
    Responsive
@@ -1171,7 +1210,7 @@ body {
   .cursor-trail { display: none; }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .nav, .header-actions .lang-toggle, .header-actions .btn { display: none; }
   .menu-toggle { display: inline-flex; }
   .projects-grid { grid-template-columns: 1fr; }
@@ -1182,4 +1221,13 @@ body {
   .team-card__avatar { width: 80px; height: 80px; }
   .channel { grid-template-columns: 1fr; gap: 4px; padding: 12px 0; }
   .footer__business dl { grid-template-columns: 88px 1fr; }
+}
+
+@media (max-width: 480px) {
+  .marquee__item { font-size: 12px; padding: 0 16px; }
+  .hero { padding-top: clamp(32px, 6vw, 56px); }
+  .footer__business dl { grid-template-columns: 76px 1fr; column-gap: 8px; }
+  .footer__bottom { font-size: 10px; }
+  .exp-row { grid-template-columns: 32px 1fr auto; gap: 10px; padding: 14px 4px; }
+  .exp-row__num { font-size: 11px; }
 }

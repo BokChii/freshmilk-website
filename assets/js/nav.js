@@ -22,7 +22,7 @@
     a.addEventListener('click', () => setOpen(false));
   });
 
-  const mq = matchMedia('(min-width: 721px)');
+  const mq = matchMedia('(min-width: 861px)');
   mq.addEventListener?.('change', e => { if (e.matches) setOpen(false); });
 
   document.addEventListener('keydown', e => {

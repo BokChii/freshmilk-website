@@ -77,12 +77,22 @@
 
   <!-- ===== Mobile menu drawer ===== -->
   <aside class="mobile-menu" data-mobile-menu aria-label="Mobile navigation">
-    <a href="#about" data-i18n="nav.about">회사 소개</a>
-    <a href="#how" data-i18n="nav.how">일하는 방식</a>
-    <a href="#projects" data-i18n="nav.projects">프로젝트</a>
-    <a href="#team" data-i18n="nav.team">팀</a>
-    <a href="#lab" data-i18n="nav.lab">실험 노트</a>
-    <a href="#contact" data-i18n="nav.contact">문의</a>
+    <nav class="mobile-menu__nav" aria-label="Mobile primary">
+      <a href="#about" data-i18n="nav.about">회사 소개</a>
+      <a href="#how" data-i18n="nav.how">일하는 방식</a>
+      <a href="#projects" data-i18n="nav.projects">프로젝트</a>
+      <a href="#team" data-i18n="nav.team">팀</a>
+      <a href="#lab" data-i18n="nav.lab">실험 노트</a>
+      <a href="#contact" data-i18n="nav.contact">문의</a>
+    </nav>
+
+    <div class="mobile-menu__actions">
+      <div class="lang-toggle lang-toggle--block" role="group" aria-label="Language">
+        <button class="lang-toggle__btn" data-lang-btn="ko" aria-pressed="true">KO</button>
+        <button class="lang-toggle__btn" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--primary btn--block" href="#contact" data-mobile-cta data-i18n="header.cta">문의하기</a>
+    </div>
   </aside>
 
   <main id="main">
