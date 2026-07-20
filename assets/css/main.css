@@ -1579,7 +1579,6 @@ body::after {
 }
 
 @media (max-width: 480px) {
-  .marquee__item { font-size: 12px; padding: 0 16px; }
   .hero { padding-top: clamp(32px, 6vw, 56px); }
   .footer__business dl { grid-template-columns: 76px 1fr; column-gap: 8px; }
   .footer__bottom { font-size: 10px; }

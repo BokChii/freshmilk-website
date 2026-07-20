@@ -1,71 +1,101 @@
 /* =========================================
-   Marquee (LIVE LAB signature)
+   Marquee — editorial ticker (sans-led, mono for codes/dates)
    ========================================= */
 
 .marquee {
   overflow: hidden;
   border-block: 1px solid var(--border);
-  background: var(--bg);
-  font-family: var(--font-mono);
-  font-size: var(--fs-small);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text);
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: color-mix(in srgb, var(--text) 88%, var(--text-muted));
   position: relative;
   z-index: var(--z-base);
 }
 
 .marquee--inverse {
-  background: var(--text);
-  color: var(--text-inverse);
-  border-color: transparent;
+  background: var(--glass-bg-strong);
+  color: var(--text);
+  border-block-color: var(--glass-border);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
 }
 
 .marquee__viewport {
   display: flex;
   width: max-content;
   white-space: nowrap;
-  animation: marquee-scroll 28s linear infinite;
+  animation: marquee-scroll 46s linear infinite;
   will-change: transform;
 }
 
 .marquee--reverse .marquee__viewport {
   animation-direction: reverse;
+  animation-duration: 52s;
 }
 
 .marquee__track {
   display: inline-flex;
   align-items: center;
-  gap: 48px;
-  padding: 14px 24px;
+  gap: clamp(36px, 5vw, 56px);
+  padding: 16px 28px;
 }
 
 .marquee__item {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+/* EXP codes, dates — mono only */
+.marquee__item--mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
 }
 
 .marquee__dot {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: currentColor;
-  opacity: 0.5;
+  opacity: 0.28;
   flex: 0 0 auto;
 }
-
-.marquee__item--accent { color: var(--signal); }
-.marquee--inverse .marquee__item--accent { color: var(--signal); }
 
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 
+@media (max-width: 960px) {
+  .marquee {
+    font-size: 13px;
+  }
+  .marquee__track {
+    gap: 28px;
+    padding: 14px 20px;
+  }
+  .marquee__item--mono {
+    font-size: 11px;
+  }
+}
+
 /* Pause on hover for accessibility */
 @media (hover: hover) {
   .marquee:hover .marquee__viewport {
     animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__viewport {
+    animation: none;
   }
 }
