@@ -31,7 +31,7 @@
     "annotation": "↳ One hypothesis a day"
   },
   "about": {
-    "metaLabel": "WHO WE ARE",
+    "metaLabel": "About",
     "heading": "Where technology meets content,<br>we drop new hypotheses every day.",
     "missionLabel": "MISSION",
     "missionText": "Fuse the trends of technology and content to bring delight to people.",
@@ -59,7 +59,7 @@
     "tl5Status": "TBD"
   },
   "how": {
-    "metaLabel": "OPERATING PRINCIPLES",
+    "metaLabel": "How we work",
     "heading": "This is how we work.",
     "subheading": "Three values. Six principles. The operating system for every experiment.",
     "value1Title": "Erase the lines. Pursue boundless creativity.",
@@ -68,7 +68,7 @@
     "value2Text": "We don't pre-judge our value. Every idea ships as an experiment first, then evolves from the result.",
     "value3Title": "Speed — ship · validate · fail · pivot → win fast.",
     "value3Text": "Speed is the amount of learning. We trust ship counts over perfection and data over confidence.",
-    "principlesLabel": "CODE OF CONDUCT — 06 RULES",
+    "principlesLabel": "Six operating principles",
     "p1Title": "No limits on ideas",
     "p1Text": "We ask \"how could it work?\" first. Every proposal is logged and revisited regularly.",
     "p2Title": "The market sets the limits",
@@ -83,7 +83,7 @@
     "p6Text": "Default to sharing. The why and how of decisions are visible to all."
   },
   "projects": {
-    "metaLabel": "EXPERIMENTS IN MOTION",
+    "metaLabel": "Projects",
     "heading": "Four experiments, one mission.",
     "subheading": "Parallel attempts toward the content platform people visit every day. All in design + app development.",
     "mainName": "Storit",
@@ -113,7 +113,7 @@
     "disclaimer": "* working title — even the name is decided by the market."
   },
   "team": {
-    "metaLabel": "PEOPLE",
+    "metaLabel": "Team",
     "heading": "People first, then experiments.",
     "subheading": "Two co-founders running experiments together.",
     "m1Name": "Kangsan Kim",
@@ -124,7 +124,7 @@
     "m2Quote": "Plans that learn fast beat plans that chase perfect."
   },
   "lab": {
-    "metaLabel": "LAB NOTES · LIVE SOON",
+    "metaLabel": "Lab notes",
     "logTitle": "EXP LOG — INCOMING.",
     "subtitle": "Experiments, retrospectives, failures, and pivots. A record of what we are learning — soon to be public.",
     "note1Title": "Why put quizzes on webtoons",
@@ -135,7 +135,7 @@
     "note3Excerpt": "30 days, one verse a day. We'll read reach and drop-off together."
   },
   "contact": {
-    "metaLabel": "GET IN TOUCH",
+    "metaLabel": "Contact",
     "heading": "We're looking for people to experiment with us.",
     "subtitle": "Partnerships, product collabs, and general inquiries are all welcome. Email is the fastest route.",
     "channelGeneralLabel": "GENERAL · BUSINESS",

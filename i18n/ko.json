@@ -20,7 +20,7 @@
   },
   "hero": {
     "kicker": "FRESHMILK / LIVE LAB",
-    "title": "경계를 허물고,<br>시장이 우리를<br><span class=\"hero__line-accent\"><span class=\"hero__serif\">정의</span>하게 합니다.</span>",
+    "title": "경계를 허물고,<br>시장이 우리를<br><span class=\"hero__line-accent\">정의하게 합니다.</span>",
     "subtitle": "기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전합니다. 우리는 매일, 시장에 답을 묻습니다.",
     "ctaPrimary": "우리가 만드는 것 보기",
     "ctaSecondary": "팀 만나보기",
@@ -31,7 +31,7 @@
     "annotation": "↳ 매일 하나의 가설"
   },
   "about": {
-    "metaLabel": "WHO WE ARE",
+    "metaLabel": "회사 소개",
     "heading": "기술과 콘텐츠가 만나는 자리에서,<br>매일 새로운 가설을 던집니다.",
     "missionLabel": "MISSION",
     "missionText": "기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전한다.",
@@ -59,7 +59,7 @@
     "tl5Status": "TBD"
   },
   "how": {
-    "metaLabel": "OPERATING PRINCIPLES",
+    "metaLabel": "일하는 방식",
     "heading": "우리는 이렇게 일합니다.",
     "subheading": "세 가지 가치, 여섯 가지 원칙. 모든 실험의 운영 체제.",
     "value1Title": "경계를 허물고, 무한한 창의성을 추구한다.",
@@ -68,7 +68,7 @@
     "value2Text": "스스로 가치를 제한하지 않습니다. 어떤 아이디어든 먼저 실험하고, 결과를 바탕으로 발전시킵니다.",
     "value3Title": "스피드 — 빠른 적용·검증·실패·피봇 → 빠른 성공.",
     "value3Text": "속도는 곧 학습의 양입니다. 우리는 완벽보다 출시 횟수를, 자신감보다 데이터를 신뢰합니다.",
-    "principlesLabel": "CODE OF CONDUCT — 06 RULES",
+    "principlesLabel": "운영 원칙 6가지",
     "p1Title": "아이디어에는 제한이 없다",
     "p1Text": "\"어떻게 하면 가능할까?\"를 먼저 묻습니다. 모든 제안은 기록되고 정기적으로 검토됩니다.",
     "p2Title": "한계는 시장이 정한다",
@@ -83,7 +83,7 @@
     "p6Text": "정보 공유가 원칙입니다. 의사결정의 과정과 이유를 모두가 이해할 수 있게 설명합니다."
   },
   "projects": {
-    "metaLabel": "EXPERIMENTS IN MOTION",
+    "metaLabel": "프로젝트",
     "heading": "4가지 실험, 하나의 미션.",
     "subheading": "매일 찾는 콘텐츠 플랫폼을 향한 동시 다발적 시도들. 모두 디자인 + 앱 개발 중.",
     "mainName": "스토릿",
@@ -113,7 +113,7 @@
     "disclaimer": "* 가칭(working title) — 이름까지 시장이 정합니다."
   },
   "team": {
-    "metaLabel": "PEOPLE",
+    "metaLabel": "팀",
     "heading": "사람이 먼저, 그다음 실험.",
     "subheading": "같이 실험하는 두 명의 공동 창업자.",
     "m1Name": "김강산",
@@ -124,7 +124,7 @@
     "m2Quote": "완벽한 기획보다 빠르게 배우는 기획."
   },
   "lab": {
-    "metaLabel": "LAB NOTES · LIVE SOON",
+    "metaLabel": "실험 노트",
     "logTitle": "EXP LOG — INCOMING.",
     "subtitle": "실험과 회고, 실패와 피봇의 기록. 무엇을 배우고 있는지 곧 공개합니다.",
     "note1Title": "왜 웹툰에 퀴즈를 얹는가",
@@ -135,7 +135,7 @@
     "note3Excerpt": "30일, 하루 한 절. 도달률과 이탈 지점을 한꺼번에 본다."
   },
   "contact": {
-    "metaLabel": "GET IN TOUCH",
+    "metaLabel": "문의",
     "heading": "같이 실험할 사람을 찾고 있습니다.",
     "subtitle": "사업 제휴, 제품 협업, 일반 문의 모두 환영해요. 가장 빠른 길은 메일입니다.",
     "channelGeneralLabel": "GENERAL · BUSINESS",

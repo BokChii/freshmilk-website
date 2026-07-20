@@ -35,9 +35,19 @@
   --text-subtle:  #8E9099;
   --text-inverse: #FFFFFF;
 
-  /* Grid line (LIVE LAB graph paper) */
-  --grid-line:    rgba(15, 17, 21, 0.045);
-  --grid-line-strong: rgba(15, 17, 21, 0.085);
+  /* Grid line (hero only — kept subtle) */
+  --grid-line:    rgba(15, 17, 21, 0.022);
+  --grid-line-strong: rgba(15, 17, 21, 0.04);
+
+  /* Glass (EXP INDEX — A-minus) */
+  --glass-bg-strong: color-mix(in srgb, var(--bg-pure) 78%, transparent);
+  --glass-border:    color-mix(in srgb, var(--border-strong) 50%, transparent);
+  --glass-blur:      14px;
+
+  /* Aurora (subtle site-wide wash) */
+  --aurora-opacity: 0.58;
+  --aurora-brand:   color-mix(in srgb, var(--brand) 28%, transparent);
+  --aurora-signal:  color-mix(in srgb, var(--signal) 14%, transparent);
 
   /* Ink (annotation / handwriting accent) */
   --ink-red:      #C8262C;          /* manuscript redline */
@@ -87,6 +97,7 @@
   --dur-slow:    720ms;
 
   /* z-index scale (grain is high so it sits over page chrome; cursor FX must sit above grain) */
+  --z-aurora: 0;
   --z-bg:     0;
   --z-base:   1;
   --z-elev:   10;
@@ -122,9 +133,15 @@
     --signal-line: #5C1A3A;
     --signal-ink:  #FFB7D3;
 
-    /* Grid lines visible on dark */
-    --grid-line:        rgba(255, 255, 255, 0.05);
-    --grid-line-strong: rgba(255, 255, 255, 0.09);
+    --grid-line:        rgba(255, 255, 255, 0.028);
+    --grid-line-strong: rgba(255, 255, 255, 0.045);
+
+    --glass-bg-strong: color-mix(in srgb, var(--surface) 76%, transparent);
+    --glass-border:    rgba(255, 255, 255, 0.1);
+
+    --aurora-opacity: 0.52;
+    --aurora-brand:   color-mix(in srgb, var(--brand) 34%, transparent);
+    --aurora-signal:  color-mix(in srgb, var(--signal) 16%, transparent);
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 6px 20px -10px rgba(0, 0, 0, 0.55), 0 2px 6px -3px rgba(0, 0, 0, 0.35);
