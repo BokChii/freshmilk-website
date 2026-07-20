@@ -50,10 +50,10 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
   /* Aurora */
-  --aurora-opacity: 0.92;
-  --aurora-brand:   color-mix(in srgb, var(--brand) 52%, transparent);
-  --aurora-signal:  color-mix(in srgb, var(--signal) 30%, transparent);
-  --aurora-violet:  color-mix(in srgb, #7B61FF 22%, transparent);
+  --aurora-opacity: 0.55;
+  --aurora-brand:   color-mix(in srgb, var(--brand) 38%, transparent);
+  --aurora-signal:  color-mix(in srgb, var(--signal) 18%, transparent);
+  --aurora-violet:  color-mix(in srgb, #7B61FF 12%, transparent);
 
   /* Ink (annotation / handwriting accent) */
   --ink-red:      #C8262C;          /* manuscript redline */
@@ -74,7 +74,7 @@
 
   /* Spacing / Layout */
   --container: 1240px;
-  --section-py: clamp(80px, 11vw, 160px);
+  --section-py: clamp(64px, 9vw, 120px);
   --gutter:    clamp(20px, 4vw, 48px);
   --gap-xs:    8px;
   --gap-sm:    12px;
@@ -149,10 +149,10 @@
       0 12px 40px -12px rgba(0, 0, 0, 0.55),
       inset 0 1px 0 rgba(255, 255, 255, 0.14);
 
-    --aurora-opacity: 1;
-    --aurora-brand:   color-mix(in srgb, var(--brand) 58%, transparent);
-    --aurora-signal:  color-mix(in srgb, var(--signal) 36%, transparent);
-    --aurora-violet:  color-mix(in srgb, #9B7BFF 28%, transparent);
+    --aurora-opacity: 0.62;
+    --aurora-brand:   color-mix(in srgb, var(--brand) 42%, transparent);
+    --aurora-signal:  color-mix(in srgb, var(--signal) 20%, transparent);
+    --aurora-violet:  color-mix(in srgb, #9B7BFF 14%, transparent);
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 6px 20px -10px rgba(0, 0, 0, 0.55), 0 2px 6px -3px rgba(0, 0, 0, 0.35);

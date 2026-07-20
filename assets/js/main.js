@@ -1,15 +1,12 @@
 /* =========================================
    FreshMilk — main.js
    - Header scroll state
-   - Reveal animations (IntersectionObserver)
-   - Number counters
-   - Marquee track duplication
-   - Smooth in-page anchor scroll (CSS handles base)
+   - Reveal animations
+   - Scroll progress + parallax + nav spy
    ========================================= */
 (() => {
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Prevent restored scroll from landing mid-page on fresh loads
   if (!window.location.hash && 'scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
@@ -17,13 +14,19 @@
 
   // -------- Header scroll state --------
   const header = document.querySelector('.site-header');
-  if (header) {
-    const onScroll = () => {
-      header.classList.toggle('is-scrolled', window.scrollY > 8);
-    };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
+  const progressBar = document.querySelector('.scroll-progress__bar');
+
+  const onScroll = () => {
+    const y = window.scrollY;
+    if (header) header.classList.toggle('is-scrolled', y > 8);
+    if (progressBar) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? Math.min(y / max, 1) : 0;
+      progressBar.style.width = `${pct * 100}%`;
+    }
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   // -------- Reveal --------
   const revealEls = document.querySelectorAll('.reveal');
@@ -34,9 +37,7 @@
   }
 
   revealEls.forEach((el) => {
-    if (el.closest('.hero')) {
-      el.classList.add('is-in');
-    }
+    if (el.closest('.hero')) el.classList.add('is-in');
   });
 
   if ('IntersectionObserver' in window && revealEls.length) {
@@ -47,7 +48,7 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.04, rootMargin: '0px 0px 0px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
 
     revealEls.forEach((el) => {
       if (el.classList.contains('is-in')) return;
@@ -55,17 +56,85 @@
         el.classList.add('is-in');
         return;
       }
-      const groupSiblings = Array.from(el.parentElement?.children || []);
-      const idx = groupSiblings.indexOf(el);
-      const delay = Math.min(idx, 6) * 60;
-      el.style.setProperty('--reveal-delay', `${delay}ms`);
       io.observe(el);
     });
   } else {
     revealEls.forEach(el => el.classList.add('is-in'));
   }
 
-  // -------- Counters --------
+  // -------- Timeline draw --------
+  const timeline = document.querySelector('[data-timeline]');
+  if (timeline && 'IntersectionObserver' in window) {
+    const tio = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-active');
+          tio.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    tio.observe(timeline);
+  } else if (timeline) {
+    timeline.classList.add('is-active');
+  }
+
+  // -------- Nav section spy --------
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+  const sections = [...navLinks].map((link) => {
+    const id = link.getAttribute('href')?.slice(1);
+    const el = id ? document.getElementById(id) : null;
+    return el ? { link, el } : null;
+  }).filter(Boolean);
+
+  if (sections.length && 'IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const match = sections.find((s) => s.el === e.target);
+        if (!match) return;
+        navLinks.forEach((l) => l.classList.remove('is-active'));
+        match.link.classList.add('is-active');
+      });
+    }, { rootMargin: '-42% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach((s) => spy.observe(s.el));
+  }
+
+  // -------- Parallax on project art --------
+  const parallaxEls = [...document.querySelectorAll('[data-parallax]')];
+
+  function updateParallax() {
+    if (reduceMotion || !parallaxEls.length) return;
+    const vh = window.innerHeight;
+    parallaxEls.forEach((wrap) => {
+      const img = wrap.querySelector('img');
+      if (!img) return;
+      const strength = parseFloat(wrap.dataset.parallax || '0.05');
+      const rect = wrap.getBoundingClientRect();
+      const center = rect.top + rect.height * 0.5;
+      const delta = (center - vh * 0.5) / vh;
+      const y = delta * strength * -120;
+      const scale = 1 + Math.abs(delta) * strength * 0.15;
+      img.style.transform = `translate3d(0, ${y}px, 0) scale(${scale})`;
+    });
+  }
+
+  if (parallaxEls.length && !reduceMotion) {
+    let ticking = false;
+    const onParallaxScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        updateParallax();
+        ticking = false;
+      });
+    };
+    updateParallax();
+    window.addEventListener('scroll', onParallaxScroll, { passive: true });
+    window.addEventListener('resize', onParallaxScroll, { passive: true });
+  }
+
+  // -------- Counters (legacy) --------
   function animateCounter(el) {
     const target = el.getAttribute('data-counter');
     const duration = parseInt(el.getAttribute('data-counter-duration') || '1100', 10);
@@ -129,17 +198,4 @@
   } else {
     counters.forEach(animateCounter);
   }
-
-  // -------- Marquee: duplicate track for seamless loop --------
-  document.querySelectorAll('.marquee').forEach(m => {
-    const viewport = m.querySelector('.marquee__viewport');
-    if (!viewport) return;
-    const track = viewport.querySelector('.marquee__track');
-    if (!track) return;
-    const clone = track.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    viewport.appendChild(clone);
-  });
-
-  // -------- Year for "© 2026" — leave for content authoring --------
 })();
