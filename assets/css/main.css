@@ -258,6 +258,7 @@ body::after {
 .btn--signal:hover { background: var(--signal-hover); transform: translateY(-1px); }
 
 .btn--sm { padding: 8px 14px; font-size: 13px; }
+.btn--lg { padding: 16px 28px; font-size: 16px; }
 
 /* =========================================
    Header
@@ -438,6 +439,16 @@ body::after {
   max-width: 760px;
 }
 .section__head .meta { margin-bottom: 4px; }
+.section__head--feature { margin-bottom: clamp(24px, 3vw, 36px); }
+.section__head--feature .h2 {
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+.section__head--feature .lead {
+  max-width: 42ch;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
 
 /* =========================================
    HERO
@@ -467,12 +478,20 @@ body::after {
   transform: translateY(0);
 }
 
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: clamp(32px, 6vw, 80px);
-  align-items: center;
-  padding-block: clamp(40px, 7vw, 100px);
+.hero__stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2.8vw, 26px);
+  padding-block: clamp(48px, 8vw, 88px) clamp(28px, 4vw, 48px);
+  max-width: 680px;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .hero__copy { display: flex; flex-direction: column; gap: 24px; }
@@ -523,11 +542,39 @@ body::after {
   font-size: clamp(16px, 1.7vw, 20px);
   color: color-mix(in srgb, var(--text) 70%, var(--text-muted));
   line-height: 1.65;
-  max-width: 56ch;
+  max-width: 48ch;
   text-wrap: pretty;
 }
 
-.hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+}
+
+.trust-bar__item {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  background: color-mix(in srgb, var(--glass-bg) 40%, transparent);
+}
+
+.trust-bar__item--mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
 
 /* EXP INDEX card — primary glass panel */
 .exp-index {
@@ -628,6 +675,34 @@ body::after {
   margin-top: 14px;
   letter-spacing: 0.05em;
 }
+
+/* EXP strip — below hero, horizontal index */
+.exp-index--strip {
+  margin-top: clamp(8px, 2vw, 16px);
+}
+
+.exp-index__list--strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.exp-index__list--strip .exp-row {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 6px 0;
+  padding: clamp(14px, 2vw, 20px);
+  border-bottom: none;
+  border-right: 1px dashed var(--border);
+  align-items: start;
+}
+
+.exp-index__list--strip .exp-row:last-child { border-right: none; }
+
+.exp-index__list--strip .exp-row__status {
+  font-size: 10px;
+}
+
+.exp-index__list--strip .exp-row:hover { padding-left: clamp(14px, 2vw, 20px); }
 
 /* =========================================
    ABOUT
@@ -994,6 +1069,39 @@ body::after {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.project-main--feature {
+  grid-template-columns: 1fr;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.project-main--feature .project-main__art {
+  order: -1;
+  min-height: clamp(240px, 38vw, 420px);
+  border-left: none;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--text);
+  text-decoration: none;
+  margin-top: auto;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.feature-link:hover { color: var(--brand); }
+
+.projects-more__title {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
 }
 
 .projects-grid {
@@ -1510,7 +1618,11 @@ body::after {
    Responsive
    ========================================= */
 @media (max-width: 960px) {
-  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .exp-index__list--strip { grid-template-columns: repeat(2, 1fr); }
+  .exp-index__list--strip .exp-row:nth-child(2) { border-right: none; }
+  .exp-index__list--strip .exp-row:nth-child(odd) { border-right: 1px dashed var(--border); }
+  .exp-index__list--strip .exp-row:nth-child(1),
+  .exp-index__list--strip .exp-row:nth-child(2) { border-bottom: 1px dashed var(--border); }
   .exp-index,
   .about__story,
   .value-card,
@@ -1580,6 +1692,13 @@ body::after {
 
 @media (max-width: 480px) {
   .hero { padding-top: clamp(32px, 6vw, 56px); }
+  .trust-bar__item { font-size: 11px; padding: 6px 11px; }
+  .exp-index__list--strip { grid-template-columns: 1fr; }
+  .exp-index__list--strip .exp-row {
+    border-right: none;
+    border-bottom: 1px dashed var(--border);
+  }
+  .exp-index__list--strip .exp-row:last-child { border-bottom: none; }
   .footer__business dl { grid-template-columns: 76px 1fr; column-gap: 8px; }
   .footer__bottom { font-size: 10px; }
   .exp-row { grid-template-columns: 32px 1fr auto; gap: 10px; padding: 14px 4px; }

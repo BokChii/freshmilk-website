@@ -35,7 +35,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/reset.css" />
   <link rel="stylesheet" href="/assets/css/tokens.css" />
-  <link rel="stylesheet" href="/assets/css/marquee.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
@@ -97,100 +96,76 @@
 
   <main id="main">
 
-    <!-- ===== Top marquee ===== -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__viewport">
-        <div class="marquee__track">
-          <span class="marquee__item">매일, 시장에 답을 묻습니다<span class="marquee__dot"></span></span>
-          <span class="marquee__item">4가지 실험, 하나의 미션<span class="marquee__dot"></span></span>
-          <span class="marquee__item">이름까지 시장이 정합니다<span class="marquee__dot"></span></span>
-          <span class="marquee__item marquee__item--mono">EST · 2025.12<span class="marquee__dot"></span></span>
-          <span class="marquee__item">FreshMilk Live Lab<span class="marquee__dot"></span></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== Hero ===== -->
+    <!-- ===== Hero (Rabbit-style: headline + trust + CTA) ===== -->
     <section class="hero gridbg gridbg--lg" id="top" aria-labelledby="hero-title">
       <div class="container">
-        <div class="hero__grid">
-          <div class="hero__copy">
-            <p class="meta reveal">
-              <span class="dot dot--building dot--pulse" aria-hidden="true"></span>
-              <span>FRESHMILK</span><span class="meta__sep">/</span><span>LIVE LAB</span><span class="meta__sep">/</span><span>EST 2025.12</span>
-            </p>
-            <h1 class="hero__title reveal" id="hero-title" data-i18n-html="hero.title">
-              경계를 허물고,<br>시장이 우리를<br><span class="hero__line-accent">정의하게 합니다.</span>
-            </h1>
-            <p class="hero__lead reveal" data-i18n="hero.subtitle">
-              기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전합니다. 우리는 매일, 시장에 답을 묻습니다.
-            </p>
-            <div class="hero__ctas reveal">
-              <a class="btn btn--primary" href="#projects">
-                <span data-i18n="hero.ctaPrimary">우리가 만드는 것 보기</span>
-                <span class="arrow" aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn--ghost" href="#team" data-i18n="hero.ctaSecondary">팀 만나보기</a>
-            </div>
-          </div>
+        <div class="hero__stack">
+          <p class="hero__eyebrow reveal" data-i18n="hero.kicker">FreshMilk Live Lab</p>
+          <h1 class="hero__title reveal" id="hero-title" data-i18n-html="hero.title">
+            경계를 허물고,<br>시장이 우리를<br><span class="hero__line-accent">정의하게 합니다.</span>
+          </h1>
+          <p class="hero__lead reveal" data-i18n="hero.subtitle">
+            기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전합니다.
+          </p>
 
-          <aside class="exp-index reveal" aria-label="Experiment index">
-            <div class="exp-index__head">
-              <span class="meta meta--brand" data-i18n="hero.expTitle">EXP INDEX</span>
-              <span class="meta" data-i18n="hero.expSubtitle">현재 진행 중인 실험</span>
-            </div>
-            <div class="exp-index__list">
-              <a class="exp-row" href="#projects" aria-label="EXP 01 Storit">
-                <span class="exp-row__num">EXP 01</span>
-                <span class="exp-row__name">스토릿 <small>STORIT</small></span>
-                <span class="exp-row__status">
-                  <span class="dot dot--building" aria-hidden="true"></span>
-                  <span data-i18n="hero.expStatus">Coming Soon</span>
-                </span>
-              </a>
-              <a class="exp-row" href="#projects" aria-label="EXP 02 tolli">
-                <span class="exp-row__num">EXP 02</span>
-                <span class="exp-row__name">tolli</span>
-                <span class="exp-row__status">
-                  <span class="dot dot--building" aria-hidden="true"></span>
-                  <span data-i18n="hero.expStatus">Coming Soon</span>
-                </span>
-              </a>
-              <a class="exp-row" href="#projects" aria-label="EXP 03 Picktory">
-                <span class="exp-row__num">EXP 03</span>
-                <span class="exp-row__name">픽토리 <small>PICKTORY</small></span>
-                <span class="exp-row__status">
-                  <span class="dot dot--building" aria-hidden="true"></span>
-                  <span data-i18n="hero.expStatus">Coming Soon</span>
-                </span>
-              </a>
-              <a class="exp-row" href="#projects" aria-label="EXP 04 econoup">
-                <span class="exp-row__num">EXP 04</span>
-                <span class="exp-row__name">econoup <small>*</small></span>
-                <span class="exp-row__status">
-                  <span class="dot dot--ideating dot--pulse" aria-hidden="true"></span>
-                  <span data-i18n="hero.expStatus">Coming Soon</span>
-                </span>
-              </a>
-            </div>
-            <p class="exp-index__footnote" data-i18n="hero.expFootnote">* 가칭(working title) — 이름까지 시장이 정합니다.</p>
-          </aside>
+          <ul class="trust-bar reveal" aria-label="FreshMilk highlights">
+            <li class="trust-bar__item" data-i18n="hero.trust1">2025.12 설립</li>
+            <li class="trust-bar__item" data-i18n="hero.trust2">4 EXP 진행 중</li>
+            <li class="trust-bar__item" data-i18n="hero.trust3">포항 · 한동대 창업보육센터</li>
+            <li class="trust-bar__item trust-bar__item--mono" data-i18n="hero.trust4">Coming Soon</li>
+          </ul>
+
+          <div class="hero__ctas reveal">
+            <a class="btn btn--primary btn--lg" href="#projects">
+              <span data-i18n="hero.ctaPrimary">우리가 만드는 것 보기</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaSecondary">문의하기</a>
+          </div>
         </div>
+
+        <aside class="exp-index exp-index--strip reveal" aria-label="Experiment index">
+          <div class="exp-index__head">
+            <span class="meta meta--brand" data-i18n="hero.expTitle">EXP INDEX</span>
+            <span class="meta" data-i18n="hero.expSubtitle">현재 진행 중인 실험</span>
+          </div>
+          <div class="exp-index__list exp-index__list--strip">
+            <a class="exp-row" href="#projects" aria-label="EXP 01 Storit">
+              <span class="exp-row__num">01</span>
+              <span class="exp-row__name">스토릿 <small>STORIT</small></span>
+              <span class="exp-row__status">
+                <span class="dot dot--building" aria-hidden="true"></span>
+                <span data-i18n="hero.expStatus">Coming Soon</span>
+              </span>
+            </a>
+            <a class="exp-row" href="#projects" aria-label="EXP 02 tolli">
+              <span class="exp-row__num">02</span>
+              <span class="exp-row__name">tolli</span>
+              <span class="exp-row__status">
+                <span class="dot dot--building" aria-hidden="true"></span>
+                <span data-i18n="hero.expStatus">Coming Soon</span>
+              </span>
+            </a>
+            <a class="exp-row" href="#projects" aria-label="EXP 03 Picktory">
+              <span class="exp-row__num">03</span>
+              <span class="exp-row__name">픽토리 <small>PICKTORY</small></span>
+              <span class="exp-row__status">
+                <span class="dot dot--building" aria-hidden="true"></span>
+                <span data-i18n="hero.expStatus">Coming Soon</span>
+              </span>
+            </a>
+            <a class="exp-row" href="#projects" aria-label="EXP 04 econoup">
+              <span class="exp-row__num">04</span>
+              <span class="exp-row__name">econoup <small>*</small></span>
+              <span class="exp-row__status">
+                <span class="dot dot--ideating dot--pulse" aria-hidden="true"></span>
+                <span data-i18n="hero.expStatus">Coming Soon</span>
+              </span>
+            </a>
+          </div>
+        </aside>
       </div>
     </section>
-
-    <!-- ===== Bottom marquee (reverse, glass strip) ===== -->
-    <div class="marquee marquee--reverse marquee--inverse" aria-hidden="true">
-      <div class="marquee__viewport">
-        <div class="marquee__track">
-          <span class="marquee__item marquee__item--mono">EXP 04 · IN PROGRESS<span class="marquee__dot"></span></span>
-          <span class="marquee__item">스토릿 · tolli · 픽토리 · econoup<span class="marquee__dot"></span></span>
-          <span class="marquee__item">매일 찾는 콘텐츠 플랫폼<span class="marquee__dot"></span></span>
-          <span class="marquee__item marquee__item--mono">2025.12 · POHANG<span class="marquee__dot"></span></span>
-          <span class="marquee__item">기술과 콘텐츠, 사람들의 즐거움<span class="marquee__dot"></span></span>
-        </div>
-      </div>
-    </div>
 
     <!-- ===== About ===== -->
     <section class="section" id="about" aria-labelledby="about-h">
@@ -339,13 +314,16 @@
     <!-- ===== Projects ===== -->
     <section class="section" id="projects" aria-labelledby="projects-h">
       <div class="container">
-        <header class="section__head">
-          <span class="meta meta--section reveal"><span class="meta__index">03</span><span class="meta__sep">—</span><span data-i18n="projects.metaLabel">프로젝트</span></span>
-          <h2 class="h2 reveal" id="projects-h" data-i18n="projects.heading">4가지 실험, 하나의 미션.</h2>
-          <p class="lead reveal" data-i18n="projects.subheading">매일 찾는 콘텐츠 플랫폼을 향한 동시 다발적 시도들. 모두 디자인 + 앱 개발 중.</p>
+        <header class="section__head section__head--feature reveal">
+          <span class="meta meta--section"><span class="meta__index">03</span><span class="meta__sep">—</span><span data-i18n="projects.metaLabel">프로젝트</span></span>
+          <h2 class="h2" id="projects-h" data-i18n="projects.featureTitle">스토릿</h2>
+          <p class="lead" data-i18n="projects.featureLead">웹툰 퀴즈 리워드 팬덤 커뮤니티. 4가지 실험 중 메인 EXP.</p>
         </header>
 
-        <article class="project-main reveal">
+        <article class="project-main project-main--feature reveal">
+          <div class="project-main__art" aria-hidden="true">
+            <img src="/assets/img/projects/storit.svg" alt="" loading="lazy" />
+          </div>
           <div class="project-main__body">
             <div class="project-main__head">
               <span class="meta meta--brand">
@@ -364,12 +342,11 @@
               <span class="chip" data-i18n="projects.mainTag3">커뮤니티</span>
               <span class="chip" data-i18n="projects.mainTag4">리워드</span>
             </div>
-          </div>
-          <div class="project-main__art" aria-hidden="true">
-            <img src="/assets/img/projects/storit.svg" alt="" loading="lazy" />
+            <a class="feature-link" href="#contact" data-i18n="projects.learnMore">문의하기 →</a>
           </div>
         </article>
 
+        <h3 class="projects-more__title reveal" data-i18n="projects.moreTitle">더 많은 실험</h3>
         <div class="projects-grid">
           <article class="project-card reveal">
             <div class="project-card__art" aria-hidden="true">
