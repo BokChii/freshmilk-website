@@ -17,19 +17,20 @@ body {
   position: relative;
 }
 
-/* Subtle aurora wash (A-minus: 2 blobs, slow drift) */
+/* Subtle aurora wash + hero boost layer */
 body::before {
   content: "";
   position: fixed;
-  inset: -12%;
+  inset: -15%;
   pointer-events: none;
   z-index: var(--z-aurora);
   opacity: var(--aurora-opacity);
   background:
-    radial-gradient(42% 36% at 14% 20%, var(--aurora-brand), transparent 72%),
-    radial-gradient(38% 32% at 86% 24%, var(--aurora-signal), transparent 74%);
-  filter: blur(60px);
-  animation: aurora-drift 42s ease-in-out infinite alternate;
+    radial-gradient(44% 38% at 12% 18%, var(--aurora-brand), transparent 70%),
+    radial-gradient(40% 36% at 88% 22%, var(--aurora-signal), transparent 72%),
+    radial-gradient(48% 42% at 55% 92%, var(--aurora-violet), transparent 75%);
+  filter: blur(52px);
+  animation: aurora-drift 36s ease-in-out infinite alternate;
 }
 
 @keyframes aurora-drift {
@@ -51,18 +52,27 @@ body::after {
   z-index: var(--z-grain);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   background-size: 220px 220px;
-  opacity: 0.35;
+  opacity: 0.25;
   mix-blend-mode: multiply;
 }
 @media (prefers-color-scheme: dark) {
   body::after {
     mix-blend-mode: screen;
-    opacity: 0.2;
+    opacity: 0.12;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   body::before { animation: none; }
+}
+
+/* Glass surface utility */
+.glass {
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
 }
 
 /* Container */
@@ -259,9 +269,9 @@ body::after {
   height: var(--header-h);
   display: flex;
   align-items: center;
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(16px);
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(16px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--dur-med) var(--ease-out),
               background var(--dur-med) var(--ease-out);
@@ -438,6 +448,24 @@ body::after {
   padding-bottom: clamp(40px, 6vw, 80px);
   overflow: hidden;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -25% -15%;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    radial-gradient(55% 50% at 25% 35%, var(--aurora-brand), transparent 62%),
+    radial-gradient(50% 45% at 78% 28%, var(--aurora-signal), transparent 65%);
+  filter: blur(44px);
+  opacity: 0.85;
+}
+
+/* Hero content always visible (reveal must not hide above-the-fold copy) */
+.hero .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .hero__grid {
   display: grid;
@@ -501,26 +529,25 @@ body::after {
 
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 
-/* EXP INDEX card */
+/* EXP INDEX card — primary glass panel */
 .exp-index {
   position: relative;
   background: var(--glass-bg-strong);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: clamp(20px, 2.4vw, 28px);
-  box-shadow:
-    inset 0 1px 0 color-mix(in srgb, white 10%, transparent),
-    var(--shadow-md);
+  box-shadow: var(--shadow-glass);
   overflow: hidden;
-  backdrop-filter: saturate(165%) blur(var(--glass-blur));
-  -webkit-backdrop-filter: saturate(165%) blur(var(--glass-blur));
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
 }
 .exp-index::before {
   content: "";
   position: absolute; inset: 0;
   background:
-    radial-gradient(120% 90% at 100% 0%, var(--brand-soft) 0%, transparent 60%);
-  opacity: 0.2;
+    radial-gradient(120% 90% at 100% 0%, var(--brand-soft) 0%, transparent 60%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, transparent 45%);
+  opacity: 0.55;
   pointer-events: none;
   z-index: 0;
 }
@@ -640,9 +667,12 @@ body::after {
 
 .about__story {
   border-radius: var(--radius-lg);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   padding: clamp(24px, 3vw, 36px);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
 }
 .about__story p {
   font-size: clamp(15px, 1.4vw, 17px);
@@ -786,19 +816,22 @@ body::after {
   gap: 16px;
 }
 .value-card {
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: clamp(24px, 3vw, 36px);
-  background: var(--bg);
+  background: var(--glass-bg);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 4px));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 4px));
+  box-shadow: var(--shadow-glass);
   position: relative;
   overflow: hidden;
   transition: border-color var(--dur-med) var(--ease-out),
               background var(--dur-med) var(--ease-out);
 }
-/* Value card hover: brand-tinted background, no transform (anchored, stable) */
+/* Value card hover: slightly brighter glass */
 .value-card:hover {
-  border-color: var(--text);
-  background: var(--surface);
+  border-color: color-mix(in srgb, var(--glass-border) 70%, var(--brand));
+  background: color-mix(in srgb, var(--glass-bg) 85%, var(--brand-soft));
 }
 .value-card::after {
   content: "";
@@ -894,15 +927,18 @@ body::after {
    PROJECTS
    ========================================= */
 .project-main {
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  background: var(--bg);
+  background: var(--glass-bg);
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 0;
   margin-bottom: 16px;
   position: relative;
+  backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
+  box-shadow: var(--shadow-glass);
   transition: border-color var(--dur-med) var(--ease-out),
               box-shadow var(--dur-med) var(--ease-out);
 }
@@ -966,12 +1002,15 @@ body::after {
   gap: 16px;
 }
 .project-card {
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  background: var(--bg);
+  background: var(--glass-bg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
+  box-shadow: var(--shadow-glass);
   transition: border-color var(--dur-med) var(--ease-out),
               box-shadow var(--dur-med) var(--ease-out);
   position: relative;
@@ -1275,13 +1314,16 @@ body::after {
 .channel__value a:hover { color: var(--brand); border-bottom-color: var(--brand); }
 
 .contact__card {
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  background: var(--bg);
+  background: var(--glass-bg);
   padding: clamp(24px, 3vw, 36px);
   display: flex;
   flex-direction: column;
   gap: 18px;
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
 }
 .contact__buttons { display: flex; flex-direction: column; gap: 10px; }
 .contact__address {
@@ -1469,11 +1511,17 @@ body::after {
    ========================================= */
 @media (max-width: 960px) {
   .hero__grid { grid-template-columns: 1fr; gap: 40px; }
-  .exp-index {
+  .exp-index,
+  .about__story,
+  .value-card,
+  .contact__card,
+  .project-main,
+  .project-card {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     background: var(--bg-pure);
     border-color: var(--border);
+    box-shadow: var(--shadow-md);
   }
   .about__grid { grid-template-columns: 1fr; gap: 32px; }
   .values { grid-template-columns: 1fr; }

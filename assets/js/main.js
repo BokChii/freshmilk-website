@@ -21,18 +21,34 @@
 
   // -------- Reveal --------
   const revealEls = document.querySelectorAll('.reveal');
+
+  function revealIfAboveFold(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight * 0.94 && rect.bottom > 0;
+  }
+
+  revealEls.forEach((el) => {
+    if (el.closest('.hero')) {
+      el.classList.add('is-in');
+    }
+  });
+
   if ('IntersectionObserver' in window && revealEls.length) {
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
+      entries.forEach((e) => {
         if (e.isIntersecting) {
           e.target.classList.add('is-in');
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.04, rootMargin: '0px 0px 0px 0px' });
 
-    revealEls.forEach((el, i) => {
-      // Stagger via inline custom property
+    revealEls.forEach((el) => {
+      if (el.classList.contains('is-in')) return;
+      if (revealIfAboveFold(el)) {
+        el.classList.add('is-in');
+        return;
+      }
       const groupSiblings = Array.from(el.parentElement?.children || []);
       const idx = groupSiblings.indexOf(el);
       const delay = Math.min(idx, 6) * 60;

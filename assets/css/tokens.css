@@ -39,15 +39,21 @@
   --grid-line:    rgba(15, 17, 21, 0.022);
   --grid-line-strong: rgba(15, 17, 21, 0.04);
 
-  /* Glass (EXP INDEX — A-minus) */
-  --glass-bg-strong: color-mix(in srgb, var(--bg-pure) 78%, transparent);
-  --glass-border:    color-mix(in srgb, var(--border-strong) 50%, transparent);
-  --glass-blur:      14px;
+  /* Glass */
+  --glass-bg:        color-mix(in srgb, var(--bg-pure) 42%, transparent);
+  --glass-bg-strong: color-mix(in srgb, var(--bg-pure) 32%, transparent);
+  --glass-border:    color-mix(in srgb, white 28%, var(--border-strong));
+  --glass-blur:      22px;
+  --glass-saturate:  185%;
+  --shadow-glass:
+    0 8px 32px -8px rgba(15, 17, 21, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
-  /* Aurora (subtle site-wide wash) */
-  --aurora-opacity: 0.58;
-  --aurora-brand:   color-mix(in srgb, var(--brand) 28%, transparent);
-  --aurora-signal:  color-mix(in srgb, var(--signal) 14%, transparent);
+  /* Aurora */
+  --aurora-opacity: 0.92;
+  --aurora-brand:   color-mix(in srgb, var(--brand) 52%, transparent);
+  --aurora-signal:  color-mix(in srgb, var(--signal) 30%, transparent);
+  --aurora-violet:  color-mix(in srgb, #7B61FF 22%, transparent);
 
   /* Ink (annotation / handwriting accent) */
   --ink-red:      #C8262C;          /* manuscript redline */
@@ -136,12 +142,17 @@
     --grid-line:        rgba(255, 255, 255, 0.028);
     --grid-line-strong: rgba(255, 255, 255, 0.045);
 
-    --glass-bg-strong: color-mix(in srgb, var(--surface) 76%, transparent);
-    --glass-border:    rgba(255, 255, 255, 0.1);
+    --glass-bg:        color-mix(in srgb, var(--surface) 38%, transparent);
+    --glass-bg-strong: color-mix(in srgb, var(--surface) 28%, transparent);
+    --glass-border:    rgba(255, 255, 255, 0.22);
+    --shadow-glass:
+      0 12px 40px -12px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.14);
 
-    --aurora-opacity: 0.52;
-    --aurora-brand:   color-mix(in srgb, var(--brand) 34%, transparent);
-    --aurora-signal:  color-mix(in srgb, var(--signal) 16%, transparent);
+    --aurora-opacity: 1;
+    --aurora-brand:   color-mix(in srgb, var(--brand) 58%, transparent);
+    --aurora-signal:  color-mix(in srgb, var(--signal) 36%, transparent);
+    --aurora-violet:  color-mix(in srgb, #9B7BFF 28%, transparent);
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 6px 20px -10px rgba(0, 0, 0, 0.55), 0 2px 6px -3px rgba(0, 0, 0, 0.35);
