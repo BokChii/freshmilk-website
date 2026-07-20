@@ -38,7 +38,7 @@ body::before {
   to   { transform: translate(1.5%, -1%) scale(1.02); }
 }
 
-body > :not(script):not(.cursor-fx) {
+body > :not(script):not(.cursor-fx):not(.mobile-menu):not(.site-header) {
   position: relative;
   z-index: var(--z-base);
 }
