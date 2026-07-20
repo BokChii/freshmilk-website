@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "프레시밀크 | 매일 찾게 만드는 콘텐츠를 실험합니다",
-    "description": "스토릿·tolli·픽토리·econoup. 포항에서 네 가지 제품을 동시에 만들고 있는 콘텐츠 스튜디오."
+    "title": "프레시밀크 | 스토릿을 만드는 콘텐츠 제품 스튜디오",
+    "description": "웹툰 팬덤 커뮤니티 스토릿을 중심으로, 매일 찾게 만드는 콘텐츠 제품을 실험합니다. 포항 · 한동대 창업보육센터."
   },
   "brand": {
     "name": "프레시밀크"
@@ -17,19 +17,26 @@
     "cta": "문의하기"
   },
   "hero": {
-    "kicker": "FreshMilk",
+    "kicker": "FreshMilk · Content Studio",
     "title": "경계를 허물고,<br>시장이 우리를<br><span class=\"hero__line-accent\">정의하게 합니다.</span>",
-    "subtitle": "매일 찾게 만드는 콘텐츠 제품을 실험합니다.",
-    "ctaPrimary": "프로젝트 보기",
+    "subtitle": "메인 제품 스토릿과 함께, 매일 찾게 만드는 콘텐츠를 포항에서 실험합니다.",
+    "ctaPrimary": "스토릿 보기",
     "ctaSecondary": "문의하기",
     "trust1": "2025.12 설립",
-    "trust2": "4개 프로젝트 진행 중",
+    "trust2": "스토릿 · 메인 제품",
     "trust3": "포항 · 한동대 창업보육센터"
   },
   "about": {
     "metaLabel": "소개",
     "heading": "콘텐츠를 매일 찾게 만드는 제품을<br>실험합니다.",
-    "lead": "2025년 12월, 한동대 창업보육센터에서 시작했습니다. 스토릿·tolli·픽토리·econoup 네 가지 제품을 동시에 만들며 시장의 반응을 확인합니다.",
+    "lead": "2025년 12월, 한동대 창업보육센터에서 시작했습니다. 스토릿을 중심으로 tolli·픽토리 등 제품을 병행하며 시장의 반응을 확인합니다.",
+    "incubator": "한동대학교 창업보육센터 · 2025 입주",
+    "missionLabel": "미션",
+    "missionText": "기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움을 전한다.",
+    "visionLabel": "비전",
+    "visionText": "매일 찾는 콘텐츠 플랫폼",
+    "storyP1": "프레시밀크는 웹툰·K-콘텐츠·습관형 학습처럼, 사람들이 매일 돌아오는 경험을 만드는 팀입니다.",
+    "storyP2": "한 번에 하나만 고집하기보다, 작게 여러 실험을 돌리고 시장이 반응하는 것에 집중합니다.",
     "tenet1": "작게 출시하고, 빠르게 배웁니다.",
     "tenet2": "데이터로 판단하고, 과감히 피봇합니다.",
     "tenet3": "완벽보다 실행 횟수를 믿습니다.",
@@ -38,20 +45,24 @@
     "tl2Date": "2026.01",
     "tl2Title": "4개 프로젝트 동시 진행",
     "tl3Date": "지금",
-    "tl3Title": "베타 준비 중"
+    "tl3Title": "스토릿 베타 준비"
   },
   "projects": {
     "metaLabel": "프로젝트",
     "featureTitle": "스토릿",
-    "featureLead": "웹툰 퀴즈 리워드 팬덤 커뮤니티",
-    "learnMore": "베타 문의 →",
-    "moreTitle": "더 많은 실험",
+    "featureLead": "웹툰 퀴즈 리워드 팬덤 커뮤니티 — 메인 제품",
+    "learnMore": "베타 문의하기",
     "mainName": "스토릿",
     "mainTagline": "Storit",
     "mainCopy": "읽는 웹툰에서, 즐기는 웹툰으로. 퀴즈와 리워드로 팬덤이 모이는 커뮤니티.",
     "mainStatus": "개발 중 · 메인",
+    "mainFeature1": "읽은 웹툰 기반 퀴즈로 팬덤이 직접 참여",
+    "mainFeature2": "정답·참여 리워드로 커뮤니티를 활성화",
+    "mainFeature3": "2026년 베타 — 웹·앱 동시 준비 중",
     "mainTag1": "웹툰",
     "mainTag2": "퀴즈",
+    "mainTag3": "팬덤",
+    "moreTitle": "함께 돌리는 실험",
     "p2Name": "tolli",
     "p2Copy": "매일의 말씀, 손끝의 암송. 성경 암송을 게임처럼.",
     "p2Status": "개발 중",
@@ -60,12 +71,7 @@
     "p3Copy": "맞히는 재미로 보는 K-콘텐츠. 추리와 예측으로 팬덤이 모입니다.",
     "p3Status": "개발 중",
     "p3Tag1": "K-콘텐츠",
-    "p4Name": "econoup",
-    "p4WorkingTitle": "가칭",
-    "p4Copy": "경제를 매일 5분. 습관이 되는 경제 학습.",
-    "p4Status": "구상 중",
-    "p4Tag1": "학습",
-    "disclaimer": "* econoup는 가칭입니다."
+    "econoupTeaser": "econoup — 경제를 매일 5분, 습관형 학습 앱 (가칭 · 구상 중)"
   },
   "team": {
     "metaLabel": "팀",
@@ -73,18 +79,35 @@
     "subheading": "같이 실험하고, 같이 배웁니다.",
     "m1Name": "김강산",
     "m1Role": "CEO · Co-founder",
+    "m1Bio": "제품 실행과 팀 운영. 스토릿을 중심으로 빠르게 출시·검증합니다.",
     "m1Quote": "먼저 만들고, 시장에 묻습니다.",
     "m2Name": "김동신",
     "m2Role": "기획 · Co-founder",
+    "m2Bio": "기획과 실험 설계. 사용자 반응을 제품 방향에 빠르게 반영합니다.",
     "m2Quote": "빠르게 배우는 기획이 최선입니다."
+  },
+  "updates": {
+    "metaLabel": "소식",
+    "heading": "최근 업데이트",
+    "u1Date": "2026.05",
+    "u1Text": "회사 홈페이지 개편 · 스토릿 베타 준비 본격화",
+    "u2Date": "2026.01",
+    "u2Text": "tolli·픽토리·econoup 병행 개발 착수",
+    "u3Date": "2025.12",
+    "u3Text": "프레시밀크 창업 · 스토릿 프로젝트 킥오프"
   },
   "contact": {
     "metaLabel": "문의",
     "heading": "같이 실험할 사람을 찾습니다.",
-    "subtitle": "제휴·협업·일반 문의 환영합니다.",
-    "cardTitle": "메일로 연락하기",
-    "cardBtn1": "김강산(대표)",
-    "cardBtn2": "김동신(기획)",
+    "subtitle": "제휴·협업·베타·일반 문의 환영합니다.",
+    "typesTitle": "문의 유형",
+    "type1": "스토릿 베타 · 제품",
+    "type2": "제휴 · 협업",
+    "type3": "투자 · 미디어 · 기타",
+    "cardTitle": "대표 메일",
+    "cardEmail": "kgsan@freshmilk.kr",
+    "cardBtn1": "김강산(대표)에게 메일",
+    "cardBtn2": "김동신(기획)에게 메일",
     "addressLabel": "주소",
     "address": "경상북도 포항시 북구 흥해읍 한동로 558,<br>한동대학교 창업보육센터 학생창업공간(10)"
   },

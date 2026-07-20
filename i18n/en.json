@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "FreshMilk | Building content people visit every day",
-    "description": "Storit · tolli · Picktory · econoup. A Pohang-based studio running four product experiments at once."
+    "title": "FreshMilk | Content product studio behind Storit",
+    "description": "Building Storit, a webtoon fandom community, and daily content products from Pohang · Handong University incubator."
   },
   "brand": {
     "name": "FreshMilk"
@@ -17,19 +17,26 @@
     "cta": "Get in touch"
   },
   "hero": {
-    "kicker": "FreshMilk",
+    "kicker": "FreshMilk · Content Studio",
     "title": "Break the line.<br>Let the market<br><span class=\"hero__line-accent\"><span class=\"hero__serif\">define</span> us.</span>",
-    "subtitle": "We experiment with content products people visit every day.",
-    "ctaPrimary": "See projects",
+    "subtitle": "From our main product Storit, we experiment with content people visit every day — based in Pohang.",
+    "ctaPrimary": "See Storit",
     "ctaSecondary": "Get in touch",
     "trust1": "Est. Dec 2025",
-    "trust2": "4 projects in progress",
+    "trust2": "Storit · main product",
     "trust3": "Pohang · Handong incubator"
   },
   "about": {
     "metaLabel": "About",
     "heading": "We experiment with content<br>people visit every day.",
-    "lead": "Started in December 2025 at the Handong University incubator. We run Storit, tolli, Picktory, and econoup in parallel and let the market guide what sticks.",
+    "lead": "Started in December 2025 at the Handong University incubator. Storit is our focus, with tolli and Picktory running in parallel as we watch what the market responds to.",
+    "incubator": "Handong University Business Incubator · joined 2025",
+    "missionLabel": "Mission",
+    "missionText": "Blend technology and content trends to deliver joy to people.",
+    "visionLabel": "Vision",
+    "visionText": "Content platforms people visit every day",
+    "storyP1": "FreshMilk builds experiences people return to daily — webtoon fandom, K-content, and habit-forming learning.",
+    "storyP2": "Rather than betting on one idea, we run small experiments in parallel and double down on what the market validates.",
     "tenet1": "Ship small, learn fast.",
     "tenet2": "Decide with data, pivot boldly.",
     "tenet3": "Trust iterations over perfection.",
@@ -38,20 +45,24 @@
     "tl2Date": "2026.01",
     "tl2Title": "Four projects in parallel",
     "tl3Date": "Now",
-    "tl3Title": "Beta in preparation"
+    "tl3Title": "Storit beta in prep"
   },
   "projects": {
     "metaLabel": "Projects",
     "featureTitle": "Storit",
-    "featureLead": "Webtoon quiz reward fandom community",
-    "learnMore": "Beta inquiry →",
-    "moreTitle": "More experiments",
+    "featureLead": "Webtoon quiz reward fandom community — main product",
+    "learnMore": "Beta inquiry",
     "mainName": "Storit",
     "mainTagline": "Storit",
     "mainCopy": "From reading webtoons to playing them. A community where quizzes and rewards bring fans together.",
     "mainStatus": "In development · main",
+    "mainFeature1": "Webtoon-based quizzes let fans participate directly",
+    "mainFeature2": "Rewards for answers and engagement keep the community active",
+    "mainFeature3": "Beta in 2026 — web and app in parallel",
     "mainTag1": "Webtoon",
     "mainTag2": "Quiz",
+    "mainTag3": "Fandom",
+    "moreTitle": "Parallel experiments",
     "p2Name": "tolli",
     "p2Copy": "A daily verse at your fingertips. Bible memorization, game-like.",
     "p2Status": "In development",
@@ -60,12 +71,7 @@
     "p3Copy": "K-content through guessing. Prediction and reasoning for fans.",
     "p3Status": "In development",
     "p3Tag1": "K-content",
-    "p4Name": "econoup",
-    "p4WorkingTitle": "working title",
-    "p4Copy": "Economics in five minutes a day. Habit-forming learning.",
-    "p4Status": "Ideating",
-    "p4Tag1": "Learning",
-    "disclaimer": "* econoup is a working title."
+    "econoupTeaser": "econoup — five minutes of economics daily, habit-forming learning app (working title · ideating)"
   },
   "team": {
     "metaLabel": "Team",
@@ -73,18 +79,35 @@
     "subheading": "We experiment and learn together.",
     "m1Name": "Kangsan Kim",
     "m1Role": "CEO · Co-founder",
+    "m1Bio": "Product execution and team ops. Ships and validates fast with Storit at the center.",
     "m1Quote": "Build first, ask the market.",
     "m2Name": "Dongshin Kim",
     "m2Role": "Planning · Co-founder",
+    "m2Bio": "Planning and experiment design. Turns user feedback into product direction quickly.",
     "m2Quote": "Planning that learns fast wins."
+  },
+  "updates": {
+    "metaLabel": "Updates",
+    "heading": "Recent updates",
+    "u1Date": "2026.05",
+    "u1Text": "Company site refresh · Storit beta prep in full swing",
+    "u2Date": "2026.01",
+    "u2Text": "Parallel development kickoff for tolli, Picktory, and econoup",
+    "u3Date": "2025.12",
+    "u3Text": "FreshMilk founded · Storit project kickoff"
   },
   "contact": {
     "metaLabel": "Contact",
     "heading": "Looking for people to experiment with.",
-    "subtitle": "Partnerships, collabs, and general inquiries welcome.",
-    "cardTitle": "Email us",
-    "cardBtn1": "Kangsan (CEO)",
-    "cardBtn2": "Dongshin (Planning)",
+    "subtitle": "Partnerships, collabs, beta access, and general inquiries welcome.",
+    "typesTitle": "Inquiry types",
+    "type1": "Storit beta · product",
+    "type2": "Partnerships · collabs",
+    "type3": "Investment · media · other",
+    "cardTitle": "Primary email",
+    "cardEmail": "kgsan@freshmilk.kr",
+    "cardBtn1": "Email Kangsan (CEO)",
+    "cardBtn2": "Email Dongshin (Planning)",
     "addressLabel": "Address",
     "address": "558 Handong-ro, Heungheup-eup, Buk-gu, Pohang,<br>Handong University Business Incubator (10)"
   },

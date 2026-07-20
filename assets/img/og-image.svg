@@ -7,45 +7,29 @@
       <stop offset="0%" stop-color="#EAF3FF"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glow2" cx="100%" cy="100%" r="60%">
-      <stop offset="0%" stop-color="#FFE5F0"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
   <rect width="1200" height="630" fill="#FFFFFF"/>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.6"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
-  <rect width="1200" height="630" fill="url(#glow2)"/>
 
-  <g transform="translate(72, 90)" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="20" fill="#6B7280" letter-spacing="2">
-    <text>// FRESHMILK &#xB7; LIVE LAB &#xB7; EST 2025.12</text>
+  <g transform="translate(72, 72)" font-family="'Pretendard Variable','Pretendard',system-ui,sans-serif" font-size="18" fill="#6B7280" letter-spacing="0.02em">
+    <text>FreshMilk · Content Studio · Est. 2025</text>
   </g>
 
-  <g transform="translate(600, 300)" text-anchor="middle" font-family="'Pretendard Variable','Pretendard',system-ui,sans-serif">
-    <text font-weight="600" font-size="130" fill="#2684FF" letter-spacing="-3">&#xD504;&#xB808;&#xC2DC;&#xBC00;&#xD06C;</text>
+  <g transform="translate(600, 260)" text-anchor="middle" font-family="'Pretendard Variable','Pretendard',system-ui,sans-serif">
+    <text font-weight="600" font-size="112" fill="#2570F2" letter-spacing="-3">&#xD504;&#xB808;&#xC2DC;&#xBC00;&#xD06C;</text>
   </g>
 
-  <g transform="translate(600, 400)" text-anchor="middle" font-family="'Pretendard Variable','Pretendard',system-ui,sans-serif">
-    <text font-weight="300" font-size="34" fill="#0F1115" letter-spacing="-0.5">&#xACBD;&#xACC4;&#xB97C; &#xD5C8;&#xBB3C;&#xACE0;, &#xC2DC;&#xC7A5;&#xC5D0;&#xC11C; &#xAC00;&#xB2A5;&#xC131;&#xC744; &#xCC3E;&#xC2B5;&#xB2C8;&#xB2E4;.</text>
+  <g transform="translate(600, 360)" text-anchor="middle" font-family="'Pretendard Variable','Pretendard',system-ui,sans-serif">
+    <text font-weight="400" font-size="32" fill="#0F1115" letter-spacing="-0.5">&#xC2A4;&#xD1A0;&#xB9BF;&#xC744; &#xB9CC;&#xB4DC;&#xB294; &#xCF58;&#xD150;&#xCE20; &#xC81C;&#xD488; &#xC2A4;&#xD29C;&#xB514;&#xC624;</text>
   </g>
 
-  <g transform="translate(72, 540)" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="18" fill="#0F1115" letter-spacing="2">
-    <g transform="translate(0,0)">
-      <circle cx="-2" cy="-6" r="5" fill="#2684FF"/>
-      <text x="14">EXP 01 STORIT</text>
-    </g>
-    <g transform="translate(280,0)">
-      <circle cx="-2" cy="-6" r="5" fill="#2684FF"/>
-      <text x="14">EXP 02 TOLLI</text>
-    </g>
-    <g transform="translate(540,0)">
-      <circle cx="-2" cy="-6" r="5" fill="#2684FF"/>
-      <text x="14">EXP 03 PICKTORY</text>
-    </g>
-    <g transform="translate(860,0)">
-      <circle cx="-2" cy="-6" r="5" fill="#FF2D87"/>
-      <text x="14">EXP 04 ECONOUP*</text>
-    </g>
+  <g transform="translate(600, 420)" text-anchor="middle" font-family="'Pretendard Variable','Pretendard',system-ui,sans-serif">
+    <text font-weight="300" font-size="22" fill="#5B6068">&#xB9E4;&#xC77C; &#xCC3E;&#xAC8C; &#xB9CC;&#xB4DC;&#xB294; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xC2E4;&#xD97C;&#xD569;&#xB2C8;&#xB2E4;</text>
+  </g>
+
+  <g transform="translate(600, 520)" text-anchor="middle" font-family="'Pretendard Variable','Pretendard',system-ui,sans-serif" font-size="16" fill="#2570F2" font-weight="600">
+    <text>Storit · tolli · Picktory</text>
   </g>
 </svg>
