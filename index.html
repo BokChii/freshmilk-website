@@ -36,6 +36,18 @@
   <link rel="stylesheet" href="/assets/css/reset.css" />
   <link rel="stylesheet" href="/assets/css/tokens.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <style id="hero-critical">
+    /* Above-the-fold hero must never wait on JS or late CSS */
+    .hero .hero__eyebrow,
+    .hero .hero__title,
+    .hero .hero__lead,
+    .hero .trust-bar,
+    .hero .hero__ctas,
+    .hero .exp-index {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -100,22 +112,22 @@
     <section class="hero gridbg gridbg--lg" id="top" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero__stack">
-          <p class="hero__eyebrow reveal" data-i18n="hero.kicker">FreshMilk Live Lab</p>
-          <h1 class="hero__title reveal" id="hero-title" data-i18n-html="hero.title">
+          <p class="hero__eyebrow" data-i18n="hero.kicker">FreshMilk Live Lab</p>
+          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">
             경계를 허물고,<br>시장이 우리를<br><span class="hero__line-accent">정의하게 합니다.</span>
           </h1>
-          <p class="hero__lead reveal" data-i18n="hero.subtitle">
+          <p class="hero__lead" data-i18n="hero.subtitle">
             기술과 콘텐츠의 흐름을 맞물려 사람들에게 즐거움을 전합니다.
           </p>
 
-          <ul class="trust-bar reveal" aria-label="FreshMilk highlights">
+          <ul class="trust-bar" aria-label="FreshMilk highlights">
             <li class="trust-bar__item" data-i18n="hero.trust1">2025.12 설립</li>
             <li class="trust-bar__item" data-i18n="hero.trust2">4 EXP 진행 중</li>
             <li class="trust-bar__item" data-i18n="hero.trust3">포항 · 한동대 창업보육센터</li>
             <li class="trust-bar__item trust-bar__item--mono" data-i18n="hero.trust4">Coming Soon</li>
           </ul>
 
-          <div class="hero__ctas reveal">
+          <div class="hero__ctas">
             <a class="btn btn--primary btn--lg" href="#projects">
               <span data-i18n="hero.ctaPrimary">우리가 만드는 것 보기</span>
               <span class="arrow" aria-hidden="true">→</span>
@@ -124,7 +136,7 @@
           </div>
         </div>
 
-        <aside class="exp-index exp-index--strip reveal" aria-label="Experiment index">
+        <aside class="exp-index exp-index--strip" aria-label="Experiment index">
           <div class="exp-index__head">
             <span class="meta meta--brand" data-i18n="hero.expTitle">EXP INDEX</span>
             <span class="meta" data-i18n="hero.expSubtitle">현재 진행 중인 실험</span>

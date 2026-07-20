@@ -9,6 +9,12 @@
 (() => {
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Prevent restored scroll from landing mid-page on fresh loads
+  if (!window.location.hash && 'scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  }
+
   // -------- Header scroll state --------
   const header = document.querySelector('.site-header');
   if (header) {

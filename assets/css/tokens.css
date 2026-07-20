@@ -65,7 +65,7 @@
   --font-display: 'Instrument Serif', 'Pretendard Variable', 'Pretendard', serif;
 
   /* Display sizes */
-  --fs-hero:   clamp(44px, 7.4vw, 112px);
+  --fs-hero:   clamp(40px, 6.2vw, 96px);
   --fs-h2:     clamp(30px, 4vw, 56px);
   --fs-h3:     clamp(22px, 2.4vw, 32px);
   --fs-body:   16px;
