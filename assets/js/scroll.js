@@ -66,10 +66,30 @@
     const pin = document.querySelector('[data-about-pin]');
     if (!pin) return;
 
+    const sticky = pin.querySelector('.about-pin__sticky');
     const track = pin.querySelector('.about-pin__track');
     const panels = track ? [...track.children] : [];
     const dots = pin.querySelectorAll('.about-pin__dot');
-    if (!track || !panels.length) return;
+    if (!sticky || !track || !panels.length) return;
+
+    let maxX = 0;
+    let holdPx = 0;
+
+    function measure() {
+      track.style.transform = 'translate3d(0, 0, 0)';
+
+      const viewW = sticky.clientWidth;
+      const trackStyle = getComputedStyle(track);
+      const padL = parseFloat(trackStyle.paddingLeft) || 0;
+      const padR = parseFloat(trackStyle.paddingRight) || 0;
+      const last = panels[panels.length - 1];
+      const lastRight = last.offsetLeft + last.offsetWidth;
+
+      maxX = Math.max(0, lastRight - viewW + padL + padR);
+      holdPx = Math.min(320, window.innerHeight * 0.38);
+      pin.dataset.maxX = String(maxX);
+      pin.dataset.holdPx = String(holdPx);
+    }
 
     function layout() {
       if (mobile() || reduceMotion) {
@@ -80,33 +100,42 @@
       }
 
       pin.classList.remove('about-pin--static');
-      pin.style.height = `${panels.length * 100}vh`;
+      measure();
+      pin.style.height = `${window.innerHeight + maxX + holdPx}px`;
     }
 
     function update() {
       if (mobile() || reduceMotion || pin.classList.contains('about-pin--static')) return;
 
-      const rect = pin.getBoundingClientRect();
-      const max = pin.offsetHeight - window.innerHeight;
-      const scrolled = Math.max(0, -rect.top);
-      const progress = max > 0 ? Math.min(scrolled / max, 1) : 0;
+      maxX = parseFloat(pin.dataset.maxX || '0');
+      holdPx = parseFloat(pin.dataset.holdPx || '0');
 
-      const trackWidth = track.scrollWidth - window.innerWidth + 48;
-      const x = -progress * Math.max(trackWidth, 0);
+      const rect = pin.getBoundingClientRect();
+      const scrolled = Math.max(0, -rect.top);
+      const x = -Math.min(scrolled, maxX);
       track.style.transform = `translate3d(${x}px, 0, 0)`;
 
+      const hProgress = maxX > 0 ? Math.min(scrolled / maxX, 1) : 0;
       const active = Math.min(
         panels.length - 1,
-        Math.floor(progress * panels.length + 0.001)
+        Math.floor(hProgress * panels.length + 0.001)
       );
       dots.forEach((dot, i) => dot.classList.toggle('is-active', i === active));
-      pin.style.setProperty('--pin-progress', progress.toFixed(4));
+      pin.style.setProperty('--pin-progress', hProgress.toFixed(4));
     }
 
     layout();
     bindScroll(update);
-    window.addEventListener('resize', layout, { passive: true });
-    window.addEventListener('resize', update, { passive: true });
+    window.addEventListener('resize', () => {
+      layout();
+      update();
+    }, { passive: true });
+    document.addEventListener('lang:change', () => {
+      requestAnimationFrame(() => {
+        layout();
+        update();
+      });
+    });
   }
 
   // -------- Team polaroid drop --------

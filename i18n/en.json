@@ -60,12 +60,15 @@
     "tl2Date": "2026.01",
     "tl2Title": "Four projects in parallel",
     "tl3Date": "Now",
-    "tl3Title": "Storit beta in prep"
+    "tl3Title": "Storit beta in prep",
+    "photoAnnot": "Lab snapshot"
   },
   "projects": {
     "metaLabel": "Projects",
     "featureTitle": "Storit",
     "featureLead": "Webtoon quiz reward fandom community — main product",
+    "mainSticker": "MAIN",
+    "featureAnnot": "Core product",
     "learnMore": "Beta inquiry",
     "mainName": "Storit",
     "mainTagline": "Storit",
@@ -92,6 +95,7 @@
     "metaLabel": "Team",
     "heading": "Two co-founders.",
     "subheading": "We experiment and learn together.",
+    "sticker": "Co-founders",
     "m1Name": "Kangsan Kim",
     "m1Role": "CEO · Co-founder",
     "m1Bio": "Product execution and team ops. Ships and validates fast with Storit at the center.",
@@ -114,6 +118,7 @@
   "contact": {
     "metaLabel": "Contact",
     "heading": "Looking for people to experiment with.",
+    "annot": "Let's build",
     "subtitle": "Partnerships, collabs, beta access, and general inquiries welcome.",
     "typesTitle": "Inquiry types",
     "type1": "Storit beta · product",

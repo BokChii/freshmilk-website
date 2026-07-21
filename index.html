@@ -199,7 +199,7 @@
     </section>
 
     <!-- ===== About ===== -->
-    <section class="section" id="about" aria-labelledby="about-h">
+    <section class="section section--exhibit" id="about" aria-labelledby="about-h">
       <div class="container">
         <header class="section__head">
           <span class="meta meta--section reveal" data-i18n="about.metaLabel">소개</span>
@@ -235,7 +235,10 @@
           </div>
         </div>
 
-        <figure class="about__photo media-slot media-slot--wide reveal reveal-rise">
+        <figure class="about__photo media-slot media-slot--wide media-slot--exhibit reveal reveal-rise">
+          <span class="exhibit-tape exhibit-tape--tl" data-exhibit-pop aria-hidden="true"></span>
+          <span class="exhibit-tape exhibit-tape--tr" data-exhibit-pop aria-hidden="true"></span>
+          <span class="exhibit-redline exhibit-redline--photo" data-exhibit-pop data-i18n="about.photoAnnot">Lab snapshot</span>
           <img class="media-slot__photo" src="/assets/img/photos/workspace.jpg" alt="FreshMilk workspace" loading="lazy" decoding="async" />
         </figure>
 
@@ -268,12 +271,14 @@
     </section>
 
     <!-- ===== Projects ===== -->
-    <section class="section section--surface section--ambient" id="projects" aria-labelledby="projects-h">
+    <section class="section section--surface section--ambient section--exhibit" id="projects" aria-labelledby="projects-h">
       <div class="container">
         <header class="section__head section__head--feature reveal reveal-blur">
+          <span class="exhibit-sticker exhibit-sticker--main" data-exhibit-pop data-i18n="projects.mainSticker">MAIN</span>
           <span class="meta meta--section" data-i18n="projects.metaLabel">프로젝트</span>
           <h2 class="h2" id="projects-h" data-i18n="projects.featureTitle">스토릿</h2>
           <p class="lead" data-i18n="projects.featureLead">웹툰 퀴즈 리워드 팬덤 커뮤니티</p>
+          <span class="exhibit-redline exhibit-redline--title" data-exhibit-pop data-i18n="projects.featureAnnot">핵심 제품</span>
         </header>
 
         <div class="project-scale-wrap" data-scroll-scale>
@@ -354,9 +359,10 @@
     </section>
 
     <!-- ===== Team ===== -->
-    <section class="section" id="team" aria-labelledby="team-h">
+    <section class="section section--exhibit" id="team" aria-labelledby="team-h">
       <div class="container">
         <header class="section__head">
+          <span class="exhibit-sticker exhibit-sticker--team" data-exhibit-pop data-i18n="team.sticker">Co-founders</span>
           <span class="meta meta--section reveal" data-i18n="team.metaLabel">팀</span>
           <h2 class="h2 reveal reveal-rise reveal-blur" id="team-h" data-i18n="team.heading">두 명의 공동 창업자.</h2>
           <p class="lead reveal reveal-rise" data-i18n="team.subheading">같이 실험하고, 같이 배웁니다.</p>
@@ -433,10 +439,11 @@
     </section>
 
     <!-- ===== Contact ===== -->
-    <section class="section section--ambient" id="contact" aria-labelledby="contact-h">
+    <section class="section section--ambient section--exhibit section--contact-glow" id="contact" aria-labelledby="contact-h">
       <div class="container">
         <div class="contact__grid">
           <div class="contact__copy reveal reveal-rise">
+            <span class="exhibit-redline exhibit-redline--contact" data-exhibit-pop data-i18n="contact.annot">Let's build</span>
             <span class="meta meta--section" data-i18n="contact.metaLabel">문의</span>
             <h2 class="h2" id="contact-h" data-i18n="contact.heading">같이 실험할 사람을 찾습니다.</h2>
             <p class="lead" data-i18n="contact.subtitle">제휴·협업·베타·일반 문의 환영합니다.</p>
@@ -527,6 +534,7 @@
   <script src="/assets/js/hero.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/scroll.js" defer></script>
+  <script src="/assets/js/personality.js" defer></script>
   <script src="/assets/js/nav.js" defer></script>
   <script src="/assets/js/cursor.js" defer></script>
 </body>
