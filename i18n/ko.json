@@ -24,13 +24,21 @@
   },
   "hero": {
     "kicker": "FreshMilk · Content Studio",
-    "title": "경계를 허물고,<br>시장이 우리를<br><span class=\"hero__line-accent\">정의하게 합니다.</span>",
+    "titleLine1": "경계를 허물고,",
+    "titleLine2": "시장이 우리를",
+    "titleLine3": "<span class=\"hero__line-accent\">정의하게 합니다.</span>",
     "subtitle": "메인 제품 스토릿과 함께, 매일 찾게 만드는 콘텐츠를 포항에서 실험합니다.",
     "ctaPrimary": "스토릿 보기",
     "ctaSecondary": "문의하기",
     "trust1": "2025.12 설립",
     "trust2": "스토릿 · 메인 제품",
-    "trust3": "포항 · 한동대 창업보육센터"
+    "trust3": "포항 · 한동대 창업보육센터",
+    "stageStatus": "베타 준비 중",
+    "stageTag": "오늘의 웹툰 퀴즈",
+    "stageReward": "+120P",
+    "sticker1": "웹툰",
+    "sticker2": "퀴즈",
+    "sticker3": "팬덤"
   },
   "about": {
     "metaLabel": "소개",

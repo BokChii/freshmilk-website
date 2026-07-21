@@ -52,8 +52,10 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.75),
     inset 0 -1px 0 rgba(255, 255, 255, 0.2);
 
-  --aurora-opacity: 0.32;
-  --aurora-brand:   color-mix(in srgb, var(--brand) 22%, transparent);
+  --aurora-opacity: 0.48;
+  --aurora-brand:   color-mix(in srgb, var(--brand) 38%, transparent);
+  --aurora-cyan:    color-mix(in srgb, #6ECFF6 28%, transparent);
+  --aurora-cream:   color-mix(in srgb, #FFE4A8 22%, transparent);
   --aurora-signal:  transparent;
   --aurora-violet:  transparent;
 

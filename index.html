@@ -47,14 +47,13 @@
   <link rel="stylesheet" href="/assets/css/tokens.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <style id="hero-critical">
-    /* Above-the-fold hero must never wait on JS or late CSS */
-    .hero .hero__eyebrow,
-    .hero .hero__title,
-    .hero .hero__lead,
-    .hero .trust-bar,
-    .hero .hero__ctas {
-      opacity: 1;
-      transform: none;
+    /* Hero text readable before animation CSS loads */
+    .hero--exhibition .hero__eyebrow,
+    .hero--exhibition .hero__title,
+    .hero--exhibition .hero__lead,
+    .hero--exhibition .trust-bar,
+    .hero--exhibition .hero__ctas {
+      visibility: visible;
     }
   </style>
 </head>
@@ -137,15 +136,23 @@
 
   <main id="main">
 
-    <!-- ===== Hero (Rabbit-style: headline + trust + CTA) ===== -->
-    <section class="hero gridbg gridbg--lg" id="top" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero__stack">
-          <p class="hero__eyebrow" data-i18n="hero.kicker">FreshMilk Live Lab</p>
-          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">
-            경계를 허물고,<br>시장이 우리를<br><span class="hero__line-accent">정의하게 합니다.</span>
+    <!-- ===== Hero (exhibition: copy + Storit stage) ===== -->
+    <section class="hero hero--exhibition hero--ready gridbg gridbg--lg" id="top" aria-labelledby="hero-title">
+      <div class="hero__aurora" data-hero-aurora aria-hidden="true">
+        <span class="hero__blob hero__blob--brand"></span>
+        <span class="hero__blob hero__blob--cyan"></span>
+        <span class="hero__blob hero__blob--cream"></span>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow hero-enter" data-i18n="hero.kicker">FreshMilk · Content Studio</p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__line hero-enter" data-i18n="hero.titleLine1">경계를 허물고,</span>
+            <span class="hero__line hero-enter" data-i18n="hero.titleLine2">시장이 우리를</span>
+            <span class="hero__line hero__line--accent hero-enter" data-i18n-html="hero.titleLine3"><span class="hero__line-accent">정의하게 합니다.</span></span>
           </h1>
-          <p class="hero__lead" data-i18n="hero.subtitle">
+          <p class="hero__lead hero-enter" data-i18n="hero.subtitle">
             메인 제품 스토릿과 함께, 매일 찾게 만드는 콘텐츠를 포항에서 실험합니다.
           </p>
 
@@ -155,13 +162,38 @@
             <li class="trust-bar__item" data-i18n="hero.trust3">포항 · 한동대 창업보육센터</li>
           </ul>
 
-          <div class="hero__ctas">
+          <div class="hero__ctas hero-enter">
             <a class="btn btn--primary btn--lg" href="#projects">
               <span data-i18n="hero.ctaPrimary">스토릿 보기</span>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaSecondary">문의하기</a>
           </div>
+        </div>
+
+        <div class="hero-stage hero-enter" data-hero-stage aria-hidden="true">
+          <div class="hero-stage__glow"></div>
+          <div class="hero-stage__device">
+            <div class="hero-stage__screen">
+              <div class="hero-stage__status">
+                <span class="dot dot--building dot--pulse"></span>
+                <span data-i18n="hero.stageStatus">베타 준비 중</span>
+              </div>
+              <p class="hero-stage__app-name">Storit</p>
+              <p class="hero-stage__app-tag" data-i18n="hero.stageTag">오늘의 웹툰 퀴즈</p>
+              <div class="hero-stage__webtoon" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="hero-stage__quiz" data-hero-quiz>Quiz!</div>
+              <div class="hero-stage__foot">
+                <span class="hero-stage__chip" data-i18n="hero.stageReward">+120P</span>
+                <span class="hero-stage__chip hero-stage__chip--muted">#12</span>
+              </div>
+            </div>
+          </div>
+          <span class="hero-stage__sticker hero-stage__sticker--a" data-i18n="hero.sticker1">웹툰</span>
+          <span class="hero-stage__sticker hero-stage__sticker--b" data-i18n="hero.sticker2">퀴즈</span>
+          <span class="hero-stage__sticker hero-stage__sticker--c" data-i18n="hero.sticker3">팬덤</span>
         </div>
       </div>
     </section>
@@ -321,7 +353,7 @@
         </header>
 
         <div class="team-grid reveal-stagger">
-          <article class="team-card glass-card reveal reveal-scale" data-tilt data-tilt-max="4">
+          <article class="team-card reveal reveal-scale" data-tilt data-tilt-max="4">
             <div class="team-card__avatar media-slot media-slot--avatar">
               <img class="media-slot__photo" src="/assets/img/photos/kgsan.jpg" alt="김강산" loading="lazy" decoding="async" />
               <img class="media-slot__fallback" src="/assets/img/team/kgsan.svg" alt="" aria-hidden="true" />
@@ -342,7 +374,7 @@
             </div>
           </article>
 
-          <article class="team-card glass-card reveal reveal-scale" data-tilt data-tilt-max="4">
+          <article class="team-card reveal reveal-scale" data-tilt data-tilt-max="4">
             <div class="team-card__avatar media-slot media-slot--avatar">
               <img class="media-slot__photo" src="/assets/img/photos/kdshin.jpg" alt="김동신" loading="lazy" decoding="async" />
               <img class="media-slot__fallback" src="/assets/img/team/kdshin.svg" alt="" aria-hidden="true" />
@@ -409,7 +441,7 @@
             <p class="contact__address-inline" data-i18n-html="contact.address">경상북도 포항시 북구 흥해읍 한동로 558,<br>한동대학교 창업보육센터 학생창업공간(10)</p>
           </div>
 
-          <aside class="contact__card glass-card reveal reveal-scale" data-tilt data-tilt-max="4">
+          <aside class="contact__card reveal reveal-scale" data-tilt data-tilt-max="4">
             <span class="contact__card-label" data-i18n="contact.cardTitle">대표 메일</span>
             <a class="contact__email" href="mailto:kgsan@freshmilk.kr">kgsan@freshmilk.kr</a>
             <div class="contact__buttons">
@@ -481,6 +513,7 @@
   <!-- Scripts -->
   <script src="/assets/js/theme.js" defer></script>
   <script src="/assets/js/i18n.js" defer></script>
+  <script src="/assets/js/hero.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/nav.js" defer></script>
   <script src="/assets/js/cursor.js" defer></script>

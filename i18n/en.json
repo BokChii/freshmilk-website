@@ -24,13 +24,21 @@
   },
   "hero": {
     "kicker": "FreshMilk · Content Studio",
-    "title": "Break the line.<br>Let the market<br><span class=\"hero__line-accent\"><span class=\"hero__serif\">define</span> us.</span>",
+    "titleLine1": "Break the line.",
+    "titleLine2": "Let the market",
+    "titleLine3": "<span class=\"hero__line-accent\"><span class=\"hero__serif\">define</span> us.</span>",
     "subtitle": "From our main product Storit, we experiment with content people visit every day — based in Pohang.",
     "ctaPrimary": "See Storit",
     "ctaSecondary": "Get in touch",
     "trust1": "Est. Dec 2025",
     "trust2": "Storit · main product",
-    "trust3": "Pohang · Handong incubator"
+    "trust3": "Pohang · Handong incubator",
+    "stageStatus": "Beta in prep",
+    "stageTag": "Today's webtoon quiz",
+    "stageReward": "+120P",
+    "sticker1": "Webtoon",
+    "sticker2": "Quiz",
+    "sticker3": "Fandom"
   },
   "about": {
     "metaLabel": "About",
