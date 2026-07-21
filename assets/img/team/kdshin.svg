@@ -1,40 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Dongshin Kim - Head of Planning">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Dongshin Kim - Planning">
   <defs>
     <filter id="kdsGrain" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
-      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0"/>
     </filter>
   </defs>
 
-  <rect width="240" height="240" fill="#FBFAF6"/>
+  <rect width="240" height="240" fill="#F7F8FA"/>
   <rect width="240" height="240" filter="url(#kdsGrain)"/>
 
-  <!-- Tape-like corner (brand cobalt) -->
-  <rect x="190" y="-4" width="60" height="22" fill="#2570F2" transform="rotate(8 190 -4)" opacity="0.95"/>
+  <rect x="190" y="-4" width="60" height="22" fill="#2570F2" transform="rotate(8 190 -4)" opacity="0.9"/>
 
-  <!-- Subtle grid lines -->
-  <g stroke="#0E0F12" stroke-width="0.6" opacity="0.06">
+  <g stroke="#0E0F12" stroke-width="0.5" opacity="0.06">
     <line x1="0" y1="60"  x2="240" y2="60"/>
     <line x1="0" y1="120" x2="240" y2="120"/>
     <line x1="0" y1="180" x2="240" y2="180"/>
-    <line x1="60"  y1="0" x2="60"  y2="240"/>
-    <line x1="120" y1="0" x2="120" y2="240"/>
-    <line x1="180" y1="0" x2="180" y2="240"/>
   </g>
 
-  <!-- Huge serif italic D bleeding off edge -->
-  <text x="-12" y="208" font-family="'Instrument Serif', serif" font-style="italic" font-size="260" fill="#0E0F12" opacity="0.92" letter-spacing="-6">D</text>
+  <text x="-12" y="208" font-family="'Instrument Serif', serif" font-style="italic" font-size="260" fill="#0E0F12" opacity="0.12" letter-spacing="-6">D</text>
 
-  <!-- Mono signature lines on right -->
-  <g font-family="'JetBrains Mono', ui-monospace, monospace" fill="#0E0F12">
-    <text x="222" y="32" font-size="10" letter-spacing="2" text-anchor="end" opacity="0.6">PLAN &#8212; EXP/01-04</text>
-    <text x="222" y="218" font-size="11" letter-spacing="2" text-anchor="end" font-weight="600">&#8212; KDSHIN.</text>
-    <text x="222" y="232" font-size="9" letter-spacing="2" text-anchor="end" opacity="0.55">HEAD OF PLANNING</text>
-  </g>
-
-  <!-- Redline annotation arrow -->
-  <g fill="none" stroke="#C8262C" stroke-width="2" stroke-linecap="round">
-    <path d="M 122 190 Q 144 178 174 192" opacity="0.85"/>
-    <path d="M 170 188 L 176 192 L 170 196" opacity="0.85"/>
+  <g font-family="'Pretendard Variable', sans-serif" fill="#0E0F12">
+    <text x="222" y="218" font-size="12" letter-spacing="0.02em" text-anchor="end" font-weight="600">김동신</text>
+    <text x="222" y="234" font-size="10" letter-spacing="0.04em" text-anchor="end" opacity="0.55">Planning</text>
   </g>
 </svg>

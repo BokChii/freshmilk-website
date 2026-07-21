@@ -43,7 +43,7 @@
   <!-- Top meta -->
   <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#5B6068" letter-spacing="2">
     <text x="40" y="42">EXP/04 &#8212; ECONOUP* &#183; CHART.001</text>
-    <text x="600" y="42" text-anchor="end" fill="#FF2D87">&#9679; IDEATING</text>
+    <text x="600" y="42" text-anchor="end" fill="#2570F2">&#9679; IDEATING</text>
   </g>
 
   <!-- Axes -->
@@ -75,12 +75,12 @@
   <text x="430" y="138" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#5B6068" letter-spacing="1" opacity="0.8">LINEAR REF</text>
 
   <!-- Actual curve (compound, signal pink) -->
-  <g stroke="#FF2D87" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke="#2570F2" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M 60 340 Q 140 340 200 320 Q 260 295 320 240 Q 380 175 480 80"/>
   </g>
 
   <!-- Data points -->
-  <g fill="#FF2D87">
+  <g fill="#2570F2">
     <circle cx="60"  cy="340" r="3.5"/>
     <circle cx="120" cy="336" r="3.5"/>
     <circle cx="180" cy="324" r="3.5"/>

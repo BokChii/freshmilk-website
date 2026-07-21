@@ -2,38 +2,25 @@
   <defs>
     <filter id="kgsGrain" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
-      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/>
     </filter>
   </defs>
 
-  <rect width="240" height="240" fill="#0B2C6B"/>
+  <rect width="240" height="240" fill="#EDF3FE"/>
   <rect width="240" height="240" filter="url(#kgsGrain)"/>
 
-  <!-- Tape-like corner (signal pink) -->
-  <rect x="-10" y="-4" width="60" height="22" fill="#FF2D87" transform="rotate(-8 -10 -4)" opacity="0.95"/>
+  <rect x="-10" y="-4" width="60" height="22" fill="#2570F2" transform="rotate(-8 -10 -4)" opacity="0.9"/>
 
-  <!-- Subtle grid lines (lab paper feel) -->
-  <g stroke="#FFFFFF" stroke-width="0.6" opacity="0.08">
+  <g stroke="#2570F2" stroke-width="0.5" opacity="0.08">
     <line x1="0" y1="60"  x2="240" y2="60"/>
     <line x1="0" y1="120" x2="240" y2="120"/>
     <line x1="0" y1="180" x2="240" y2="180"/>
-    <line x1="60"  y1="0" x2="60"  y2="240"/>
-    <line x1="120" y1="0" x2="120" y2="240"/>
-    <line x1="180" y1="0" x2="180" y2="240"/>
   </g>
 
-  <!-- Huge serif italic K bleeding off edge -->
-  <text x="-12" y="208" font-family="'Instrument Serif', serif" font-style="italic" font-size="260" fill="#FFFFFF" opacity="0.95" letter-spacing="-6">K</text>
+  <text x="-12" y="208" font-family="'Instrument Serif', serif" font-style="italic" font-size="260" fill="#2570F2" opacity="0.22" letter-spacing="-6">K</text>
 
-  <!-- Mono signature lines on right -->
-  <g font-family="'JetBrains Mono', ui-monospace, monospace" fill="#FFFFFF">
-    <text x="222" y="32" font-size="10" letter-spacing="2" text-anchor="end" opacity="0.7">EXP/01 &#8212; LEAD</text>
-    <text x="222" y="218" font-size="11" letter-spacing="2" text-anchor="end" font-weight="600">&#8212; KGSAN.</text>
-    <text x="222" y="232" font-size="9" letter-spacing="2" text-anchor="end" opacity="0.55">CEO &#xB7; CO-FOUNDER</text>
-  </g>
-
-  <!-- Hand-drawn signature swoop -->
-  <g fill="none" stroke="#FF2D87" stroke-width="2.2" stroke-linecap="round">
-    <path d="M 132 200 Q 156 192 180 200 Q 200 206 222 196" opacity="0.85"/>
+  <g font-family="'Pretendard Variable', sans-serif" fill="#0E0F12">
+    <text x="222" y="218" font-size="12" letter-spacing="0.02em" text-anchor="end" font-weight="600">김강산</text>
+    <text x="222" y="234" font-size="10" letter-spacing="0.04em" text-anchor="end" opacity="0.55">CEO</text>
   </g>
 </svg>

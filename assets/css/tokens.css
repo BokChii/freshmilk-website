@@ -1,62 +1,62 @@
 /* =========================================
-   FreshMilk Design Tokens — LIVE LAB v2 (Editorial)
+   FreshMilk Design Tokens — Editorial (clean)
    ========================================= */
 
 :root {
   /* Brand */
-  --brand:        #2570F2;          /* slightly cooler/deeper cobalt */
+  --brand:        #2570F2;
   --brand-hover:  #1A58C9;
-  --brand-soft:   #E8F0FF;
-  --brand-line:   #C2D8FF;
-  --brand-ink:    #0B2C6B;          /* deep ink for use on brand-soft surface */
+  --brand-soft:   #EDF3FE;
+  --brand-line:   #C8DAFC;
+  --brand-ink:    #0B2C6B;
 
-  /* Signal — LIVE / EXP 강조용 */
-  --signal:       #FF2D87;
-  --signal-hover: #E61E74;
-  --signal-soft:  #FFE5F0;
-  --signal-line:  #FFC2DA;
-  --signal-ink:   #6B0E3A;
+  /* Secondary accent — muted (replaces hot pink) */
+  --signal:       #5B6573;
+  --signal-hover: #464F5C;
+  --signal-soft:  #F2F4F7;
+  --signal-line:  #DDE1E8;
+  --signal-ink:   #2C3340;
 
   /* Status */
   --ok:           #1B9D52;
-  --warn:         #E78A0B;
+  --warn:         #C4841A;
 
-  /* Neutrals — Light (paper tone) */
-  --bg:           #FBFAF6;          /* warm off-white (paper, not pure #FFF) */
+  /* Neutrals — Light (bright, clean) */
+  --bg:           #FFFFFF;
   --bg-pure:      #FFFFFF;
-  --surface:      #F4F2EB;          /* slightly warm cream surface */
-  --surface-2:    #EDEBE3;
-  --border:       #E6E2D7;
-  --border-soft:  #EFECE3;
-  --border-strong:#CFCABC;
+  --surface:      #F7F8FA;
+  --surface-2:    #EFF1F5;
+  --border:       #E6E9EF;
+  --border-soft:  #F0F2F6;
+  --border-strong:#D4D9E2;
 
-  --text:         #0E0F12;
-  --text-muted:   #5B6068;
-  --text-subtle:  #8E9099;
+  --text:         #121418;
+  --text-muted:   #5C6370;
+  --text-subtle:  #8B919C;
   --text-inverse: #FFFFFF;
 
-  /* Grid line (hero only — kept subtle) */
-  --grid-line:    rgba(15, 17, 21, 0.022);
-  --grid-line-strong: rgba(15, 17, 21, 0.04);
+  /* Grid line (hero only) */
+  --grid-line:    rgba(18, 20, 24, 0.018);
+  --grid-line-strong: rgba(18, 20, 24, 0.035);
 
   /* Glass */
-  --glass-bg:        color-mix(in srgb, var(--bg-pure) 42%, transparent);
-  --glass-bg-strong: color-mix(in srgb, var(--bg-pure) 32%, transparent);
-  --glass-border:    color-mix(in srgb, white 28%, var(--border-strong));
-  --glass-blur:      22px;
-  --glass-saturate:  185%;
+  --glass-bg:        color-mix(in srgb, var(--bg-pure) 72%, transparent);
+  --glass-bg-strong: color-mix(in srgb, var(--bg-pure) 88%, transparent);
+  --glass-border:    color-mix(in srgb, white 40%, var(--border));
+  --glass-blur:      18px;
+  --glass-saturate:  160%;
   --shadow-glass:
-    0 8px 32px -8px rgba(15, 17, 21, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    0 4px 24px -6px rgba(18, 20, 24, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 
-  /* Aurora */
-  --aurora-opacity: 0.55;
-  --aurora-brand:   color-mix(in srgb, var(--brand) 38%, transparent);
-  --aurora-signal:  color-mix(in srgb, var(--signal) 18%, transparent);
-  --aurora-violet:  color-mix(in srgb, #7B61FF 12%, transparent);
+  /* Aurora — brand only, very subtle */
+  --aurora-opacity: 0.22;
+  --aurora-brand:   color-mix(in srgb, var(--brand) 18%, transparent);
+  --aurora-signal:  transparent;
+  --aurora-violet:  transparent;
 
-  /* Ink (annotation / handwriting accent) */
-  --ink-red:      #C8262C;          /* manuscript redline */
+  /* Ink (annotation accent) */
+  --ink-red:      #B91C1C;
 
   /* Typography */
   --font-sans:    'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
@@ -87,12 +87,12 @@
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  /* Elevation — toned down (no neon SaaS glow) */
-  --shadow-sm: 0 1px 2px rgba(15, 17, 21, 0.04), 0 1px 1px rgba(15, 17, 21, 0.03);
-  --shadow-md: 0 6px 20px -10px rgba(15, 17, 21, 0.10), 0 2px 6px -3px rgba(15, 17, 21, 0.05);
-  --shadow-lg: 0 18px 40px -18px rgba(15, 17, 21, 0.14), 0 4px 10px -6px rgba(15, 17, 21, 0.06);
-  --shadow-brand: 0 8px 22px -10px rgba(37, 112, 242, 0.22);
-  --shadow-signal: 0 8px 22px -10px rgba(255, 45, 135, 0.22);
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(18, 20, 24, 0.04);
+  --shadow-md: 0 4px 16px -6px rgba(18, 20, 24, 0.08);
+  --shadow-lg: 0 12px 32px -12px rgba(18, 20, 24, 0.12);
+  --shadow-brand: 0 6px 18px -8px rgba(37, 112, 242, 0.28);
+  --shadow-signal: 0 6px 18px -8px rgba(91, 101, 115, 0.2);
 
   /* Motion */
   --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
@@ -102,7 +102,6 @@
   --dur-med:     360ms;
   --dur-slow:    720ms;
 
-  /* z-index scale (grain is high so it sits over page chrome; cursor FX must sit above grain) */
   --z-aurora: 0;
   --z-bg:     0;
   --z-base:   1;
@@ -112,57 +111,52 @@
   --z-cursor: 10000;
   --z-modal:  10001;
 
-  /* Header */
   --header-h:  64px;
   color-scheme: light;
 }
 
-/* Dark mode (system preference) — slightly blue-tinted, not flat black */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:          #0A0D14;         /* deep ink-blue, not Vercel black */
-    --bg-pure:     #060810;
-    --surface:     #10141C;
-    --surface-2:   #161B24;
-    --border:      #23293A;
-    --border-soft: #1A1F2C;
-    --border-strong: #303749;
+    --bg:          #161A22;
+    --bg-pure:     #12151C;
+    --surface:     #1E232D;
+    --surface-2:   #252B36;
+    --border:      #2E3542;
+    --border-soft: #232933;
+    --border-strong: #3A4252;
 
-    --text:        #ECEDF1;
-    --text-muted:  #A3A8B4;
-    --text-subtle: #6A7184;
+    --text:        #F0F1F4;
+    --text-muted:  #A8AEB8;
+    --text-subtle: #727986;
 
-    --brand-soft:  #0E1F3F;
-    --brand-line:  #224990;
+    --brand-soft:  #152A52;
+    --brand-line:  #2A508C;
     --brand-ink:   #B6D2FF;
-    --signal-soft: #2A0E1C;
-    --signal-line: #5C1A3A;
-    --signal-ink:  #FFB7D3;
+    --signal-soft: #252932;
+    --signal-line: #3A404C;
+    --signal-ink:  #C8CDD6;
 
-    --grid-line:        rgba(255, 255, 255, 0.028);
-    --grid-line-strong: rgba(255, 255, 255, 0.045);
+    --grid-line:        rgba(255, 255, 255, 0.022);
+    --grid-line-strong: rgba(255, 255, 255, 0.04);
 
-    --glass-bg:        color-mix(in srgb, var(--surface) 38%, transparent);
-    --glass-bg-strong: color-mix(in srgb, var(--surface) 28%, transparent);
-    --glass-border:    rgba(255, 255, 255, 0.22);
+    --glass-bg:        color-mix(in srgb, var(--surface) 55%, transparent);
+    --glass-bg-strong: color-mix(in srgb, var(--surface) 72%, transparent);
+    --glass-border:    rgba(255, 255, 255, 0.12);
     --shadow-glass:
-      0 12px 40px -12px rgba(0, 0, 0, 0.55),
-      inset 0 1px 0 rgba(255, 255, 255, 0.14);
+      0 8px 28px -8px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
-    --aurora-opacity: 0.62;
-    --aurora-brand:   color-mix(in srgb, var(--brand) 42%, transparent);
-    --aurora-signal:  color-mix(in srgb, var(--signal) 20%, transparent);
-    --aurora-violet:  color-mix(in srgb, #9B7BFF 14%, transparent);
+    --aurora-opacity: 0.18;
+    --aurora-brand:   color-mix(in srgb, var(--brand) 22%, transparent);
 
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 6px 20px -10px rgba(0, 0, 0, 0.55), 0 2px 6px -3px rgba(0, 0, 0, 0.35);
-    --shadow-lg: 0 18px 40px -18px rgba(0, 0, 0, 0.65), 0 4px 10px -6px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 4px 16px -6px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px -12px rgba(0, 0, 0, 0.55);
 
     color-scheme: dark;
   }
 }
 
-/* Reduced motion respect */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

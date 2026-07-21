@@ -69,13 +69,13 @@
       <circle cx="120" cy="40" r="4"/>
     </g>
     <!-- Today's dot (highlighted, signal pink) -->
-    <circle cx="140" cy="40" r="5" fill="#FF2D87"/>
+    <circle cx="140" cy="40" r="5" fill="#2570F2"/>
     <!-- Annotation arrow to today's dot -->
-    <g stroke="#FF2D87" stroke-width="1.2" fill="none">
+    <g stroke="#2570F2" stroke-width="1.2" fill="none">
       <path d="M 170 56 L 148 44" stroke-linecap="round"/>
       <path d="M 152 40 L 148 44 L 152 48" stroke-linecap="round"/>
     </g>
-    <text x="172" y="64" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#FF2D87" letter-spacing="1">
+    <text x="172" y="64" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#2570F2" letter-spacing="1">
       TODAY
     </text>
     <!-- Remaining dots (outline only) -->

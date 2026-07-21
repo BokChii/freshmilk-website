@@ -198,4 +198,24 @@
   } else {
     counters.forEach(animateCounter);
   }
+
+  // -------- Photo slots (auto-swap when files exist in /assets/img/photos/) --------
+  function initMediaSlots() {
+    document.querySelectorAll('.media-slot').forEach((slot) => {
+      const photo = slot.querySelector('.media-slot__photo');
+      if (!photo?.getAttribute('src')) return;
+
+      const markLoaded = () => slot.classList.add('has-photo');
+
+      if (photo.complete && photo.naturalWidth > 0) {
+        markLoaded();
+        return;
+      }
+
+      photo.addEventListener('load', markLoaded, { once: true });
+      photo.addEventListener('error', () => photo.remove(), { once: true });
+    });
+  }
+
+  initMediaSlots();
 })();

@@ -46,7 +46,7 @@
   <g transform="translate(220, 116) rotate(-3)">
     <rect x="0" y="0" width="160" height="200" fill="#FFFFFF" stroke="#0E0F12" stroke-width="2"/>
     <rect x="14" y="14" width="132" height="132" fill="#FFE5F0"/>
-    <text x="80" y="104" font-family="'Instrument Serif', serif" font-style="italic" font-size="96" fill="#FF2D87" text-anchor="middle">?</text>
+    <text x="80" y="104" font-family="'Instrument Serif', serif" font-style="italic" font-size="96" fill="#2570F2" text-anchor="middle">?</text>
     <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#5B6068" letter-spacing="2">
       <text x="14" y="166">PICK · 02</text>
       <text x="14" y="184" opacity="0.6">— DRAMA / TWIST</text>

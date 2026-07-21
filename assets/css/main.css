@@ -26,9 +26,9 @@ body::before {
   z-index: var(--z-aurora);
   opacity: var(--aurora-opacity);
   background:
-    radial-gradient(44% 38% at 12% 18%, var(--aurora-brand), transparent 70%),
-    radial-gradient(40% 36% at 88% 22%, var(--aurora-violet), transparent 72%);
-  filter: blur(52px);
+    radial-gradient(50% 42% at 18% 12%, var(--aurora-brand), transparent 72%);
+  filter: blur(44px);
+  opacity: 0.5;
   animation: aurora-drift 36s ease-in-out infinite alternate;
 }
 
@@ -51,7 +51,7 @@ body::after {
   z-index: var(--z-grain);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   background-size: 220px 220px;
-  opacity: 0.14;
+  opacity: 0.07;
   mix-blend-mode: multiply;
 }
 @media (prefers-color-scheme: dark) {
@@ -469,7 +469,7 @@ body::after {
   background:
     radial-gradient(55% 50% at 25% 35%, var(--aurora-brand), transparent 62%);
   filter: blur(44px);
-  opacity: 0.7;
+  opacity: 0.45;
 }
 
 /* Hero content always visible (never gated by reveal JS) */
@@ -847,8 +847,8 @@ body::after {
   letter-spacing: -0.01em;
   color: var(--text);
 }
-.mv-card--vision { border-left-color: var(--signal); }
-.mv-card--vision .meta { color: var(--signal); }
+.mv-card--vision { border-left-color: var(--brand-line); }
+.mv-card--vision .meta { color: var(--text-muted); }
 .mv-card--vision .mv-card__text {
   font-weight: 200;
   font-size: clamp(28px, 4vw, 44px);
@@ -947,17 +947,17 @@ body::after {
   border-color: var(--text);
 }
 .timeline__item.is-now .timeline__node {
-  background: var(--signal);
-  border-color: var(--signal);
-  box-shadow: 0 0 0 4px var(--signal-soft);
+  background: var(--brand);
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px var(--brand-soft);
 }
 .timeline__item.is-now .timeline__node::after {
   content: "";
   position: absolute;
   inset: -2px;
   border-radius: 50%;
-  background: var(--signal);
-  opacity: 0.4;
+  background: var(--brand);
+  opacity: 0.35;
   animation: tl-pulse 1.8s var(--ease-out) infinite;
   z-index: -1;
 }
@@ -980,7 +980,7 @@ body::after {
   margin-top: 36px;
   font-weight: 500;
 }
-.timeline__item.is-now .timeline__date { color: var(--signal); font-weight: 600; }
+.timeline__item.is-now .timeline__date { color: var(--brand); font-weight: 600; }
 .timeline__item.is-next .timeline__date { color: var(--text-subtle); }
 .timeline__title-row {
   font-size: 14px;
@@ -1422,7 +1422,7 @@ body::after {
   color: var(--text);
   margin: 10px 0 18px;
   padding: 6px 0 6px 14px;
-  border-left: 2px solid var(--signal);
+  border-left: 2px solid var(--brand-line);
   font-weight: 350;
   letter-spacing: -0.005em;
   text-wrap: pretty;
@@ -1817,6 +1817,57 @@ body::after {
   color: var(--text);
 }
 
+/* Photo slots — drop files in assets/img/photos/ */
+.media-slot {
+  position: relative;
+  overflow: hidden;
+}
+
+.media-slot__photo,
+.media-slot__fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.media-slot__photo {
+  display: none;
+}
+
+.media-slot.has-photo .media-slot__photo {
+  display: block;
+}
+
+.media-slot.has-photo .media-slot__fallback {
+  display: none;
+}
+
+.media-slot--avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+}
+
+.about__photo.media-slot {
+  display: none;
+  margin-top: clamp(28px, 4vw, 40px);
+  margin-bottom: clamp(28px, 4vw, 40px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  aspect-ratio: 21 / 9;
+  max-height: 340px;
+  background: var(--surface);
+}
+
+.about__photo.media-slot.has-photo {
+  display: block;
+}
+
+.about__photo .media-slot__photo {
+  display: block;
+}
+
 .nav__link.is-active {
   color: var(--text);
 }
@@ -1843,7 +1894,7 @@ body::after {
   display: block;
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--brand), color-mix(in srgb, var(--signal) 40%, var(--brand)));
+  background: linear-gradient(90deg, var(--brand), color-mix(in srgb, var(--brand) 55%, white));
   transform-origin: left center;
   transition: width 0.08s linear;
 }
