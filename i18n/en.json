@@ -81,7 +81,9 @@
     "moreTitle": "Parallel experiments",
     "p2Name": "tolli",
     "p2Copy": "A daily verse at your fingertips. Bible memorization, game-like.",
-    "p2Status": "In development",
+    "p2Status": "Live · iOS / Android",
+    "p2StoreAndroid": "Get on Android",
+    "p2StoreIos": "Get on iOS",
     "p2Tag1": "Habit",
     "p3Name": "Picktory",
     "p3Copy": "K-content through guessing. Prediction and reasoning for fans.",
@@ -102,15 +104,25 @@
     "m2Bio": "Planning and experiment design. Turns user feedback into product direction quickly.",
     "m2Quote": "Planning that learns fast wins."
   },
+  "highlights": {
+    "metaLabel": "Awards · programs",
+    "heading": "Milestones along the way",
+    "h1": "Youth Startup Academy selected",
+    "h2": "Startup & IT competition awards",
+    "h3": "FIX exhibition booth",
+    "h4": "Government & public grant programs"
+  },
   "updates": {
     "metaLabel": "Updates",
     "heading": "Recent updates",
     "u1Date": "2026.05",
     "u1Text": "Company site refresh · Storit beta prep in full swing",
-    "u2Date": "2026.01",
-    "u2Text": "Parallel development kickoff for tolli, Picktory, and econoup",
-    "u3Date": "2025.12",
-    "u3Text": "FreshMilk founded · Storit project kickoff"
+    "u2Date": "2026",
+    "u2Text": "tolli launched on iOS and Android",
+    "u3Date": "2026.01",
+    "u3Text": "Picktory and econoup development kickoff",
+    "u4Date": "2025.12",
+    "u4Text": "FreshMilk founded · Storit project kickoff"
   },
   "contact": {
     "metaLabel": "Contact",

@@ -2713,6 +2713,93 @@ body::after {
 
 .status-pill--brand { color: var(--brand); }
 .status-pill--signal { color: var(--signal); }
+.status-pill--live { color: var(--ok); }
+
+.project-card__stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-card__store {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--brand-line);
+  background: var(--brand-soft);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand);
+  text-decoration: none;
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.project-card__store:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--brand-soft) 70%, white);
+  border-color: var(--brand);
+}
+
+.media-slot--mascot .media-slot__photo {
+  object-fit: contain;
+  padding: clamp(16px, 5vw, 28px);
+  background:
+    radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--brand-soft) 85%, white), var(--surface));
+}
+
+.media-slot--mascot.has-photo .media-slot__fallback {
+  display: none;
+}
+
+/* Team highlights — curated awards & programs */
+.highlights {
+  margin-top: clamp(40px, 6vw, 64px);
+  padding: clamp(24px, 3vw, 32px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
+}
+
+.highlights__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: clamp(16px, 2.5vw, 22px);
+}
+
+.highlights__title {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.highlights__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights__item {
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--bg-pure);
+  font-size: 13px;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--text) 85%, var(--text-muted));
+  letter-spacing: -0.01em;
+  box-shadow: var(--shadow-sm);
+}
 
 .project-main__art,
 .project-card__art {
