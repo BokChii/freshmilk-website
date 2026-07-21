@@ -210,25 +210,49 @@
         <div class="about-pin" data-about-pin aria-label="Mission, vision, and story">
           <div class="about-pin__sticky">
             <div class="about-pin__track">
-              <article class="about-pin__panel mv-card">
-                <span class="meta" data-i18n="about.missionLabel">미션</span>
-                <p class="mv-card__text" data-i18n="about.missionText">기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움을 전한다.</p>
+              <article class="about-pin__panel about-pin__panel--mission" data-pin-panel>
+                <span class="about-pin__index" aria-hidden="true">01</span>
+                <div class="about-pin__panel-inner">
+                  <span class="meta" data-i18n="about.missionLabel">미션</span>
+                  <p class="about-pin__statement" data-i18n="about.missionText">기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움을 전한다.</p>
+                </div>
               </article>
-              <article class="about-pin__panel mv-card mv-card--vision">
-                <span class="meta" data-i18n="about.visionLabel">비전</span>
-                <p class="mv-card__text" data-i18n="about.visionText">매일 찾는 콘텐츠 플랫폼</p>
+              <article class="about-pin__panel about-pin__panel--vision" data-pin-panel>
+                <span class="about-pin__index" aria-hidden="true">02</span>
+                <div class="about-pin__panel-inner">
+                  <span class="meta" data-i18n="about.visionLabel">비전</span>
+                  <p class="about-pin__vision-head" data-i18n="about.visionHeadline">매일 찾는</p>
+                  <p class="about-pin__vision-sub" data-i18n="about.visionSub">콘텐츠 플랫폼</p>
+                </div>
               </article>
-              <article class="about-pin__panel about-pin__panel--story about__story">
-                <span class="meta" data-i18n="about.storyLabel">스토리</span>
-                <p data-i18n="about.storyP1">프레시밀크는 웹툰·K-콘텐츠·습관형 학습처럼, 사람들이 매일 돌아오는 경험을 만드는 팀입니다.</p>
-                <p data-i18n="about.storyP2">한 번에 하나만 고집하기보다, 작게 여러 실험을 돌리고 시장이 반응하는 것에 집중합니다.</p>
+              <article class="about-pin__panel about-pin__panel--story" data-pin-panel>
+                <span class="about-pin__index" aria-hidden="true">03</span>
+                <div class="about-pin__panel-inner">
+                  <span class="meta" data-i18n="about.storyLabel">스토리</span>
+                  <p class="about-pin__story-lead" data-i18n="about.storyP1">프레시밀크는 웹툰·K-콘텐츠·습관형 학습처럼, 사람들이 매일 돌아오는 경험을 만드는 팀입니다.</p>
+                  <p class="about-pin__story-body" data-i18n="about.storyP2">한 번에 하나만 고집하기보다, 작게 여러 실험을 돌리고 시장이 반응하는 것에 집중합니다.</p>
+                </div>
               </article>
             </div>
-            <div class="about-pin__dots" aria-hidden="true">
-              <span class="about-pin__dot is-active"></span>
-              <span class="about-pin__dot"></span>
-              <span class="about-pin__dot"></span>
-            </div>
+            <nav class="about-pin__progress" aria-label="Mission, vision, and story progress">
+              <div class="about-pin__progress-track" aria-hidden="true">
+                <span class="about-pin__progress-fill"></span>
+              </div>
+              <ol class="about-pin__progress-labels">
+                <li class="is-active">
+                  <span class="about-pin__progress-num">01</span>
+                  <span data-i18n="about.pinMission">미션</span>
+                </li>
+                <li>
+                  <span class="about-pin__progress-num">02</span>
+                  <span data-i18n="about.pinVision">비전</span>
+                </li>
+                <li>
+                  <span class="about-pin__progress-num">03</span>
+                  <span data-i18n="about.pinStory">스토리</span>
+                </li>
+              </ol>
+            </nav>
           </div>
         </div>
 

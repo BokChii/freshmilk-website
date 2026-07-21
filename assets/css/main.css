@@ -1207,9 +1207,10 @@ body::after {
 }
 
 .about-pin__panel {
+  position: relative;
   flex: 0 0 min(520px, 82vw);
-  min-height: clamp(220px, 32vh, 320px);
-  padding: clamp(28px, 4vw, 40px);
+  min-height: clamp(240px, 34vh, 340px);
+  padding: clamp(28px, 4vw, 44px);
   border-radius: var(--radius-lg);
   border: 1px solid var(--glass-border);
   background: var(--glass-bg-strong);
@@ -1218,67 +1219,208 @@ body::after {
   box-shadow: var(--shadow-glass);
   display: flex;
   flex-direction: column;
-  gap: 16px;
   justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  transform: scale(0.97);
+  opacity: 0.72;
+  transition:
+    transform 0.45s var(--ease-out),
+    opacity 0.45s var(--ease-out),
+    box-shadow 0.45s var(--ease-out),
+    border-color 0.45s var(--ease-out);
 }
 
-.about-pin__panel.mv-card {
+.about-pin__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.about-pin__panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.about-pin__panel-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.about-pin__panel.is-active {
+  transform: scale(1);
+  opacity: 1;
+  border-color: color-mix(in srgb, var(--brand-line) 70%, var(--glass-border));
+  box-shadow:
+    var(--shadow-glass),
+    0 20px 48px -20px color-mix(in srgb, var(--brand) 22%, transparent);
+}
+
+.about-pin__index {
+  position: absolute;
+  top: clamp(16px, 2.5vw, 24px);
+  right: clamp(20px, 3vw, 28px);
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: clamp(44px, 7vw, 68px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: color-mix(in srgb, var(--brand) 14%, transparent);
+  pointer-events: none;
+}
+
+.about-pin__panel--mission::before {
+  background:
+    radial-gradient(70% 70% at 12% 18%, color-mix(in srgb, var(--brand) 28%, transparent), transparent 68%),
+    radial-gradient(50% 50% at 88% 82%, color-mix(in srgb, var(--brand-soft) 80%, transparent), transparent 72%);
+}
+
+.about-pin__panel--mission {
   border-left: 3px solid var(--brand);
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 }
 
-.about-pin__panel.mv-card--vision {
-  border-left-color: color-mix(in srgb, var(--brand) 55%, var(--text-muted));
+.about-pin__statement {
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.35;
+  letter-spacing: -0.022em;
+  font-weight: 500;
+  text-wrap: pretty;
+  max-width: 16ch;
+}
+
+.about-pin__panel--vision::before {
+  background:
+    radial-gradient(62% 62% at 82% 22%, var(--aurora-cyan), transparent 68%),
+    radial-gradient(48% 48% at 18% 78%, var(--aurora-cream), transparent 72%);
+}
+
+.about-pin__panel--vision {
+  border-left: 3px solid color-mix(in srgb, var(--brand) 55%, var(--text-muted));
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.about-pin__vision-head {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.about-pin__vision-sub {
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--text) 78%, var(--text-muted));
 }
 
 .about-pin__panel--story {
-  border-left: none;
   flex-basis: min(560px, 86vw);
+  background: color-mix(in srgb, var(--surface) 55%, var(--glass-bg-strong));
 }
 
-.about-pin__panel--story .meta {
-  margin-bottom: 4px;
+.about-pin__panel--story::before {
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.65;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 100%);
 }
 
-.about-pin__panel .mv-card__text {
-  font-size: clamp(22px, 2.8vw, 32px);
-  line-height: 1.35;
-  letter-spacing: -0.02em;
-  font-weight: 500;
+.about-pin__story-lead {
+  font-size: clamp(18px, 1.9vw, 22px);
+  line-height: 1.55;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  text-wrap: pretty;
 }
 
-.about-pin__panel--story p {
-  font-size: clamp(16px, 1.6vw, 18px);
+.about-pin__story-body {
+  font-size: clamp(15px, 1.5vw, 17px);
   line-height: 1.65;
-  color: color-mix(in srgb, var(--text) 82%, var(--text-muted));
+  color: var(--text-muted);
+  text-wrap: pretty;
+  max-width: 42ch;
 }
 
-.about-pin__panel--story p + p {
-  margin-top: 12px;
-}
-
-.about-pin__dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
+.about-pin__progress {
   margin-top: clamp(20px, 3vh, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.about-pin__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+.about-pin__progress-track {
+  height: 3px;
+  border-radius: var(--radius-pill);
   background: var(--border);
-  transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast);
+  overflow: hidden;
 }
 
-.about-pin__dot.is-active {
-  background: var(--brand);
-  transform: scale(1.25);
+.about-pin__progress-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--brand), color-mix(in srgb, var(--brand) 60%, #6ECFF6));
+  transition: width 0.12s linear;
 }
 
-.about-pin--static .about-pin__dots {
-  display: none;
+.about-pin__progress-labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-pin__progress-labels li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-subtle);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.about-pin__progress-labels li.is-active {
+  color: var(--brand);
+}
+
+.about-pin__progress-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.about-pin--static .about-pin__progress-labels li {
+  color: var(--text-muted);
+}
+
+.about-pin--static .about-pin__progress-labels li.is-active {
+  color: var(--brand);
 }
 
 .about-pin--static .about-pin__track {
@@ -1290,6 +1432,13 @@ body::after {
   flex: 1 1 auto;
   width: 100%;
   min-height: 0;
+  transform: none;
+  opacity: 1;
+  margin-bottom: 16px;
+}
+
+.about-pin--static .about-pin__panel:last-child {
+  margin-bottom: 0;
 }
 
 .about-pin--static .about-pin__sticky {
@@ -2726,6 +2875,8 @@ body::after {
   .hero-stage__webtoon span { animation: none; }
   .project-scale-wrap { transform: none; }
   .about-pin__track { transform: none !important; }
+  .about-pin__panel { transform: none; opacity: 1; }
+  .about-pin__progress-fill { transition: none; }
   .team-card--polaroid { opacity: 1; animation: none; transform: rotate(var(--polaroid-tilt, 0deg)); }
   .section--exhibit.is-settled .section__head,
   .section--exhibit.is-settled .contact__grid { animation: none; }

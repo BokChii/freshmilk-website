@@ -68,8 +68,9 @@
 
     const sticky = pin.querySelector('.about-pin__sticky');
     const track = pin.querySelector('.about-pin__track');
-    const panels = track ? [...track.children] : [];
-    const dots = pin.querySelectorAll('.about-pin__dot');
+    const panels = track ? [...track.querySelectorAll('[data-pin-panel]')] : [];
+    const progressFill = pin.querySelector('.about-pin__progress-fill');
+    const progressLabels = pin.querySelectorAll('.about-pin__progress-labels li');
     if (!sticky || !track || !panels.length) return;
 
     let maxX = 0;
@@ -96,12 +97,14 @@
         pin.style.height = '';
         track.style.transform = '';
         pin.classList.add('about-pin--static');
+        initStaticActive();
         return;
       }
 
       pin.classList.remove('about-pin--static');
       measure();
       pin.style.height = `${window.innerHeight + maxX + holdPx}px`;
+      setActivePanel(0);
     }
 
     function update() {
@@ -120,8 +123,26 @@
         panels.length - 1,
         Math.floor(hProgress * panels.length + 0.001)
       );
-      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === active));
+      panels.forEach((panel, i) => panel.classList.toggle('is-active', i === active));
+      progressLabels.forEach((label, i) => label.classList.toggle('is-active', i === active));
+      if (progressFill) progressFill.style.width = `${(hProgress * 100).toFixed(2)}%`;
       pin.style.setProperty('--pin-progress', hProgress.toFixed(4));
+    }
+
+    function setActivePanel(index) {
+      panels.forEach((panel, i) => panel.classList.toggle('is-active', i === index));
+      progressLabels.forEach((label, i) => label.classList.toggle('is-active', i === index));
+    }
+
+    function initStaticActive() {
+      if (pin.classList.contains('about-pin--static')) {
+        panels.forEach((p) => p.classList.add('is-active'));
+        progressLabels.forEach((l) => l.classList.add('is-active'));
+        if (progressFill) progressFill.style.width = '100%';
+      } else {
+        setActivePanel(0);
+        if (progressFill) progressFill.style.width = '0%';
+      }
     }
 
     layout();
