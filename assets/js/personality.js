@@ -1,12 +1,13 @@
 /* =========================================
-   FreshMilk — Phase 3 personality micro-interactions
-   Section settle bounce · exhibit annotations reveal
+   FreshMilk — Phase 3 section settle motion
    ========================================= */
 (() => {
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   const sections = document.querySelectorAll('.section--exhibit');
-  if (sections.length && 'IntersectionObserver' in window && !reduceMotion) {
+
+  if (!sections.length) return;
+
+  if ('IntersectionObserver' in window && !reduceMotion) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
@@ -19,25 +20,4 @@
   } else {
     sections.forEach((s) => s.classList.add('is-settled'));
   }
-
-  document.querySelectorAll('[data-exhibit-pop]').forEach((el, i) => {
-    el.style.setProperty('--exhibit-delay', `${i * 90}ms`);
-    if (reduceMotion) {
-      el.classList.add('is-visible');
-      return;
-    }
-
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (!e.isIntersecting) return;
-          e.target.classList.add('is-visible');
-          io.unobserve(e.target);
-        });
-      }, { threshold: 0.2 });
-      io.observe(el);
-    } else {
-      el.classList.add('is-visible');
-    }
-  });
 })();

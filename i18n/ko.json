@@ -35,10 +35,7 @@
     "trust3": "포항 · 한동대 창업보육센터",
     "stageStatus": "베타 준비 중",
     "stageTag": "오늘의 웹툰 퀴즈",
-    "stageReward": "+120P",
-    "sticker1": "웹툰",
-    "sticker2": "퀴즈",
-    "sticker3": "팬덤"
+    "stageReward": "+120P"
   },
   "about": {
     "metaLabel": "소개",
@@ -60,15 +57,12 @@
     "tl2Date": "2026.01",
     "tl2Title": "4개 프로젝트 동시 진행",
     "tl3Date": "지금",
-    "tl3Title": "스토릿 베타 준비",
-    "photoAnnot": "실험실 스냅"
+    "tl3Title": "스토릿 베타 준비"
   },
   "projects": {
     "metaLabel": "프로젝트",
     "featureTitle": "스토릿",
     "featureLead": "웹툰 퀴즈 리워드 팬덤 커뮤니티 — 메인 제품",
-    "mainSticker": "MAIN",
-    "featureAnnot": "핵심 제품",
     "learnMore": "베타 문의하기",
     "mainName": "스토릿",
     "mainTagline": "Storit",
@@ -95,7 +89,6 @@
     "metaLabel": "팀",
     "heading": "두 명의 공동 창업자.",
     "subheading": "같이 실험하고, 같이 배웁니다.",
-    "sticker": "Co-founders",
     "m1Name": "김강산",
     "m1Role": "CEO · Co-founder",
     "m1Bio": "제품 실행과 팀 운영. 스토릿을 중심으로 빠르게 출시·검증합니다.",
@@ -118,7 +111,6 @@
   "contact": {
     "metaLabel": "문의",
     "heading": "같이 실험할 사람을 찾습니다.",
-    "annot": "함께 만들어요",
     "subtitle": "제휴·협업·베타·일반 문의 환영합니다.",
     "typesTitle": "문의 유형",
     "type1": "스토릿 베타 · 제품",
