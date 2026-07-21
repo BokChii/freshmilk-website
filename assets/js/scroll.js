@@ -104,7 +104,7 @@
       pin.classList.remove('about-pin--static');
       measure();
       pin.style.height = `${window.innerHeight + maxX + holdPx}px`;
-      setActivePanel(0);
+      initStaticActive();
     }
 
     function update() {
