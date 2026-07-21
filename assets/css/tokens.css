@@ -66,7 +66,7 @@
   --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-display: 'Instrument Serif', 'Pretendard Variable', 'Pretendard', serif;
 
-  --fs-hero:   clamp(40px, 6.2vw, 96px);
+  --fs-hero:   clamp(34px, 5vw, 72px);
   --fs-h2:     clamp(30px, 4vw, 56px);
   --fs-h3:     clamp(22px, 2.4vw, 32px);
   --fs-body:   16px;
