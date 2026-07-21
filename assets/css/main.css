@@ -1915,9 +1915,11 @@ body::after {
     var(--shadow-glass),
     0 20px 48px -16px color-mix(in srgb, var(--brand) 22%, transparent);
 }
-.project-main:hover .project-main__art img,
+.project-main:hover .project-main__art .media-slot__photo,
+.project-main:hover .project-main__art .media-slot__fallback,
 .project-main:hover .project-main__art svg { transform: scale(1.02); }
-.project-main__art img,
+.project-main__art .media-slot__photo,
+.project-main__art .media-slot__fallback,
 .project-main__art svg { transition: transform var(--dur-slow) var(--ease-out); }
 .project-main__body {
   padding: clamp(28px, 3.2vw, 48px);
@@ -1986,8 +1988,9 @@ body::after {
   overflow: hidden;
   border-left: 1px solid var(--border);
 }
-.project-main__art img,
-.project-main__art svg {
+.project-main__art .media-slot__photo,
+.project-main__art .media-slot__fallback,
+.project-main__art > svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2016,20 +2019,12 @@ body::after {
 
 .project-main--feature .project-main__art {
   order: -1;
-  min-height: clamp(240px, 38vw, 420px);
+  min-height: auto;
+  padding: clamp(28px, 5vw, 48px);
   border-left: none;
   border-bottom: 1px solid var(--glass-border);
-}
-
-.project-main__mascot {
-  position: absolute;
-  right: clamp(12px, 3vw, 24px);
-  bottom: clamp(12px, 3vw, 24px);
-  width: clamp(64px, 12vw, 88px);
-  height: auto;
-  z-index: 2;
-  pointer-events: none;
-  filter: drop-shadow(0 8px 16px color-mix(in srgb, var(--text) 12%, transparent));
+  background:
+    radial-gradient(circle at 50% 20%, color-mix(in srgb, var(--brand-soft) 70%, white), var(--surface));
 }
 
 .feature-link {
@@ -2790,12 +2785,27 @@ body::after {
     radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--brand-soft) 85%, white), var(--surface));
 }
 
-.media-slot--screenshot .media-slot__photo {
-  object-fit: contain;
-  object-position: center top;
-  padding: clamp(12px, 3vw, 24px) clamp(12px, 3vw, 24px) clamp(48px, 8vw, 72px);
-  background:
-    radial-gradient(circle at 50% 20%, color-mix(in srgb, var(--brand-soft) 75%, white), var(--surface));
+.media-slot--screenshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-slot--screenshot .media-slot__photo,
+.media-slot--screenshot .media-slot__fallback {
+  width: min(240px, 44vw);
+  height: auto;
+  max-height: min(400px, 52vh);
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: top center;
+  padding: 0;
+  border-radius: 22px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-pure);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    0 24px 48px -20px color-mix(in srgb, var(--brand) 30%, transparent);
 }
 
 .media-slot--mascot.has-photo .media-slot__fallback {
@@ -2853,8 +2863,8 @@ body::after {
   will-change: transform;
 }
 
-.project-main__art img,
-.project-card__art img {
+.project-main__art .media-slot__photo,
+.project-main__art .media-slot__fallback {
   transition: transform 0.1s linear;
 }
 
@@ -2901,9 +2911,24 @@ body::after {
 }
 
 .media-slot--avatar {
+  border-radius: var(--radius-md);
+}
+
+.media-slot--avatar .media-slot__photo,
+.media-slot--avatar .media-slot__fallback {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.media-slot--avatar .media-slot__fallback {
+  z-index: 0;
+}
+
+.media-slot--avatar.has-photo .media-slot__photo {
+  z-index: 1;
 }
 
 .about__photo.media-slot {
@@ -3015,7 +3040,7 @@ body::after {
   .team-card--polaroid { opacity: 1; animation: none; transform: rotate(var(--polaroid-tilt, 0deg)); }
   .section--exhibit.is-settled .section__head,
   .section--exhibit.is-settled .contact__grid { animation: none; }
-  .project-main__art img,
+  .project-main__art .media-slot__photo,
   .project-card__art img { transform: none !important; }
   [data-tilt] { transform: none !important; }
 }

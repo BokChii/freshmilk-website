@@ -242,15 +242,29 @@
       const photo = slot.querySelector('.media-slot__photo');
       if (!photo?.getAttribute('src')) return;
 
-      const markLoaded = () => slot.classList.add('has-photo');
+      const markLoaded = () => {
+        if (photo.naturalWidth > 0) slot.classList.add('has-photo');
+      };
 
-      if (photo.complete && photo.naturalWidth > 0) {
+      if (photo.complete) {
         markLoaded();
-        return;
+        if (slot.classList.contains('has-photo')) return;
       }
 
       photo.addEventListener('load', markLoaded, { once: true });
       photo.addEventListener('error', () => photo.remove(), { once: true });
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            if (photo.loading === 'lazy') photo.loading = 'eager';
+            if (photo.complete) markLoaded();
+            io.unobserve(slot);
+          });
+        }, { rootMargin: '240px 0px' });
+        io.observe(slot);
+      }
     });
   }
 
