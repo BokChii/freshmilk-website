@@ -16,6 +16,12 @@
   "header": {
     "cta": "문의하기"
   },
+  "theme": {
+    "groupLabel": "테마",
+    "light": "라이트 모드",
+    "dark": "다크 모드",
+    "system": "시스템 설정"
+  },
   "hero": {
     "kicker": "FreshMilk · Content Studio",
     "title": "경계를 허물고,<br>시장이 우리를<br><span class=\"hero__line-accent\">정의하게 합니다.</span>",

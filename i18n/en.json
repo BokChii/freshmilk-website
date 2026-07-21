@@ -16,6 +16,12 @@
   "header": {
     "cta": "Get in touch"
   },
+  "theme": {
+    "groupLabel": "Theme",
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "system": "System theme"
+  },
   "hero": {
     "kicker": "FreshMilk · Content Studio",
     "title": "Break the line.<br>Let the market<br><span class=\"hero__line-accent\"><span class=\"hero__serif\">define</span> us.</span>",

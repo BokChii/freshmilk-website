@@ -1,8 +1,10 @@
 /* =========================================
    FreshMilk Design Tokens — Editorial (clean)
+   Theme: data-theme="light" | "dark" | "system"
    ========================================= */
 
-:root {
+:root,
+:root[data-theme="light"] {
   /* Brand */
   --brand:        #2570F2;
   --brand-hover:  #1A58C9;
@@ -10,7 +12,7 @@
   --brand-line:   #C8DAFC;
   --brand-ink:    #0B2C6B;
 
-  /* Secondary accent — muted (replaces hot pink) */
+  /* Secondary accent — muted */
   --signal:       #5B6573;
   --signal-hover: #464F5C;
   --signal-soft:  #F2F4F7;
@@ -21,7 +23,7 @@
   --ok:           #1B9D52;
   --warn:         #C4841A;
 
-  /* Neutrals — Light (bright, clean) */
+  /* Neutrals — Light */
   --bg:           #FFFFFF;
   --bg-pure:      #FFFFFF;
   --surface:      #F7F8FA;
@@ -35,11 +37,9 @@
   --text-subtle:  #8B919C;
   --text-inverse: #FFFFFF;
 
-  /* Grid line (hero only) */
   --grid-line:    rgba(18, 20, 24, 0.018);
   --grid-line-strong: rgba(18, 20, 24, 0.035);
 
-  /* Glass */
   --glass-bg:        color-mix(in srgb, var(--bg-pure) 72%, transparent);
   --glass-bg-strong: color-mix(in srgb, var(--bg-pure) 88%, transparent);
   --glass-border:    color-mix(in srgb, white 40%, var(--border));
@@ -49,22 +49,18 @@
     0 4px 24px -6px rgba(18, 20, 24, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
 
-  /* Aurora — brand only, very subtle */
   --aurora-opacity: 0.22;
   --aurora-brand:   color-mix(in srgb, var(--brand) 18%, transparent);
   --aurora-signal:  transparent;
   --aurora-violet:  transparent;
 
-  /* Ink (annotation accent) */
   --ink-red:      #B91C1C;
 
-  /* Typography */
   --font-sans:    'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
                   system-ui, 'Segoe UI', Roboto, sans-serif;
   --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-display: 'Instrument Serif', 'Pretendard Variable', 'Pretendard', serif;
 
-  /* Display sizes */
   --fs-hero:   clamp(40px, 6.2vw, 96px);
   --fs-h2:     clamp(30px, 4vw, 56px);
   --fs-h3:     clamp(22px, 2.4vw, 32px);
@@ -72,7 +68,6 @@
   --fs-small:  14px;
   --fs-label:  12px;
 
-  /* Spacing / Layout */
   --container: 1240px;
   --section-py: clamp(64px, 9vw, 120px);
   --gutter:    clamp(20px, 4vw, 48px);
@@ -87,14 +82,12 @@
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  /* Elevation */
   --shadow-sm: 0 1px 2px rgba(18, 20, 24, 0.04);
   --shadow-md: 0 4px 16px -6px rgba(18, 20, 24, 0.08);
   --shadow-lg: 0 12px 32px -12px rgba(18, 20, 24, 0.12);
   --shadow-brand: 0 6px 18px -8px rgba(37, 112, 242, 0.28);
   --shadow-signal: 0 6px 18px -8px rgba(91, 101, 115, 0.2);
 
-  /* Motion */
   --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -115,8 +108,48 @@
   color-scheme: light;
 }
 
+:root[data-theme="dark"] {
+  --bg:          #161A22;
+  --bg-pure:     #12151C;
+  --surface:     #1E232D;
+  --surface-2:   #252B36;
+  --border:      #2E3542;
+  --border-soft: #232933;
+  --border-strong: #3A4252;
+
+  --text:        #F0F1F4;
+  --text-muted:  #A8AEB8;
+  --text-subtle: #727986;
+
+  --brand-soft:  #152A52;
+  --brand-line:  #2A508C;
+  --brand-ink:   #B6D2FF;
+  --signal-soft: #252932;
+  --signal-line: #3A404C;
+  --signal-ink:  #C8CDD6;
+
+  --grid-line:        rgba(255, 255, 255, 0.022);
+  --grid-line-strong: rgba(255, 255, 255, 0.04);
+
+  --glass-bg:        color-mix(in srgb, var(--surface) 55%, transparent);
+  --glass-bg-strong: color-mix(in srgb, var(--surface) 72%, transparent);
+  --glass-border:    rgba(255, 255, 255, 0.12);
+  --shadow-glass:
+    0 8px 28px -8px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  --aurora-opacity: 0.18;
+  --aurora-brand:   color-mix(in srgb, var(--brand) 22%, transparent);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 16px -6px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px -12px rgba(0, 0, 0, 0.55);
+
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="system"] {
     --bg:          #161A22;
     --bg-pure:     #12151C;
     --surface:     #1E232D;
