@@ -79,6 +79,86 @@ body::after {
   box-shadow: var(--shadow-glass);
 }
 
+.glass-card {
+  position: relative;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
+  transition:
+    transform var(--dur-med) var(--ease-out),
+    box-shadow var(--dur-med) var(--ease-out),
+    border-color var(--dur-med) var(--ease-out);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--glass-shine);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-card:hover {
+  border-color: color-mix(in srgb, var(--brand-line) 55%, var(--glass-border));
+  box-shadow:
+    var(--shadow-glass),
+    0 16px 40px -12px color-mix(in srgb, var(--brand) 18%, transparent);
+}
+
+.glass-card[data-tilt].is-tilting {
+  transition: transform 0.08s linear, box-shadow var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out);
+}
+
+/* Ambient blobs behind glass sections */
+.section--ambient {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--ambient::before,
+.section--ambient::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.section--ambient::before {
+  width: min(520px, 70vw);
+  height: min(520px, 70vw);
+  top: -12%;
+  right: -8%;
+  background: radial-gradient(circle, var(--aurora-brand), transparent 68%);
+  opacity: 0.85;
+}
+
+.section--ambient::after {
+  width: min(380px, 55vw);
+  height: min(380px, 55vw);
+  bottom: -8%;
+  left: -6%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--brand) 12%, transparent), transparent 70%);
+  opacity: 0.7;
+}
+
+.section--ambient > .container {
+  position: relative;
+  z-index: 1;
+}
+
 /* Container */
 .container {
   width: 100%;
@@ -279,7 +359,9 @@ body::after {
               background var(--dur-med) var(--ease-out);
 }
 .site-header.is-scrolled {
-  border-bottom-color: var(--border);
+  border-bottom-color: var(--glass-border);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  box-shadow: var(--shadow-glass);
 }
 
 .site-header__row {
@@ -610,13 +692,47 @@ body::after {
   display: inline-flex;
   align-items: center;
   padding: 7px 14px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-pill);
   font-size: 12px;
   color: var(--text-muted);
   letter-spacing: 0.02em;
-  background: var(--surface);
+  background: var(--glass-bg);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(16px);
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(16px);
+  box-shadow: var(--shadow-sm);
   white-space: nowrap;
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.trust-bar__item:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-line);
+  color: var(--text);
+  box-shadow: var(--shadow-glass);
+}
+
+.trust-bar--live .trust-bar__item {
+  animation: trust-in 0.65s var(--ease-out) backwards;
+}
+
+.trust-bar--live .trust-bar__item:nth-child(1) { animation-delay: 0.12s; }
+.trust-bar--live .trust-bar__item:nth-child(2) { animation-delay: 0.22s; }
+.trust-bar--live .trust-bar__item:nth-child(3) { animation-delay: 0.32s; }
+
+@keyframes trust-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .trust-bar__item--mono {
@@ -880,6 +996,17 @@ body::after {
 .mv-card {
   border-left: 2px solid var(--brand);
   padding: 8px 0 8px 20px;
+  background: color-mix(in srgb, var(--glass-bg) 80%, transparent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding-right: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+
+.mv-card:hover {
+  transform: translateX(4px);
+  background: color-mix(in srgb, var(--brand-soft) 35%, var(--glass-bg));
 }
 .mv-card .meta { color: var(--brand); margin-bottom: 8px; }
 .mv-card__text {
@@ -905,6 +1032,16 @@ body::after {
   backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
   -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
   box-shadow: var(--shadow-glass);
+  position: relative;
+  overflow: hidden;
+}
+
+.about__story::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine);
+  pointer-events: none;
 }
 .about__story p {
   font-size: clamp(15px, 1.4vw, 17px);
@@ -1168,15 +1305,29 @@ body::after {
   gap: 0;
   margin-bottom: 16px;
   position: relative;
-  backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
-  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
   box-shadow: var(--shadow-glass);
   transition: border-color var(--dur-med) var(--ease-out),
-              box-shadow var(--dur-med) var(--ease-out);
+              box-shadow var(--dur-med) var(--ease-out),
+              transform var(--dur-med) var(--ease-out);
+  transform-style: preserve-3d;
 }
+
+.project-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .project-main:hover {
-  border-color: var(--text);
-  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--brand-line) 60%, var(--glass-border));
+  box-shadow:
+    var(--shadow-glass),
+    0 20px 48px -16px color-mix(in srgb, var(--brand) 22%, transparent);
 }
 .project-main:hover .project-main__art img,
 .project-main:hover .project-main__art svg { transform: scale(1.02); }
@@ -1304,11 +1455,20 @@ body::after {
   margin-top: 16px;
   padding: 14px 18px;
   border-radius: var(--radius-md);
-  border: 1px dashed var(--border);
-  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-sm);
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.5;
+  transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+
+.project-teaser:hover {
+  border-color: var(--brand-line);
+  background: color-mix(in srgb, var(--brand-soft) 30%, var(--glass-bg));
 }
 .project-card {
   border: 1px solid var(--glass-border);
@@ -1317,17 +1477,30 @@ body::after {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
-  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(calc(var(--glass-blur) - 6px));
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
   box-shadow: var(--shadow-glass);
   transition: border-color var(--dur-med) var(--ease-out),
-              box-shadow var(--dur-med) var(--ease-out);
+              box-shadow var(--dur-med) var(--ease-out),
+              transform var(--dur-med) var(--ease-out);
   position: relative;
+  transform-style: preserve-3d;
 }
-/* Project card hover: art zoom + border darken (no lift transform) */
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .project-card:hover {
-  border-color: var(--text);
-  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--brand-line) 55%, var(--glass-border));
+  box-shadow:
+    var(--shadow-glass),
+    0 16px 40px -14px color-mix(in srgb, var(--brand) 18%, transparent);
 }
 .project-card__art img,
 .project-card__art svg { transition: transform var(--dur-slow) var(--ease-out); }
@@ -1410,20 +1583,45 @@ body::after {
   max-width: 880px;
 }
 .team-card {
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  background: var(--bg);
+  background: var(--glass-bg);
   padding: clamp(24px, 3vw, 36px);
   display: grid;
   grid-template-columns: 120px 1fr;
   gap: clamp(20px, 2.4vw, 32px);
   align-items: center;
-  transition: transform var(--dur-med) var(--ease-out),
-              box-shadow var(--dur-med) var(--ease-out);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition:
+    transform var(--dur-med) var(--ease-out),
+    box-shadow var(--dur-med) var(--ease-out),
+    border-color var(--dur-med) var(--ease-out);
 }
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.team-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .team-card:hover {
-  transform: rotate(-0.6deg) translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  border-color: color-mix(in srgb, var(--brand-line) 50%, var(--glass-border));
+  box-shadow:
+    var(--shadow-glass),
+    0 16px 36px -14px color-mix(in srgb, var(--brand) 16%, transparent);
 }
 .team-card__avatar {
   width: 120px; height: 120px;
@@ -1609,10 +1807,13 @@ body::after {
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--glass-bg);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
 }
 
 .updates-list__item {
@@ -1621,7 +1822,15 @@ body::after {
   gap: 20px;
   align-items: baseline;
   padding: clamp(16px, 2vw, 22px) clamp(18px, 2.4vw, 28px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--glass-border);
+  transition:
+    background var(--dur-fast) var(--ease-out),
+    padding-left var(--dur-med) var(--ease-out);
+}
+
+.updates-list__item:hover {
+  background: color-mix(in srgb, var(--brand-soft) 45%, transparent);
+  padding-left: clamp(22px, 2.6vw, 32px);
 }
 
 .updates-list__item:last-child {
@@ -1668,10 +1877,19 @@ body::after {
 .contact__types-list li {
   padding: 6px 12px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   font-size: 13px;
   color: var(--text-muted);
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.contact__types-list li:hover {
+  transform: translateY(-1px);
+  border-color: var(--brand-line);
+  color: var(--text);
 }
 
 .contact__email {
@@ -1733,6 +1951,33 @@ body::after {
   backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
   -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
   box-shadow: var(--shadow-glass);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition:
+    transform var(--dur-med) var(--ease-out),
+    box-shadow var(--dur-med) var(--ease-out),
+    border-color var(--dur-med) var(--ease-out);
+}
+
+.contact__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine);
+  pointer-events: none;
+}
+
+.contact__card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__card:hover {
+  border-color: color-mix(in srgb, var(--brand-line) 55%, var(--glass-border));
+  box-shadow:
+    var(--shadow-glass),
+    0 16px 40px -14px color-mix(in srgb, var(--brand) 20%, transparent);
 }
 .contact__buttons { display: flex; flex-direction: column; gap: 10px; }
 .contact__address {
@@ -1939,6 +2184,7 @@ body::after {
   background: linear-gradient(90deg, var(--brand), color-mix(in srgb, var(--brand) 55%, white));
   transform-origin: left center;
   transition: width 0.08s linear;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--brand) 45%, transparent);
 }
 
 .reveal-rise {
@@ -1949,9 +2195,19 @@ body::after {
   transform: scale(0.97);
 }
 
+.reveal-blur {
+  filter: blur(10px);
+  transform: translateY(18px);
+}
+
 .reveal-rise.is-in,
-.reveal-scale.is-in {
+.reveal-scale.is-in,
+.reveal-blur.is-in {
   transform: none;
+}
+
+.reveal-blur.is-in {
+  filter: blur(0);
 }
 
 .reveal-stagger > .reveal:nth-child(1) { --reveal-delay: 0ms; }
@@ -1963,9 +2219,11 @@ body::after {
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-progress { display: none; }
-  .reveal-rise, .reveal-scale { transform: none; }
+  .reveal-rise, .reveal-scale, .reveal-blur { transform: none; filter: none; }
+  .trust-bar--live .trust-bar__item { animation: none; }
   .project-main__art img,
   .project-card__art img { transform: none !important; }
+  [data-tilt] { transform: none !important; }
 }
 
 /* =========================================
@@ -1974,8 +2232,10 @@ body::after {
 .reveal {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity var(--dur-slow) var(--ease-out),
-              transform var(--dur-slow) var(--ease-out);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out),
+    filter var(--dur-slow) var(--ease-out);
   transition-delay: var(--reveal-delay, 0ms);
 }
 .reveal.is-in {
@@ -2089,12 +2349,11 @@ body::after {
   .value-card,
   .contact__card,
   .project-main,
-  .project-card {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    background: var(--bg-pure);
-    border-color: var(--border);
-    box-shadow: var(--shadow-md);
+  .project-card,
+  .team-card,
+  .updates-list {
+    backdrop-filter: saturate(var(--glass-saturate)) blur(16px);
+    -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(16px);
   }
   .about__grid { grid-template-columns: 1fr; gap: 32px; }
   .projects-grid,

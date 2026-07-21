@@ -119,6 +119,43 @@
     });
   }
 
+  // -------- Card tilt (pointer devices) --------
+  function initCardTilt() {
+    if (reduceMotion || matchMedia('(pointer: coarse)').matches) return;
+
+    document.querySelectorAll('[data-tilt]').forEach((card) => {
+      const max = parseFloat(card.dataset.tiltMax || '5');
+
+      card.addEventListener('pointerenter', () => card.classList.add('is-tilting'));
+      card.addEventListener('pointerleave', () => {
+        card.classList.remove('is-tilting');
+        card.style.transform = '';
+      });
+
+      card.addEventListener('pointermove', (e) => {
+        if (e.pointerType === 'touch') return;
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform =
+          `perspective(900px) rotateX(${(-y * max).toFixed(2)}deg) rotateY(${(x * max).toFixed(2)}deg) translateY(-4px)`;
+      });
+    });
+  }
+
+  // -------- Primary button micro-lift --------
+  function initButtonMotion() {
+    if (reduceMotion) return;
+    document.querySelectorAll('.btn--primary').forEach((btn) => {
+      btn.addEventListener('mouseenter', () => {
+        btn.style.transform = 'translateY(-2px)';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  }
+
   if (parallaxEls.length && !reduceMotion) {
     let ticking = false;
     const onParallaxScroll = () => {
@@ -218,4 +255,6 @@
   }
 
   initMediaSlots();
+  initCardTilt();
+  initButtonMotion();
 })();
