@@ -901,10 +901,11 @@ body::after {
 }
 
 .hero__eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: none;
   color: var(--text-muted);
   margin-bottom: clamp(14px, 2vw, 18px);
 }
@@ -3361,11 +3362,6 @@ body::after {
 }
 
 .hero--corporate .hero__eyebrow {
-  font-family: var(--font-sans);
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.01em;
   margin-bottom: 0;
 }
 
