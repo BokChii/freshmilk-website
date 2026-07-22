@@ -78,6 +78,7 @@
   --section-gap: clamp(32px, 4vw, 56px);
   --block-gap: clamp(24px, 3vw, 40px);
   --head-gap: clamp(20px, 2.5vw, 32px);
+  --about-divider-gap: clamp(40px, 5vw, 64px);
   --stack-xl: 40px;
   --stack-lg: 24px;
   --stack-md: 16px;
