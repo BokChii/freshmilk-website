@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko" data-theme="system">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('fm-theme');
+        if (t === 'light' || t === 'dark' || t === 'system') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>개인정보처리방침 · 프레시밀크</title>
+  <meta name="description" content="프레시밀크 개인정보처리방침" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <style>
+    body { min-height: 100vh; }
+    .legal-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(48px, 8vw, 96px) var(--gutter) clamp(64px, 10vw, 120px);
+    }
+    .legal-page__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: clamp(32px, 5vw, 48px);
+    }
+    .legal-page__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .legal-page__brand-mark {
+      width: 28px;
+      height: 28px;
+      background: var(--brand);
+      border-radius: 8px;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .legal-page__updated {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .legal-page h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .legal-page__intro {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: clamp(28px, 4vw, 40px);
+    }
+    .legal-page section {
+      margin-bottom: 28px;
+    }
+    .legal-page h2 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .legal-page p {
+      color: var(--text-muted);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    .legal-page__actions {
+      margin-top: 40px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="legal-page">
+    <div class="legal-page__top">
+      <a class="legal-page__brand" href="/">
+        <span class="legal-page__brand-mark" aria-hidden="true">F</span>
+        <span data-i18n="brand.name">프레시밀크</span>
+      </a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-toggle__btn" data-lang-btn="ko" aria-pressed="true">KO</button>
+        <button class="lang-toggle__btn" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <p class="legal-page__updated" data-i18n="privacy.updated">시행일: 2026년 5월 17일</p>
+    <h1 data-i18n="privacy.heading">개인정보처리방침</h1>
+    <p class="legal-page__intro" data-i18n="privacy.intro">프레시밀크(이하 "회사")는 이용자의 개인정보를 중요하게 생각하며, 관련 법령을 준수합니다.</p>
+
+    <section>
+      <h2 data-i18n="privacy.s1Title">1. 수집하는 개인정보</h2>
+      <p data-i18n="privacy.s1Body">회사 홈페이지는 별도의 회원가입 없이 열람할 수 있습니다. 이메일 문의 시 이용자가 자발적으로 제공하는 이름, 연락처, 이메일 주소, 문의 내용을 수집할 수 있습니다.</p>
+    </section>
+    <section>
+      <h2 data-i18n="privacy.s2Title">2. 개인정보의 이용 목적</h2>
+      <p data-i18n="privacy.s2Body">수집된 정보는 문의 응대, 제휴·협업 검토, 서비스 안내 등 이용자가 요청한 목적에 한해 이용합니다.</p>
+    </section>
+    <section>
+      <h2 data-i18n="privacy.s3Title">3. 보유 및 파기</h2>
+      <p data-i18n="privacy.s3Body">문의 응대 완료 후 관련 법령에 따른 보존 기간이 경과하면 지체 없이 파기합니다.</p>
+    </section>
+    <section>
+      <h2 data-i18n="privacy.s4Title">4. 문의</h2>
+      <p data-i18n="privacy.s4Body">개인정보 관련 문의는 대표 이메일 kgsan@freshmilk.kr 로 연락해 주세요.</p>
+    </section>
+
+    <div class="legal-page__actions">
+      <a class="btn btn--primary" href="/">
+        <span data-i18n="privacy.backHome">홈으로 돌아가기</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/i18n.js" defer></script>
+</body>
+</html>

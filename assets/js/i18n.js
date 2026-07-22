@@ -47,7 +47,13 @@
 
     // <title> + <meta description>
     const meta = dict.meta || {};
-    if (meta.title) document.title = meta.title;
+    const privacy = dict.privacy || {};
+    const isPrivacy = /privacy/.test(location.pathname);
+    if (isPrivacy && privacy.title) {
+      document.title = privacy.title;
+    } else if (meta.title) {
+      document.title = meta.title;
+    }
     const descEl = document.querySelector('meta[name="description"]');
     if (descEl && meta.description) descEl.setAttribute('content', meta.description);
     const ogTitle = document.querySelector('meta[property="og:title"]');

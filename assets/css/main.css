@@ -695,12 +695,11 @@ body::after {
 .hero--ready .hero__eyebrow { animation-delay: 0.05s; }
 .hero--ready .hero__title .hero__line:nth-child(1) { animation-delay: 0.12s; }
 .hero--ready .hero__title .hero__line:nth-child(2) { animation-delay: 0.22s; }
-.hero--ready .hero__title .hero__line:nth-child(3) { animation-delay: 0.32s; }
-.hero--ready .hero__lead { animation-delay: 0.42s; }
-.hero--ready .trust-bar__item:nth-child(1) { animation-delay: 0.52s; }
-.hero--ready .trust-bar__item:nth-child(2) { animation-delay: 0.6s; }
-.hero--ready .trust-bar__item:nth-child(3) { animation-delay: 0.68s; }
-.hero--ready .hero__ctas { animation-delay: 0.78s; }
+.hero--ready .hero__lead { animation-delay: 0.32s; }
+.hero--ready .trust-bar__item:nth-child(1) { animation-delay: 0.42s; }
+.hero--ready .trust-bar__item:nth-child(2) { animation-delay: 0.5s; }
+.hero--ready .trust-bar__item:nth-child(3) { animation-delay: 0.58s; }
+.hero--ready .hero__ctas { animation-delay: 0.68s; }
 .hero--ready .hero-stage { animation-delay: 0.35s; }
 
 @keyframes hero-enter {
@@ -1515,6 +1514,10 @@ body::after {
   gap: 12px;
   margin-bottom: clamp(36px, 5vw, 52px);
   max-width: 520px;
+}
+
+.about__values-head {
+  margin-bottom: 16px;
 }
 
 .about__tenet {
@@ -2812,7 +2815,7 @@ body::after {
   display: none;
 }
 
-/* Team highlights — curated awards & programs */
+/* Company highlights — awards & programs */
 .highlights {
   margin-top: clamp(40px, 6vw, 64px);
   padding: clamp(24px, 3vw, 32px);
