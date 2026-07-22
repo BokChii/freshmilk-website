@@ -46,20 +46,8 @@
   <link rel="stylesheet" href="/assets/css/reset.css" />
   <link rel="stylesheet" href="/assets/css/tokens.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
-  <style id="hero-critical">
-    /* Hero text readable before animation CSS loads */
-    .hero--exhibition .hero__eyebrow,
-    .hero--exhibition .hero__title,
-    .hero--exhibition .hero__lead,
-    .hero--exhibition .trust-bar,
-    .hero--exhibition .hero__ctas {
-      visibility: visible;
-    }
-  </style>
 </head>
 <body>
-
-  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
 
   <!-- ===== Skip link ===== -->
   <a href="#main" class="visually-hidden" style="position:fixed;top:8px;left:8px;padding:8px 12px;background:#fff;border:1px solid var(--border);border-radius:8px;z-index:1000;transform:translateY(-200%);transition:transform .2s" onfocus="this.style.transform='translateY(0)'" onblur="this.style.transform='translateY(-200%)'">콘텐츠로 건너뛰기</a>
@@ -138,32 +126,26 @@
 
   <main id="main">
 
-    <!-- ===== Hero (exhibition: copy + Storit stage) ===== -->
-    <section class="hero hero--exhibition hero--ready gridbg gridbg--lg" id="top" aria-labelledby="hero-title">
-      <div class="hero__aurora" data-hero-aurora aria-hidden="true">
-        <span class="hero__blob hero__blob--brand"></span>
-        <span class="hero__blob hero__blob--cyan"></span>
-        <span class="hero__blob hero__blob--cream"></span>
-      </div>
-
-      <div class="container hero__grid">
+    <!-- ===== Hero ===== -->
+    <section class="hero hero--corporate" id="top" aria-labelledby="hero-title">
+      <div class="container hero__grid hero__grid--corporate">
         <div class="hero__copy">
-          <p class="hero__eyebrow hero-enter" data-i18n="hero.kicker">프레시밀크 · 콘텐츠 제품 기업</p>
+          <p class="hero__eyebrow" data-i18n="hero.kicker">프레시밀크 · 콘텐츠 제품 기업</p>
           <h1 class="hero__title" id="hero-title">
-            <span class="hero__line hero-enter" data-i18n="hero.titleLine1">매일 찾게 만드는</span>
-            <span class="hero__line hero__line--accent hero-enter" data-i18n-html="hero.titleLine2"><span class="hero__line-accent">콘텐츠 제품</span>을 만듭니다.</span>
+            <span class="hero__line" data-i18n="hero.titleLine1">매일 찾게 만드는</span>
+            <span class="hero__line hero__line--accent" data-i18n-html="hero.titleLine2"><span class="hero__line-accent">콘텐츠 제품</span>을 만듭니다.</span>
           </h1>
-          <p class="hero__lead hero-enter" data-i18n="hero.subtitle">
+          <p class="hero__lead" data-i18n="hero.subtitle">
             웹툰·K-콘텐츠·습관형 학습 분야의 모바일 서비스를 기획·개발합니다. 주력 서비스는 웹툰 팬덤 커뮤니티 스토릿입니다.
           </p>
 
-          <ul class="trust-bar trust-bar--live" aria-label="FreshMilk highlights">
+          <ul class="trust-bar" aria-label="FreshMilk highlights">
             <li class="trust-bar__item" data-i18n="hero.trust1">2025.12 설립</li>
             <li class="trust-bar__item" data-i18n="hero.trust2">응용 SW 개발·공급</li>
             <li class="trust-bar__item" data-i18n="hero.trust3">포항 · 한동대 창업보육센터</li>
           </ul>
 
-          <div class="hero__ctas hero-enter">
+          <div class="hero__ctas">
             <a class="btn btn--primary btn--lg" href="#about">
               <span data-i18n="hero.ctaPrimary">회사 소개</span>
               <span class="arrow" aria-hidden="true">→</span>
@@ -172,107 +154,56 @@
           </div>
         </div>
 
-        <div class="hero-stage hero-enter" data-hero-stage aria-hidden="true">
-          <div class="hero-stage__glow"></div>
-          <img class="hero-stage__mascot hero-stage__mascot--left" src="/assets/img/photos/storit_mascot.png" alt="" aria-hidden="true" width="112" height="112" loading="lazy" decoding="async" />
-          <img class="hero-stage__mascot hero-stage__mascot--right" src="/assets/img/photos/storit_mascot2.png" alt="" aria-hidden="true" width="96" height="96" loading="lazy" decoding="async" />
-          <div class="hero-stage__device">
-            <div class="hero-stage__screen">
-              <div class="hero-stage__status">
-                <span class="dot dot--building dot--pulse"></span>
-                <span data-i18n="hero.stageStatus">베타 준비 중</span>
-              </div>
-              <p class="hero-stage__app-name">Storit</p>
-              <p class="hero-stage__app-tag" data-i18n="hero.stageTag">오늘의 웹툰 퀴즈</p>
-              <div class="hero-stage__webtoon" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="hero-stage__quiz" data-hero-quiz>Quiz!</div>
-              <div class="hero-stage__foot">
-                <span class="hero-stage__chip" data-i18n="hero.stageReward">+120P</span>
-                <span class="hero-stage__chip hero-stage__chip--muted">#12</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <figure class="hero__visual" aria-hidden="true">
+          <img class="hero__screenshot" src="/assets/img/photos/storit.png" alt="" width="240" height="520" loading="eager" decoding="async" />
+        </figure>
       </div>
     </section>
 
     <!-- ===== About ===== -->
-    <section class="section section--exhibit" id="about" aria-labelledby="about-h">
+    <section class="section" id="about" aria-labelledby="about-h">
       <div class="container">
         <header class="section__head">
-          <span class="meta meta--section reveal" data-i18n="about.metaLabel">회사소개</span>
-          <h2 class="h2 reveal reveal-rise" id="about-h" data-i18n-html="about.heading">콘텐츠를 매일 찾게 만드는 제품을<br>실험합니다.</h2>
+          <span class="meta meta--section" data-i18n="about.metaLabel">회사소개</span>
+          <h2 class="h2" id="about-h" data-i18n-html="about.heading">사람들이 매일 돌아오는<br>콘텐츠 경험을 만듭니다.</h2>
         </header>
 
-        <p class="about__lead reveal reveal-rise" data-i18n="about.lead">2025년 12월, 한동대 창업보육센터에서 시작했습니다. 스토릿을 중심으로 tolli·픽토리 등 제품을 병행하며 시장의 반응을 확인합니다.</p>
+        <p class="about__lead" data-i18n="about.lead">프레시밀크는 2025년 12월 포항에서 설립된 콘텐츠 제품 기업입니다. 스토릿을 주력 서비스로, tolli·픽토리 등 모바일 서비스를 개발·운영합니다.</p>
 
-        <p class="incubator-badge reveal reveal-rise" data-i18n="about.incubator">한동대학교 창업보육센터 · 2025 입주</p>
+        <p class="incubator-badge" data-i18n="about.incubator">한동대학교 창업보육센터 · 2025 입주</p>
 
-        <div class="about-pin" data-about-pin aria-label="Mission, vision, and story">
-          <div class="about-pin__sticky">
-            <div class="about-pin__track">
-              <article class="about-pin__panel about-pin__panel--mission" data-pin-panel>
-                <span class="about-pin__index" aria-hidden="true">01</span>
-                <div class="about-pin__panel-inner">
-                  <span class="meta" data-i18n="about.missionLabel">미션</span>
-                  <p class="about-pin__statement" data-i18n="about.missionText">기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움을 전한다.</p>
-                </div>
-              </article>
-              <article class="about-pin__panel about-pin__panel--vision" data-pin-panel>
-                <span class="about-pin__index" aria-hidden="true">02</span>
-                <div class="about-pin__panel-inner">
-                  <span class="meta" data-i18n="about.visionLabel">비전</span>
-                  <p class="about-pin__vision-head" data-i18n="about.visionHeadline">매일 찾는</p>
-                  <p class="about-pin__vision-sub" data-i18n="about.visionSub">콘텐츠 플랫폼</p>
-                </div>
-              </article>
-              <article class="about-pin__panel about-pin__panel--story" data-pin-panel>
-                <span class="about-pin__index" aria-hidden="true">03</span>
-                <div class="about-pin__panel-inner">
-                  <span class="meta" data-i18n="about.storyLabel">스토리</span>
-                  <p class="about-pin__story-lead" data-i18n="about.storyP1">프레시밀크는 웹툰·K-콘텐츠·습관형 학습처럼, 사람들이 매일 돌아오는 경험을 만드는 팀입니다.</p>
-                  <p class="about-pin__story-body" data-i18n="about.storyP2">한 번에 하나만 고집하기보다, 작게 여러 실험을 돌리고 시장이 반응하는 것에 집중합니다.</p>
-                </div>
-              </article>
-            </div>
-            <nav class="about-pin__progress" aria-label="Mission, vision, and story progress">
-              <div class="about-pin__progress-track" aria-hidden="true">
-                <span class="about-pin__progress-fill"></span>
-              </div>
-              <ol class="about-pin__progress-labels">
-                <li class="is-active">
-                  <span class="about-pin__progress-num">01</span>
-                  <span data-i18n="about.pinMission">미션</span>
-                </li>
-                <li>
-                  <span class="about-pin__progress-num">02</span>
-                  <span data-i18n="about.pinVision">비전</span>
-                </li>
-                <li>
-                  <span class="about-pin__progress-num">03</span>
-                  <span data-i18n="about.pinStory">스토리</span>
-                </li>
-              </ol>
-            </nav>
+        <div class="about-mv">
+          <div class="about__grid">
+            <article class="mv-card">
+              <span class="meta" data-i18n="about.missionLabel">미션</span>
+              <p class="mv-card__text" data-i18n="about.missionText">기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움과 가치를 전합니다.</p>
+            </article>
+            <article class="mv-card mv-card--vision">
+              <span class="meta" data-i18n="about.visionLabel">비전</span>
+              <p class="mv-card__text"><span data-i18n="about.visionHeadline">매일 찾는</span> <span data-i18n="about.visionSub">콘텐츠 플랫폼</span></p>
+            </article>
           </div>
+          <article class="about__story">
+            <span class="meta" data-i18n="about.storyLabel">회사 소개</span>
+            <p data-i18n="about.storyP1">프레시밀크는 웹툰·K-콘텐츠·습관형 학습 등, 사용자가 매일 이용하는 모바일 서비스를 개발합니다.</p>
+            <p data-i18n="about.storyP2">시장 검증을 바탕으로 서비스를 빠르게 개선하며, 사용자에게 지속적인 가치를 제공하는 것을 목표로 합니다.</p>
+          </article>
         </div>
 
-        <figure class="about__photo media-slot media-slot--wide reveal reveal-rise">
+        <figure class="about__photo media-slot media-slot--wide">
           <img class="media-slot__photo" src="/assets/img/photos/workspace.jpg" alt="FreshMilk workspace" loading="lazy" decoding="async" />
         </figure>
 
-        <h3 class="about__values-head reveal reveal-rise" id="about-values-h">
+        <h3 class="about__values-head" id="about-values-h">
           <span class="meta" data-i18n="about.valuesLabel">핵심 가치</span>
         </h3>
-        <ul class="about__tenets reveal-stagger" aria-labelledby="about-values-h">
-          <li class="about__tenet reveal reveal-rise" data-i18n="about.tenet1">빠른 출시와 지속적인 개선</li>
-          <li class="about__tenet reveal reveal-rise" data-i18n="about.tenet2">데이터 기반 의사결정</li>
-          <li class="about__tenet reveal reveal-rise" data-i18n="about.tenet3">사용자 가치 중심의 제품 개발</li>
+        <ul class="about__tenets" aria-labelledby="about-values-h">
+          <li class="about__tenet" data-i18n="about.tenet1">빠른 출시와 지속적인 개선</li>
+          <li class="about__tenet" data-i18n="about.tenet2">데이터 기반 의사결정</li>
+          <li class="about__tenet" data-i18n="about.tenet3">사용자 가치 중심의 제품 개발</li>
         </ul>
 
-        <div class="timeline timeline--compact reveal" aria-label="FreshMilk timeline" data-timeline>
+        <div class="timeline timeline--compact" aria-label="FreshMilk timeline" data-timeline>
           <ol class="timeline__list">
             <li class="timeline__item is-done">
               <span class="timeline__node" aria-hidden="true"></span>
@@ -292,7 +223,7 @@
           </ol>
         </div>
 
-        <aside class="highlights reveal reveal-rise" aria-labelledby="highlights-h">
+        <aside class="highlights" aria-labelledby="highlights-h">
           <div class="highlights__head">
             <span class="meta" data-i18n="highlights.metaLabel">수상 · 프로그램</span>
             <h3 class="highlights__title" id="highlights-h" data-i18n="highlights.heading">주요 실적</h3>
@@ -308,24 +239,23 @@
     </section>
 
     <!-- ===== Projects / Services ===== -->
-    <section class="section section--surface section--ambient section--exhibit" id="projects" aria-labelledby="projects-h">
+    <section class="section section--surface" id="projects" aria-labelledby="projects-h">
       <div class="container">
-        <header class="section__head reveal reveal-blur">
+        <header class="section__head">
           <span class="meta meta--section" data-i18n="projects.metaLabel">서비스</span>
           <h2 class="h2" id="projects-h" data-i18n="projects.sectionTitle">서비스</h2>
           <p class="lead" data-i18n="projects.sectionLead">스토릿을 중심으로 운영·개발 중인 제품과 서비스입니다.</p>
         </header>
 
-        <div class="project-scale-wrap" data-scroll-scale>
-        <article class="project-main project-main--feature reveal reveal-scale" data-tilt data-tilt-max="3.5">
-          <div class="project-main__art media-slot media-slot--screenshot" data-parallax="0.06">
+        <article class="project-main project-main--feature">
+          <div class="project-main__art media-slot media-slot--screenshot">
             <img class="media-slot__photo" src="/assets/img/photos/storit.png" alt="Storit app screen" loading="lazy" decoding="async" />
             <img class="media-slot__fallback" src="/assets/img/projects/storit.svg" alt="" aria-hidden="true" loading="lazy" />
           </div>
           <div class="project-main__body">
             <div class="project-main__head">
               <span class="status-pill status-pill--brand">
-                <span class="dot dot--building dot--pulse" aria-hidden="true"></span>
+                <span class="dot dot--building" aria-hidden="true"></span>
                 <span data-i18n="projects.mainStatus">개발 중 · 메인</span>
               </span>
               <h3 class="project-main__name">
@@ -350,18 +280,17 @@
             </a>
           </div>
         </article>
-        </div>
 
-        <h3 class="projects-more__title reveal" data-i18n="projects.moreTitle">함께 돌리는 실험</h3>
-        <div class="projects-grid projects-grid--duo reveal-stagger">
-          <article class="project-card reveal reveal-left" data-tilt data-tilt-max="5">
-            <div class="project-card__art media-slot media-slot--mascot" data-parallax="0.04">
+        <h3 class="projects-more__title" data-i18n="projects.moreTitle">기타 서비스</h3>
+        <div class="projects-grid projects-grid--duo">
+          <article class="project-card">
+            <div class="project-card__art media-slot media-slot--mascot">
               <img class="media-slot__photo" src="/assets/img/photos/tolli.png" alt="tolli app mascot" loading="lazy" decoding="async" />
               <img class="media-slot__fallback" src="/assets/img/projects/tolli.svg" alt="" aria-hidden="true" loading="lazy" />
             </div>
             <div class="project-card__body">
               <span class="status-pill status-pill--live">
-                <span class="dot dot--live dot--pulse" aria-hidden="true"></span>
+                <span class="dot dot--live" aria-hidden="true"></span>
                 <span data-i18n="projects.p2Status">출시 · iOS / Android</span>
               </span>
               <h3 class="project-card__name"><span data-i18n="projects.p2Name">tolli</span></h3>
@@ -376,8 +305,8 @@
             </div>
           </article>
 
-          <article class="project-card reveal reveal-right" data-tilt data-tilt-max="5">
-            <div class="project-card__art" data-parallax="0.04" aria-hidden="true">
+          <article class="project-card">
+            <div class="project-card__art" aria-hidden="true">
               <img src="/assets/img/projects/picktory.svg" alt="" loading="lazy" />
             </div>
             <div class="project-card__body">
@@ -394,30 +323,29 @@
           </article>
         </div>
 
-        <p class="project-teaser reveal" data-i18n="projects.econoupTeaser">econoup — 경제를 매일 5분, 습관형 학습 앱 (가칭 · 구상 중)</p>
+        <p class="project-teaser" data-i18n="projects.econoupTeaser">econoup — 경제를 매일 5분, 습관형 학습 앱 (가칭 · 기획 중)</p>
       </div>
     </section>
 
     <!-- ===== Team ===== -->
-    <section class="section section--exhibit" id="team" aria-labelledby="team-h">
+    <section class="section" id="team" aria-labelledby="team-h">
       <div class="container">
         <header class="section__head">
-          <span class="meta meta--section reveal" data-i18n="team.metaLabel">팀</span>
-          <h2 class="h2 reveal reveal-rise reveal-blur" id="team-h" data-i18n="team.heading">경영진</h2>
-          <p class="lead reveal reveal-rise" data-i18n="team.subheading">제품 개발과 사업 운영을 함께 이끌어갑니다.</p>
+          <span class="meta meta--section" data-i18n="team.metaLabel">팀</span>
+          <h2 class="h2" id="team-h" data-i18n="team.heading">경영진</h2>
+          <p class="lead" data-i18n="team.subheading">제품 개발과 사업 운영을 함께 이끌어갑니다.</p>
         </header>
 
-        <div class="team-grid team-grid--polaroid">
-          <article class="team-card team-card--polaroid" data-polaroid-drop>
+        <div class="team-grid">
+          <article class="team-card">
             <div class="team-card__avatar media-slot media-slot--avatar">
               <img class="media-slot__photo" src="/assets/img/photos/kgsan.jpg" alt="김강산" loading="eager" fetchpriority="high" decoding="async" />
               <img class="media-slot__fallback" src="/assets/img/team/kgsan.svg" alt="" aria-hidden="true" />
             </div>
             <div class="team-card__body">
               <p class="team-card__name" data-i18n="team.m1Name">김강산</p>
-              <p class="team-card__role" data-i18n="team.m1Role">CEO · Co-founder</p>
-              <p class="team-card__bio" data-i18n="team.m1Bio">제품 실행과 팀 운영. 스토릿을 중심으로 빠르게 출시·검증합니다.</p>
-              <blockquote class="team-card__quote" data-i18n="team.m1Quote">먼저 만들고, 시장에 묻습니다.</blockquote>
+              <p class="team-card__role" data-i18n="team.m1Role">대표이사 · Co-founder</p>
+              <p class="team-card__bio" data-i18n="team.m1Bio">제품 개발과 조직 운영을 총괄합니다. 스토릿을 중심으로 서비스 출시와 사업을 이끕니다.</p>
               <p class="team-card__line">
                 <span class="dot dot--brand" style="background:var(--brand)" aria-hidden="true"></span>
                 <a href="mailto:kgsan@freshmilk.kr">kgsan@freshmilk.kr</a>
@@ -429,16 +357,15 @@
             </div>
           </article>
 
-          <article class="team-card team-card--polaroid" data-polaroid-drop>
+          <article class="team-card">
             <div class="team-card__avatar media-slot media-slot--avatar">
               <img class="media-slot__photo" src="/assets/img/photos/kdshin.jpg" alt="김동신" loading="eager" decoding="async" />
               <img class="media-slot__fallback" src="/assets/img/team/kdshin.svg" alt="" aria-hidden="true" />
             </div>
             <div class="team-card__body">
               <p class="team-card__name" data-i18n="team.m2Name">김동신</p>
-              <p class="team-card__role" data-i18n="team.m2Role">기획 · Co-founder</p>
-              <p class="team-card__bio" data-i18n="team.m2Bio">기획과 실험 설계. 사용자 반응을 제품 방향에 빠르게 반영합니다.</p>
-              <blockquote class="team-card__quote" data-i18n="team.m2Quote">빠르게 배우는 기획이 최선입니다.</blockquote>
+              <p class="team-card__role" data-i18n="team.m2Role">기획 총괄 · Co-founder</p>
+              <p class="team-card__bio" data-i18n="team.m2Bio">서비스 기획과 사업 설계를 담당합니다. 사용자 피드백을 제품 방향에 신속히 반영합니다.</p>
               <p class="team-card__line">
                 <span class="dot dot--brand" style="background:var(--brand)" aria-hidden="true"></span>
                 <a href="mailto:kdshin@freshmilk.kr">kdshin@freshmilk.kr</a>
@@ -454,26 +381,26 @@
     </section>
 
     <!-- ===== Updates ===== -->
-    <section class="section section--surface section--ambient" id="updates" aria-labelledby="updates-h">
+    <section class="section section--surface" id="updates" aria-labelledby="updates-h">
       <div class="container">
         <header class="section__head section__head--compact">
-          <span class="meta meta--section reveal" data-i18n="updates.metaLabel">소식</span>
-          <h2 class="h2 reveal reveal-rise reveal-blur" id="updates-h" data-i18n="updates.heading">뉴스 & 소식</h2>
+          <span class="meta meta--section" data-i18n="updates.metaLabel">소식</span>
+          <h2 class="h2" id="updates-h" data-i18n="updates.heading">뉴스 & 소식</h2>
         </header>
-        <ol class="updates-list reveal-stagger">
-          <li class="updates-list__item reveal reveal-rise">
+        <ol class="updates-list">
+          <li class="updates-list__item">
             <time class="updates-list__date" datetime="2026-05" data-i18n="updates.u1Date">2026.05</time>
             <span class="updates-list__text" data-i18n="updates.u1Text">회사 홈페이지 개편 · 스토릿 베타 준비 본격화</span>
           </li>
-          <li class="updates-list__item reveal reveal-rise">
+          <li class="updates-list__item">
             <time class="updates-list__date" datetime="2026" data-i18n="updates.u2Date">2026</time>
             <span class="updates-list__text" data-i18n="updates.u2Text">tolli iOS·Android 정식 출시</span>
           </li>
-          <li class="updates-list__item reveal reveal-rise">
+          <li class="updates-list__item">
             <time class="updates-list__date" datetime="2026-01" data-i18n="updates.u3Date">2026.01</time>
-            <span class="updates-list__text" data-i18n="updates.u3Text">픽토리·econoup 병행 개발 착수</span>
+            <span class="updates-list__text" data-i18n="updates.u3Text">픽토리·econoup 개발 착수</span>
           </li>
-          <li class="updates-list__item reveal reveal-rise">
+          <li class="updates-list__item">
             <time class="updates-list__date" datetime="2025-12" data-i18n="updates.u4Date">2025.12</time>
             <span class="updates-list__text" data-i18n="updates.u4Text">프레시밀크 창업 · 스토릿 프로젝트 킥오프</span>
           </li>
@@ -482,13 +409,13 @@
     </section>
 
     <!-- ===== Contact ===== -->
-    <section class="section section--ambient section--exhibit section--contact-glow" id="contact" aria-labelledby="contact-h">
+    <section class="section" id="contact" aria-labelledby="contact-h">
       <div class="container">
         <div class="contact__grid">
-          <div class="contact__copy reveal reveal-rise">
+          <div class="contact__copy">
             <span class="meta meta--section" data-i18n="contact.metaLabel">문의</span>
-            <h2 class="h2" id="contact-h" data-i18n="contact.heading">같이 실험할 사람을 찾습니다.</h2>
-            <p class="lead" data-i18n="contact.subtitle">제휴·협업·베타·일반 문의 환영합니다.</p>
+            <h2 class="h2" id="contact-h" data-i18n="contact.heading">비즈니스 문의</h2>
+            <p class="lead" data-i18n="contact.subtitle">제휴·협업·투자·미디어·서비스 관련 문의를 환영합니다.</p>
             <div class="contact__types">
               <span class="contact__types-label" data-i18n="contact.typesTitle">문의 유형</span>
               <ul class="contact__types-list">
@@ -500,8 +427,8 @@
             <p class="contact__address-inline" data-i18n-html="contact.address">경상북도 포항시 북구 흥해읍 한동로 558,<br>한동대학교 창업보육센터 학생창업공간(10)</p>
           </div>
 
-          <aside class="contact__card reveal reveal-scale" data-tilt data-tilt-max="4">
-            <span class="contact__card-label" data-i18n="contact.cardTitle">대표 메일</span>
+          <aside class="contact__card">
+            <span class="contact__card-label" data-i18n="contact.cardTitle">대표 연락처</span>
             <a class="contact__email" href="mailto:kgsan@freshmilk.kr">kgsan@freshmilk.kr</a>
             <div class="contact__buttons">
               <a class="btn btn--primary" href="mailto:kgsan@freshmilk.kr">
@@ -526,11 +453,7 @@
             <span class="brand__mark" aria-hidden="true">F</span>
             <span class="brand__text" data-i18n="brand.name">프레시밀크</span>
           </a>
-          <p class="footer__slogan" data-i18n="footer.slogan">매일 찾게 만드는 콘텐츠를 실험합니다.</p>
-          <span class="footer__live">
-            <span class="dot dot--live" aria-hidden="true"></span>
-            <span data-i18n="footer.liveLabel">2026.05 업데이트</span>
-          </span>
+          <p class="footer__slogan" data-i18n="footer.slogan">매일 찾게 만드는 콘텐츠 제품을 개발합니다.</p>
         </div>
 
         <div class="footer__links">
@@ -566,20 +489,14 @@
 
       <div class="footer__bottom">
         <span data-i18n="footer.copyright">© 2026 FreshMilk. All rights reserved.</span>
-        <span data-i18n="footer.madeWith">Made in Pohang</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
   <script src="/assets/js/theme.js" defer></script>
   <script src="/assets/js/i18n.js" defer></script>
-  <script src="/assets/js/hero.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
-  <script src="/assets/js/scroll.js" defer></script>
-  <script src="/assets/js/personality.js" defer></script>
   <script src="/assets/js/nav.js" defer></script>
-  <script src="/assets/js/cursor.js" defer></script>
 </body>
 </html>

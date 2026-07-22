@@ -14,16 +14,10 @@
 
   // -------- Header scroll state --------
   const header = document.querySelector('.site-header');
-  const progressBar = document.querySelector('.scroll-progress__bar');
 
   const onScroll = () => {
     const y = window.scrollY;
     if (header) header.classList.toggle('is-scrolled', y > 8);
-    if (progressBar) {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = max > 0 ? Math.min(y / max, 1) : 0;
-      progressBar.style.width = `${pct * 100}%`;
-    }
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -100,78 +94,7 @@
     sections.forEach((s) => spy.observe(s.el));
   }
 
-  // -------- Parallax on project art --------
-  const parallaxEls = [...document.querySelectorAll('[data-parallax]')];
-
-  function updateParallax() {
-    if (reduceMotion || !parallaxEls.length) return;
-    const vh = window.innerHeight;
-    parallaxEls.forEach((wrap) => {
-      const img = wrap.querySelector('img');
-      if (!img) return;
-      const strength = parseFloat(wrap.dataset.parallax || '0.05');
-      const rect = wrap.getBoundingClientRect();
-      const center = rect.top + rect.height * 0.5;
-      const delta = (center - vh * 0.5) / vh;
-      const y = delta * strength * -120;
-      const scale = 1 + Math.abs(delta) * strength * 0.15;
-      img.style.transform = `translate3d(0, ${y}px, 0) scale(${scale})`;
-    });
-  }
-
-  // -------- Card tilt (pointer devices) --------
-  function initCardTilt() {
-    if (reduceMotion || matchMedia('(pointer: coarse)').matches) return;
-
-    document.querySelectorAll('[data-tilt]').forEach((card) => {
-      const max = parseFloat(card.dataset.tiltMax || '5');
-
-      card.addEventListener('pointerenter', () => card.classList.add('is-tilting'));
-      card.addEventListener('pointerleave', () => {
-        card.classList.remove('is-tilting');
-        card.style.transform = '';
-      });
-
-      card.addEventListener('pointermove', (e) => {
-        if (e.pointerType === 'touch') return;
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform =
-          `perspective(900px) rotateX(${(-y * max).toFixed(2)}deg) rotateY(${(x * max).toFixed(2)}deg) translateY(-4px)`;
-      });
-    });
-  }
-
-  // -------- Primary button micro-lift --------
-  function initButtonMotion() {
-    if (reduceMotion) return;
-    document.querySelectorAll('.btn--primary').forEach((btn) => {
-      btn.addEventListener('mouseenter', () => {
-        btn.style.transform = 'translateY(-2px)';
-      });
-      btn.addEventListener('mouseleave', () => {
-        btn.style.transform = '';
-      });
-    });
-  }
-
-  if (parallaxEls.length && !reduceMotion) {
-    let ticking = false;
-    const onParallaxScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        updateParallax();
-        ticking = false;
-      });
-    };
-    updateParallax();
-    window.addEventListener('scroll', onParallaxScroll, { passive: true });
-    window.addEventListener('resize', onParallaxScroll, { passive: true });
-  }
-
-  // -------- Counters (legacy) --------
+  // -------- Nav section spy --------
   function animateCounter(el) {
     const target = el.getAttribute('data-counter');
     const duration = parseInt(el.getAttribute('data-counter-duration') || '1100', 10);
@@ -269,6 +192,4 @@
   }
 
   initMediaSlots();
-  initCardTilt();
-  initButtonMotion();
 })();
