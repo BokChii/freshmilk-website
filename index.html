@@ -163,84 +163,101 @@
     <!-- ===== About ===== -->
     <section class="section" id="about" aria-labelledby="about-h">
       <div class="container">
-        <header class="section__head">
-          <span class="meta meta--section" data-i18n="about.metaLabel">회사소개</span>
-          <h2 class="h2" id="about-h" data-i18n-html="about.heading">사람들이 매일 돌아오는<br>콘텐츠 경험을 만듭니다.</h2>
-        </header>
-
-        <p class="about__lead" data-i18n="about.lead">프레시밀크는 2025년 12월 포항에서 설립된 콘텐츠 제품 기업입니다. 스토릿을 주력 서비스로, tolli·픽토리 등 모바일 서비스를 개발·운영합니다.</p>
-
-        <p class="incubator-badge" data-i18n="about.incubator">한동대학교 창업보육센터 · 2025 입주</p>
-
-        <div class="about-mv">
-          <div class="about__grid">
-            <article class="mv-card">
-              <span class="meta" data-i18n="about.missionLabel">미션</span>
-              <p class="mv-card__text" data-i18n="about.missionText">기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움과 가치를 전합니다.</p>
-            </article>
-            <article class="mv-card mv-card--vision">
-              <span class="meta" data-i18n="about.visionLabel">비전</span>
-              <p class="mv-card__text"><span data-i18n="about.visionHeadline">매일 찾는</span> <span data-i18n="about.visionSub">콘텐츠 플랫폼</span></p>
-            </article>
-          </div>
-          <article class="about__story">
-            <span class="meta" data-i18n="about.storyLabel">회사 소개</span>
-            <p data-i18n="about.storyP1">프레시밀크는 웹툰·K-콘텐츠·습관형 학습 등, 사용자가 매일 이용하는 모바일 서비스를 개발합니다.</p>
-            <p data-i18n="about.storyP2">시장 검증을 바탕으로 서비스를 빠르게 개선하며, 사용자에게 지속적인 가치를 제공하는 것을 목표로 합니다.</p>
-          </article>
+        <div class="about-intro">
+          <header class="section__head section__head--intro">
+            <span class="meta meta--section" data-i18n="about.metaLabel">회사소개</span>
+            <h2 class="h2" id="about-h" data-i18n-html="about.heading">사람들이 매일 돌아오는<br>콘텐츠 경험을 만듭니다.</h2>
+            <p class="lead about__lead" data-i18n="about.lead">프레시밀크는 2025년 12월 포항에서 설립된 콘텐츠 제품 기업입니다. 스토릿을 주력 서비스로, tolli·픽토리 등 모바일 서비스를 개발·운영합니다.</p>
+          </header>
+          <p class="incubator-badge" data-i18n="about.incubator">한동대학교 창업보육센터 · 2025 입주</p>
         </div>
 
-        <figure class="about__photo media-slot media-slot--wide">
-          <img class="media-slot__photo" src="/assets/img/photos/workspace.jpg" alt="FreshMilk workspace" loading="lazy" decoding="async" />
-        </figure>
-
-        <h3 class="about__values-head" id="about-values-h">
-          <span class="meta" data-i18n="about.valuesLabel">핵심 가치</span>
-        </h3>
-        <ul class="about__tenets" aria-labelledby="about-values-h">
-          <li class="about__tenet" data-i18n="about.tenet1">빠른 출시와 지속적인 개선</li>
-          <li class="about__tenet" data-i18n="about.tenet2">데이터 기반 의사결정</li>
-          <li class="about__tenet" data-i18n="about.tenet3">사용자 가치 중심의 제품 개발</li>
-        </ul>
-
-        <div class="timeline timeline--compact" aria-label="FreshMilk timeline" data-timeline>
-          <ol class="timeline__list">
-            <li class="timeline__item is-done">
-              <span class="timeline__node" aria-hidden="true"></span>
-              <span class="timeline__date" data-i18n="about.tl1Date">2025.12</span>
-              <span class="timeline__title-row" data-i18n="about.tl1Title">창업 · 스토릿 킥오프</span>
-            </li>
-            <li class="timeline__item is-done">
-              <span class="timeline__node" aria-hidden="true"></span>
-              <span class="timeline__date" data-i18n="about.tl2Date">2026.01</span>
-              <span class="timeline__title-row" data-i18n="about.tl2Title">4개 프로젝트 동시 진행</span>
-            </li>
-            <li class="timeline__item is-now">
-              <span class="timeline__node" aria-hidden="true"></span>
-              <span class="timeline__date" data-i18n="about.tl3Date">지금</span>
-              <span class="timeline__title-row" data-i18n="about.tl3Title">스토릿 베타 준비</span>
-            </li>
-          </ol>
-        </div>
-
-        <aside class="highlights" aria-labelledby="highlights-h">
-          <div class="highlights__head">
-            <span class="meta" data-i18n="highlights.metaLabel">수상 · 프로그램</span>
-            <h3 class="highlights__title" id="highlights-h" data-i18n="highlights.heading">주요 실적</h3>
+        <div class="about-blocks">
+          <div class="about-block about-block--mv">
+            <header class="about-block__head about-block__head--label">
+              <span class="meta" data-i18n="about.mvLabel">미션 · 비전</span>
+            </header>
+            <div class="about__grid">
+              <article class="mv-card">
+                <span class="meta" data-i18n="about.missionLabel">미션</span>
+                <p class="mv-card__text" data-i18n="about.missionText">기술과 콘텐츠의 트렌드를 융합하여 사람들에게 즐거움과 가치를 전합니다.</p>
+              </article>
+              <article class="mv-card mv-card--vision">
+                <span class="meta" data-i18n="about.visionLabel">비전</span>
+                <p class="mv-card__text"><span data-i18n="about.visionHeadline">매일 찾는</span> <span data-i18n="about.visionSub">콘텐츠 플랫폼</span></p>
+              </article>
+            </div>
           </div>
-          <ul class="highlights__list">
-            <li class="highlights__item" data-i18n="highlights.h1">청년창업 사관학교 선정</li>
-            <li class="highlights__item" data-i18n="highlights.h2">창업·IT 경진대회 수상</li>
-            <li class="highlights__item" data-i18n="highlights.h3">FIX 전시회 기업 부스 참여</li>
-            <li class="highlights__item" data-i18n="highlights.h4">정부·지자체 지원사업 수행</li>
-          </ul>
-        </aside>
+
+          <div class="about-block about-block--story">
+            <article class="about__story">
+              <span class="meta" data-i18n="about.storyLabel">회사 소개</span>
+              <p data-i18n="about.storyP1">프레시밀크는 웹툰·K-콘텐츠·습관형 학습 등, 사용자가 매일 이용하는 모바일 서비스를 개발합니다.</p>
+              <p data-i18n="about.storyP2">시장 검증을 바탕으로 서비스를 빠르게 개선하며, 사용자에게 지속적인 가치를 제공하는 것을 목표로 합니다.</p>
+            </article>
+          </div>
+
+          <figure class="about-block about-block--photo about__photo media-slot media-slot--wide">
+            <img class="media-slot__photo" src="/assets/img/photos/workspace.jpg" alt="FreshMilk workspace" loading="lazy" decoding="async" />
+          </figure>
+
+          <div class="about-block about-block--values">
+            <header class="about-block__head" id="about-values-h">
+              <h3 class="about-block__title" data-i18n="about.valuesLabel">핵심 가치</h3>
+            </header>
+            <ul class="about__tenets" aria-labelledby="about-values-h">
+              <li class="about__tenet" data-i18n="about.tenet1">빠른 출시와 지속적인 개선</li>
+              <li class="about__tenet" data-i18n="about.tenet2">데이터 기반 의사결정</li>
+              <li class="about__tenet" data-i18n="about.tenet3">사용자 가치 중심의 제품 개발</li>
+            </ul>
+          </div>
+
+          <div class="about-block about-block--timeline">
+            <header class="about-block__head">
+              <span class="meta" data-i18n="about.timelineLabel">연혁</span>
+              <h3 class="about-block__title" data-i18n="about.timelineHeading">주요 일정</h3>
+            </header>
+            <div class="timeline timeline--compact" aria-label="FreshMilk timeline" data-timeline>
+              <ol class="timeline__list">
+                <li class="timeline__item is-done">
+                  <span class="timeline__node" aria-hidden="true"></span>
+                  <span class="timeline__date" data-i18n="about.tl1Date">2025.12</span>
+                  <span class="timeline__title-row" data-i18n="about.tl1Title">창업 · 스토릿 킥오프</span>
+                </li>
+                <li class="timeline__item is-done">
+                  <span class="timeline__node" aria-hidden="true"></span>
+                  <span class="timeline__date" data-i18n="about.tl2Date">2026.01</span>
+                  <span class="timeline__title-row" data-i18n="about.tl2Title">4개 프로젝트 동시 진행</span>
+                </li>
+                <li class="timeline__item is-now">
+                  <span class="timeline__node" aria-hidden="true"></span>
+                  <span class="timeline__date" data-i18n="about.tl3Date">지금</span>
+                  <span class="timeline__title-row" data-i18n="about.tl3Title">스토릿 베타 준비</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <aside class="about-block about-block--highlights highlights" aria-labelledby="highlights-h">
+            <header class="about-block__head highlights__head">
+              <span class="meta" data-i18n="highlights.metaLabel">수상 · 프로그램</span>
+              <h3 class="about-block__title highlights__title" id="highlights-h" data-i18n="highlights.heading">주요 실적</h3>
+            </header>
+            <ul class="highlights__list">
+              <li class="highlights__item" data-i18n="highlights.h1">청년창업 사관학교 선정</li>
+              <li class="highlights__item" data-i18n="highlights.h2">창업·IT 경진대회 수상</li>
+              <li class="highlights__item" data-i18n="highlights.h3">FIX 전시회 기업 부스 참여</li>
+              <li class="highlights__item" data-i18n="highlights.h4">정부·지자체 지원사업 수행</li>
+            </ul>
+          </aside>
+        </div>
       </div>
     </section>
 
     <!-- ===== Projects / Services ===== -->
     <section class="section section--surface" id="projects" aria-labelledby="projects-h">
       <div class="container">
+        <div class="section__stack section__stack--projects">
         <header class="section__head">
           <span class="meta meta--section" data-i18n="projects.metaLabel">서비스</span>
           <h2 class="h2" id="projects-h" data-i18n="projects.sectionTitle">서비스</h2>
@@ -324,12 +341,14 @@
         </div>
 
         <p class="project-teaser" data-i18n="projects.econoupTeaser">econoup — 경제를 매일 5분, 습관형 학습 앱 (가칭 · 기획 중)</p>
+        </div>
       </div>
     </section>
 
     <!-- ===== Team ===== -->
     <section class="section" id="team" aria-labelledby="team-h">
       <div class="container">
+        <div class="section__stack">
         <header class="section__head">
           <span class="meta meta--section" data-i18n="team.metaLabel">팀</span>
           <h2 class="h2" id="team-h" data-i18n="team.heading">경영진</h2>
@@ -377,12 +396,14 @@
             </div>
           </article>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- ===== Updates ===== -->
     <section class="section section--surface" id="updates" aria-labelledby="updates-h">
       <div class="container">
+        <div class="section__stack">
         <header class="section__head section__head--compact">
           <span class="meta meta--section" data-i18n="updates.metaLabel">소식</span>
           <h2 class="h2" id="updates-h" data-i18n="updates.heading">뉴스 & 소식</h2>
@@ -405,6 +426,7 @@
             <span class="updates-list__text" data-i18n="updates.u4Text">프레시밀크 창업 · 스토릿 프로젝트 킥오프</span>
           </li>
         </ol>
+        </div>
       </div>
     </section>
 
