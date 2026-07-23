@@ -2057,6 +2057,14 @@ body::after {
     0 0 0 1px color-mix(in srgb, var(--border) 80%, transparent);
 }
 
+.project-main__gallery--triple {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-main__gallery--triple .project-main__shot img {
+  width: min(100%, 240px);
+}
+
 .feature-link {
   display: inline-flex;
   align-items: center;
@@ -2184,6 +2192,64 @@ body::after {
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: var(--text-muted);
+}
+.project-card__stats-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.project-card__stats-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.project-card__stats-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+/* Picktory gallery card art */
+.project-card__art--gallery {
+  aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: clamp(18px, 2.5vw, 26px);
+  background:
+    radial-gradient(circle at 50% 15%, color-mix(in srgb, var(--brand-soft) 55%, white), var(--surface));
+}
+.project-card__logo {
+  width: auto;
+  height: clamp(40px, 5vw, 56px);
+  object-fit: contain;
+}
+.project-card__shots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+.project-card__shots img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow:
+    0 6px 18px -8px color-mix(in srgb, var(--text) 22%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--border) 75%, transparent);
 }
 .project-card__foot {
   display: flex;
@@ -2558,6 +2624,116 @@ body::after {
   line-height: 1.55;
   color: var(--text);
   text-wrap: pretty;
+}
+
+/* Awards & Press list */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  -webkit-backdrop-filter: saturate(var(--glass-saturate)) blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
+}
+
+.awards-list__item {
+  display: grid;
+  grid-template-columns: 132px 1fr auto;
+  gap: clamp(16px, 2.4vw, 28px);
+  align-items: center;
+  padding: clamp(16px, 2vw, 22px) clamp(18px, 2.4vw, 28px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.awards-list__item:hover {
+  background: color-mix(in srgb, var(--brand-soft) 35%, transparent);
+}
+
+.awards-list__item:last-child {
+  border-bottom: none;
+}
+
+.awards-list__lead {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.awards-list__date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.awards-list__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--brand-line);
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.awards-list__badge--top {
+  border-color: transparent;
+  background: var(--brand);
+  color: #fff;
+}
+
+.awards-list__title {
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  margin: 0 0 4px;
+  text-wrap: pretty;
+}
+
+.awards-list__org {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.awards-list__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.awards-list__link::after {
+  content: "↗";
+  font-size: 12px;
+}
+
+.awards-list__link:hover {
+  color: var(--brand);
+  border-color: color-mix(in srgb, var(--brand) 40%, var(--border));
 }
 
 .contact__types {
@@ -3243,12 +3419,27 @@ body::after {
   .projects-grid,
   .projects-grid--duo { grid-template-columns: 1fr; }
   .updates-list__item { grid-template-columns: 72px 1fr; gap: 12px; }
+  .awards-list__item {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 8px 16px;
+  }
+  .awards-list__lead {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .awards-list__link { grid-column: 2; align-self: center; }
+  .awards-list__body { grid-column: 1 / -1; }
   .values { grid-template-columns: 1fr; }
   .principles__grid { grid-template-columns: 1fr 1fr; }
   .project-main { grid-template-columns: 1fr; }
   .project-main__art { min-height: 220px; order: -1; }
   .project-main__gallery { gap: 16px; }
   .project-main__shot img { width: min(100%, 220px); }
+  .project-main__gallery--triple { grid-template-columns: repeat(3, 1fr); }
+  .project-main__gallery--triple .project-main__shot img { width: min(100%, 180px); }
   .timeline--compact .timeline__list { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .lab__grid { grid-template-columns: 1fr; }

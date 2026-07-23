@@ -10,6 +10,7 @@
     "about": "About",
     "projects": "Services",
     "team": "Team",
+    "press": "Awards & Press",
     "updates": "News",
     "contact": "Contact",
     "menuLabel": "Open menu"
@@ -82,6 +83,7 @@
     "mainFeature1": "Webtoon-based quizzes let fans participate directly",
     "mainFeature2": "Rewards for answers and engagement keep the community active",
     "mainFeature3": "Beta in 2026 — web and app in parallel",
+    "mainShotHomeAlt": "Storit home screen",
     "mainShotRankingAlt": "Storit ranking screen",
     "mainShotMissionAlt": "Storit daily mission screen",
     "mainTag1": "Webtoon",
@@ -90,7 +92,9 @@
     "moreTitle": "Experimental services",
     "p2Name": "tolli",
     "p2Copy": "A daily verse at your fingertips. A mobile service for Bible memorization, game-like.",
-    "p2Stats": "352 total downloads (iOS 248 · Android 104) · App Store 27 reviews at 5.0 · Play Store 21 reviews at 5.0",
+    "p2Stat1": "352 total downloads (iOS 248 · Android 104)",
+    "p2Stat2": "App Store: 27 reviews · 5.0 rating",
+    "p2Stat3": "Play Store: 21 reviews · 5.0 rating",
     "p2Status": "Live · iOS / Android",
     "p2StoreAndroid": "Get on Android",
     "p2StoreIos": "Get on iOS",
@@ -98,7 +102,8 @@
     "p3Name": "Picktory",
     "p3Copy": "K-content through guessing. A service where prediction and reasoning bring fans together.",
     "p3Status": "Experimental · in development",
-    "p3Tag1": "K-content"
+    "p3Tag1": "K-content",
+    "p3LogoAlt": "Picktory logo"
   },
   "team": {
     "metaLabel": "Team",
@@ -114,7 +119,7 @@
     "m2Quote": "Planning that learns fast wins.",
     "linkedinLabel": "LinkedIn",
     "m1LinkedInUrl": "https://www.linkedin.com/in/gangsan-kim-875a7a1b1",
-    "m2LinkedInUrl": ""
+    "m2LinkedInUrl": "https://www.linkedin.com/in/dongshinthepm/"
   },
   "highlights": {
     "metaLabel": "Awards · programs",
@@ -127,6 +132,37 @@
     "h2Url": "",
     "h3Url": "",
     "h4Url": ""
+  },
+  "press": {
+    "metaLabel": "Awards · Press",
+    "heading": "Awards & press coverage",
+    "lead": "Competition and demo-day awards, plus startup support programs we've been selected for.",
+    "linkLabel": "Read article",
+    "a1Date": "2026",
+    "a1Award": "Selected",
+    "a1Title": "Ulsan Youth Startup Academy, 16th cohort",
+    "a1Org": "Ministry of SMEs and Startups · KISED",
+    "a1Url": "",
+    "a2Date": "2025.10.28",
+    "a2Award": "Grand Prize (1st)",
+    "a2Title": "Hi-Challenge Startup Idea Competition",
+    "a2Org": "Pohang Union Tech Holdings · Specialized BI program",
+    "a2Url": "https://platum.kr/archives/273501",
+    "a3Date": "2025.09.20",
+    "a3Award": "Grand Prize",
+    "a3Title": "Yeongilman Startup Demo Day",
+    "a3Org": "Pohang City · Handong University · MOE · RISE",
+    "a3Url": "https://www.ksmnews.co.kr/news/view.php?idx=565263",
+    "a4Date": "2025.07.11",
+    "a4Award": "Excellence Award",
+    "a4Title": "Daegu UNICORE Tech Startup Idea Competition",
+    "a4Org": "Daegu City · Kyungpook National University · ETRI",
+    "a4Url": "https://www.christiandaily.co.kr/news/149437",
+    "a5Date": "2025.07.10",
+    "a5Award": "Grand Prize",
+    "a5Title": "Exhibition Industry Digital Convergence Hackathon",
+    "a5Org": "Pohang City (Mayor's Award)",
+    "a5Url": "https://www.kbmaeil.com/article/20250715500266"
   },
   "updates": {
     "metaLabel": "News",

@@ -65,6 +65,7 @@
           <li><a class="nav__link" href="#about" data-nav-link data-i18n="nav.about">회사소개</a></li>
           <li><a class="nav__link" href="#projects" data-nav-link data-i18n="nav.projects">서비스</a></li>
           <li><a class="nav__link" href="#team" data-nav-link data-i18n="nav.team">팀</a></li>
+          <li><a class="nav__link" href="#press" data-nav-link data-i18n="nav.press">수상·언론</a></li>
           <li><a class="nav__link" href="#contact" data-nav-link data-i18n="nav.contact">문의</a></li>
         </ul>
       </nav>
@@ -99,6 +100,7 @@
       <a href="#about" data-i18n="nav.about">회사소개</a>
       <a href="#projects" data-i18n="nav.projects">서비스</a>
       <a href="#team" data-i18n="nav.team">팀</a>
+      <a href="#press" data-i18n="nav.press">수상·언론</a>
       <a href="#contact" data-i18n="nav.contact">문의</a>
     </nav>
 
@@ -271,7 +273,10 @@
         </header>
 
         <article class="project-main project-main--feature">
-          <div class="project-main__art project-main__gallery" aria-label="Storit app screens">
+          <div class="project-main__art project-main__gallery project-main__gallery--triple" aria-label="Storit app screens">
+            <figure class="project-main__shot">
+              <img src="/assets/img/photos/storit.png" alt="Storit home screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotHomeAlt" />
+            </figure>
             <figure class="project-main__shot">
               <img src="/assets/img/photos/ranking.png" alt="Storit ranking screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotRankingAlt" />
             </figure>
@@ -322,7 +327,11 @@
               </span>
               <h3 class="project-card__name"><span data-i18n="projects.p2Name">tolli</span></h3>
               <p class="project-card__copy" data-i18n="projects.p2Copy">매일의 말씀, 손끝의 암송. 성경 암송을 게임처럼.</p>
-              <p class="project-card__stats" data-i18n="projects.p2Stats">누적 352회 다운로드 · App Store 27개 리뷰 5.0 · Play Store 21개 리뷰 5.0</p>
+              <ul class="project-card__stats-list" aria-label="tolli metrics">
+                <li data-i18n="projects.p2Stat1">누적 352회 다운로드 (iOS 248 · Android 104)</li>
+                <li data-i18n="projects.p2Stat2">App Store 리뷰 27개 · 평점 5.0</li>
+                <li data-i18n="projects.p2Stat3">Play Store 리뷰 21개 · 평점 5.0</li>
+              </ul>
               <div class="project-card__stores">
                 <a class="project-card__store" href="https://buly.kr/ET0munZ" target="_blank" rel="noopener noreferrer" data-i18n="projects.p2StoreAndroid">Android 다운로드</a>
                 <a class="project-card__store" href="https://buly.kr/1n6GoQC" target="_blank" rel="noopener noreferrer" data-i18n="projects.p2StoreIos">iOS 다운로드</a>
@@ -334,8 +343,14 @@
           </article>
 
           <article class="project-card">
-            <div class="project-card__art" aria-hidden="true">
-              <img src="/assets/img/projects/picktory.svg" alt="" loading="lazy" />
+            <div class="project-card__art project-card__art--gallery">
+              <img class="project-card__logo" src="/assets/img/photos/pictory.png" alt="Picktory logo" loading="lazy" decoding="async" data-i18n-attr="alt:projects.p3LogoAlt" />
+              <div class="project-card__shots" aria-label="Picktory app screens">
+                <img src="/assets/img/photos/pictory1.png" alt="Picktory screen 1" loading="lazy" decoding="async" />
+                <img src="/assets/img/photos/pictory2.png" alt="Picktory screen 2" loading="lazy" decoding="async" />
+                <img src="/assets/img/photos/pictory3.png" alt="Picktory screen 3" loading="lazy" decoding="async" />
+                <img src="/assets/img/photos/pictory4.png" alt="Picktory screen 4" loading="lazy" decoding="async" />
+              </div>
             </div>
             <div class="project-card__body">
               <span class="status-pill">
@@ -401,11 +416,81 @@
               </p>
               <p class="team-card__line">
                 <span class="dot" style="background:var(--text-subtle)" aria-hidden="true"></span>
-                <a href="https://www.linkedin.com/in/gangsan-kim-875a7a1b1" target="_blank" rel="noopener noreferrer" data-i18n-attr="href:team.m2LinkedInUrl" data-i18n="team.linkedinLabel">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/dongshinthepm/" target="_blank" rel="noopener noreferrer" data-i18n-attr="href:team.m2LinkedInUrl" data-i18n="team.linkedinLabel">LinkedIn</a>
               </p>
             </div>
           </article>
         </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Awards & Press ===== -->
+    <section class="section section--surface" id="press" aria-labelledby="press-h">
+      <div class="container">
+        <div class="section__stack">
+        <header class="section__head section__head--compact">
+          <span class="meta meta--section" data-i18n="press.metaLabel">수상 · 언론</span>
+          <h2 class="h2" id="press-h" data-i18n="press.heading">수상 내역 & 언론 보도</h2>
+          <p class="lead" data-i18n="press.lead">경진대회·데모데이 수상과 창업 지원 프로그램 선정 내역입니다.</p>
+        </header>
+        <ol class="awards-list">
+          <li class="awards-list__item">
+            <div class="awards-list__lead">
+              <time class="awards-list__date" datetime="2026" data-i18n="press.a1Date">2026</time>
+              <span class="awards-list__badge" data-i18n="press.a1Award">선정</span>
+            </div>
+            <div class="awards-list__body">
+              <h3 class="awards-list__title" data-i18n="press.a1Title">울산청년창업사관학교 16기 선정</h3>
+              <p class="awards-list__org" data-i18n="press.a1Org">중소벤처기업부 · 창업진흥원</p>
+            </div>
+            <a class="awards-list__link" href="#" target="_blank" rel="noopener noreferrer" data-press-link data-i18n-attr="href:press.a1Url" data-i18n="press.linkLabel">기사 보기</a>
+          </li>
+          <li class="awards-list__item">
+            <div class="awards-list__lead">
+              <time class="awards-list__date" datetime="2025-10-28" data-i18n="press.a2Date">2025.10.28</time>
+              <span class="awards-list__badge" data-i18n="press.a2Award">최우수상</span>
+            </div>
+            <div class="awards-list__body">
+              <h3 class="awards-list__title" data-i18n="press.a2Title">Hi-Challenge 창업 아이디어 경진대회</h3>
+              <p class="awards-list__org" data-i18n="press.a2Org">(주)포항연합기술지주 · 특화역량 BI 지원사업</p>
+            </div>
+            <a class="awards-list__link" href="#" target="_blank" rel="noopener noreferrer" data-press-link data-i18n-attr="href:press.a2Url" data-i18n="press.linkLabel">기사 보기</a>
+          </li>
+          <li class="awards-list__item">
+            <div class="awards-list__lead">
+              <time class="awards-list__date" datetime="2025-09-20" data-i18n="press.a3Date">2025.09.20</time>
+              <span class="awards-list__badge awards-list__badge--top" data-i18n="press.a3Award">대상</span>
+            </div>
+            <div class="awards-list__body">
+              <h3 class="awards-list__title" data-i18n="press.a3Title">영일만 스타트업 데모데이</h3>
+              <p class="awards-list__org" data-i18n="press.a3Org">포항시 · 한동대학교 · 교육부 · RISE 사업단</p>
+            </div>
+            <a class="awards-list__link" href="#" target="_blank" rel="noopener noreferrer" data-press-link data-i18n-attr="href:press.a3Url" data-i18n="press.linkLabel">기사 보기</a>
+          </li>
+          <li class="awards-list__item">
+            <div class="awards-list__lead">
+              <time class="awards-list__date" datetime="2025-07-11" data-i18n="press.a4Date">2025.07.11</time>
+              <span class="awards-list__badge" data-i18n="press.a4Award">우수상</span>
+            </div>
+            <div class="awards-list__body">
+              <h3 class="awards-list__title" data-i18n="press.a4Title">대구권 유니코어 기술창업 아이디어 경진대회</h3>
+              <p class="awards-list__org" data-i18n="press.a4Org">대구광역시 · 경북대학교 · ETRI</p>
+            </div>
+            <a class="awards-list__link" href="#" target="_blank" rel="noopener noreferrer" data-press-link data-i18n-attr="href:press.a4Url" data-i18n="press.linkLabel">기사 보기</a>
+          </li>
+          <li class="awards-list__item">
+            <div class="awards-list__lead">
+              <time class="awards-list__date" datetime="2025-07-10" data-i18n="press.a5Date">2025.07.10</time>
+              <span class="awards-list__badge awards-list__badge--top" data-i18n="press.a5Award">대상</span>
+            </div>
+            <div class="awards-list__body">
+              <h3 class="awards-list__title" data-i18n="press.a5Title">전시산업 디지털 융합 해커톤</h3>
+              <p class="awards-list__org" data-i18n="press.a5Org">포항시 (포항시장상)</p>
+            </div>
+            <a class="awards-list__link" href="#" target="_blank" rel="noopener noreferrer" data-press-link data-i18n-attr="href:press.a5Url" data-i18n="press.linkLabel">기사 보기</a>
+          </li>
+        </ol>
         </div>
       </div>
     </section>
@@ -463,6 +548,7 @@
           <a href="#about" data-i18n="nav.about">회사소개</a>
           <a href="#projects" data-i18n="nav.projects">서비스</a>
           <a href="#team" data-i18n="nav.team">팀</a>
+          <a href="#press" data-i18n="nav.press">수상·언론</a>
           <a href="#contact" data-i18n="nav.contact">문의</a>
           <a href="/privacy" data-i18n="footer.privacyLink">개인정보처리방침</a>
         </div>

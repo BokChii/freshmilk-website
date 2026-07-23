@@ -65,6 +65,14 @@
     });
   }
 
+  function applyPressLinks() {
+    document.querySelectorAll('[data-press-link]').forEach(anchor => {
+      const href = anchor.getAttribute('href');
+      const hasUrl = href && href !== '#';
+      anchor.hidden = !hasUrl;
+    });
+  }
+
   function apply(dict) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -92,6 +100,7 @@
 
     applyHighlightLinks();
     applyTeamSocialLinks(dict);
+    applyPressLinks();
 
     // <title> + <meta description>
     const meta = dict.meta || {};

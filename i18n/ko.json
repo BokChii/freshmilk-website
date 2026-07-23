@@ -10,6 +10,7 @@
     "about": "회사소개",
     "projects": "서비스",
     "team": "팀",
+    "press": "수상·언론",
     "updates": "소식",
     "contact": "문의",
     "menuLabel": "메뉴 열기"
@@ -82,6 +83,7 @@
     "mainFeature1": "읽은 웹툰 기반 퀴즈로 팬덤이 직접 참여",
     "mainFeature2": "정답·참여 리워드로 커뮤니티를 활성화",
     "mainFeature3": "2026년 베타 — 웹·앱 동시 준비 중",
+    "mainShotHomeAlt": "스토릿 메인 화면",
     "mainShotRankingAlt": "스토릿 랭킹 화면",
     "mainShotMissionAlt": "스토릿 데일리 미션 화면",
     "mainTag1": "웹툰",
@@ -90,7 +92,9 @@
     "moreTitle": "실험 중인 서비스",
     "p2Name": "tolli",
     "p2Copy": "매일의 말씀, 손끝의 암송. 성경 암송을 게임처럼 즐기는 모바일 서비스.",
-    "p2Stats": "누적 352회 다운로드 (iOS 248 · Android 104) · App Store 27개 리뷰 5.0 · Play Store 21개 리뷰 5.0",
+    "p2Stat1": "누적 352회 다운로드 (iOS 248 · Android 104)",
+    "p2Stat2": "App Store 리뷰 27개 · 평점 5.0",
+    "p2Stat3": "Play Store 리뷰 21개 · 평점 5.0",
     "p2Status": "운영 중 · iOS / Android",
     "p2StoreAndroid": "Android 다운로드",
     "p2StoreIos": "iOS 다운로드",
@@ -98,7 +102,8 @@
     "p3Name": "픽토리",
     "p3Copy": "맞히는 재미로 보는 K-콘텐츠. 추리와 예측으로 팬덤이 모이는 서비스.",
     "p3Status": "실험 · 개발 중",
-    "p3Tag1": "K-콘텐츠"
+    "p3Tag1": "K-콘텐츠",
+    "p3LogoAlt": "픽토리 로고"
   },
   "team": {
     "metaLabel": "팀",
@@ -114,7 +119,7 @@
     "m2Quote": "빠르게 배우는 기획이 최선입니다.",
     "linkedinLabel": "LinkedIn",
     "m1LinkedInUrl": "https://www.linkedin.com/in/gangsan-kim-875a7a1b1",
-    "m2LinkedInUrl": ""
+    "m2LinkedInUrl": "https://www.linkedin.com/in/dongshinthepm/"
   },
   "highlights": {
     "metaLabel": "수상 · 프로그램",
@@ -127,6 +132,37 @@
     "h2Url": "",
     "h3Url": "",
     "h4Url": ""
+  },
+  "press": {
+    "metaLabel": "수상 · 언론",
+    "heading": "수상 내역 & 언론 보도",
+    "lead": "경진대회·데모데이 수상과 창업 지원 프로그램 선정 내역입니다.",
+    "linkLabel": "기사 보기",
+    "a1Date": "2026",
+    "a1Award": "선정",
+    "a1Title": "울산청년창업사관학교 16기 선정",
+    "a1Org": "중소벤처기업부 · 창업진흥원",
+    "a1Url": "",
+    "a2Date": "2025.10.28",
+    "a2Award": "최우수상",
+    "a2Title": "Hi-Challenge 창업 아이디어 경진대회",
+    "a2Org": "(주)포항연합기술지주 · 특화역량 BI 지원사업",
+    "a2Url": "https://platum.kr/archives/273501",
+    "a3Date": "2025.09.20",
+    "a3Award": "대상",
+    "a3Title": "영일만 스타트업 데모데이",
+    "a3Org": "포항시 · 한동대학교 · 교육부 · RISE 사업단",
+    "a3Url": "https://www.ksmnews.co.kr/news/view.php?idx=565263",
+    "a4Date": "2025.07.11",
+    "a4Award": "우수상",
+    "a4Title": "대구권 유니코어 기술창업 아이디어 경진대회",
+    "a4Org": "대구광역시 · 경북대학교 · ETRI",
+    "a4Url": "https://www.christiandaily.co.kr/news/149437",
+    "a5Date": "2025.07.10",
+    "a5Award": "대상",
+    "a5Title": "전시산업 디지털 융합 해커톤",
+    "a5Org": "포항시 (포항시장상)",
+    "a5Url": "https://www.kbmaeil.com/article/20250715500266"
   },
   "updates": {
     "metaLabel": "소식",

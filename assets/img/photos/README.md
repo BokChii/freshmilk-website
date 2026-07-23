@@ -4,9 +4,11 @@ Drop photos here to replace SVG placeholders automatically (`main.js` → `has-p
 
 | File | Used for | Notes |
 |------|----------|--------|
-| `storit.png` | Hero — Storit preview | App screenshot (portrait OK) |
-| `ranking.png` | Services — Storit feature gallery | App screenshot |
-| `daily_mission.png` | Services — Storit feature gallery | App screenshot |
+| `storit.png` | Hero + Services — Storit gallery (home screen) | App screenshot (portrait) |
+| `ranking.png` | Services — Storit gallery (ranking) | App screenshot |
+| `daily_mission.png` | Services — Storit gallery (daily mission) | App screenshot |
+| `pictory.png` | Services — Picktory card logo | Logo (transparent PNG preferred) |
+| `pictory1.png`–`pictory4.png` | Services — Picktory screen gallery | App screenshots |
 | `kgsan.jpg` | Team — 김강산 (CEO) | Portrait, 4:5 crop, ~800×1000 |
 | `kdshin.jpg` | Team — 김동신 (Planning) | Portrait, 4:5 crop, ~800×1000 |
 | `tolli.png` | Projects — tolli card | Mascot, **transparent PNG** preferred |
