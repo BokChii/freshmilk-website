@@ -2031,6 +2031,32 @@ body::after {
     radial-gradient(circle at 50% 20%, color-mix(in srgb, var(--brand-soft) 70%, white), var(--surface));
 }
 
+.project-main__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 28px);
+  align-items: end;
+  place-items: stretch;
+  min-height: auto;
+  overflow: visible;
+}
+
+.project-main__shot {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.project-main__shot img {
+  width: min(100%, 280px);
+  height: auto;
+  object-fit: contain;
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow:
+    0 12px 32px -12px color-mix(in srgb, var(--text) 22%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--border) 80%, transparent);
+}
+
 .feature-link {
   display: inline-flex;
   align-items: center;
@@ -2150,6 +2176,14 @@ body::after {
   font-size: 14px;
   line-height: 1.55;
   flex: 1;
+}
+.project-card__stats {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--text-muted);
 }
 .project-card__foot {
   display: flex;
@@ -2862,6 +2896,21 @@ body::after {
   box-shadow: var(--shadow-sm);
 }
 
+.highlights__item-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.highlights__item--link:hover {
+  border-color: color-mix(in srgb, var(--brand) 35%, var(--border));
+  background: color-mix(in srgb, var(--brand-soft) 18%, var(--bg-pure));
+}
+
+.highlights__item--link:hover .highlights__item-link {
+  color: var(--brand);
+}
+
 .project-main__art,
 .project-card__art {
   will-change: transform;
@@ -3198,6 +3247,8 @@ body::after {
   .principles__grid { grid-template-columns: 1fr 1fr; }
   .project-main { grid-template-columns: 1fr; }
   .project-main__art { min-height: 220px; order: -1; }
+  .project-main__gallery { gap: 16px; }
+  .project-main__shot img { width: min(100%, 220px); }
   .timeline--compact .timeline__list { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .lab__grid { grid-template-columns: 1fr; }

@@ -33,6 +33,7 @@
     "trust1": "Est. Dec 2025",
     "trust2": "Application software",
     "trust3": "Pohang · Handong incubator",
+    "screenshotAlt": "Storit app preview",
     "stageStatus": "Beta in prep",
     "stageTag": "Today's webtoon quiz",
     "stageReward": "+120P"
@@ -40,7 +41,7 @@
   "about": {
     "metaLabel": "About",
     "heading": "We create content experiences<br>people return to every day.",
-    "lead": "FreshMilk is a content product company founded in Pohang in December 2025. We develop and operate mobile services with Storit as our flagship, alongside tolli and Picktory.",
+    "lead": "FreshMilk is a content product company founded in Pohang in December 2025. We develop Storit as our flagship, alongside experimental mobile services such as tolli and Picktory.",
     "incubator": "Handong University Business Incubator · joined 2025",
     "missionLabel": "Mission",
     "missionText": "Blend technology and content trends to deliver joy and value to people.",
@@ -63,14 +64,14 @@
     "tl1Date": "2025.12",
     "tl1Title": "Company founded · Storit development",
     "tl2Date": "2026.01",
-    "tl2Title": "Expanded service lineup",
+    "tl2Title": "tolli launch · Picktory experiment started",
     "tl3Date": "Now",
     "tl3Title": "Storit beta service in prep"
   },
   "projects": {
     "metaLabel": "Services",
     "sectionTitle": "Services",
-    "sectionLead": "Products and services we operate and develop, centered on Storit.",
+    "sectionLead": "Products we operate and develop, centered on Storit, plus services currently in experiment.",
     "featureTitle": "Storit",
     "featureLead": "Webtoon quiz reward fandom community",
     "learnMore": "Beta inquiry",
@@ -81,21 +82,23 @@
     "mainFeature1": "Webtoon-based quizzes let fans participate directly",
     "mainFeature2": "Rewards for answers and engagement keep the community active",
     "mainFeature3": "Beta in 2026 — web and app in parallel",
+    "mainShotRankingAlt": "Storit ranking screen",
+    "mainShotMissionAlt": "Storit daily mission screen",
     "mainTag1": "Webtoon",
     "mainTag2": "Quiz",
     "mainTag3": "Fandom",
-    "moreTitle": "Other services",
+    "moreTitle": "Experimental services",
     "p2Name": "tolli",
     "p2Copy": "A daily verse at your fingertips. A mobile service for Bible memorization, game-like.",
+    "p2Stats": "352 total downloads (iOS 248 · Android 104) · App Store 27 reviews at 5.0 · Play Store 21 reviews at 5.0",
     "p2Status": "Live · iOS / Android",
     "p2StoreAndroid": "Get on Android",
     "p2StoreIos": "Get on iOS",
     "p2Tag1": "Habit",
     "p3Name": "Picktory",
     "p3Copy": "K-content through guessing. A service where prediction and reasoning bring fans together.",
-    "p3Status": "In development",
-    "p3Tag1": "K-content",
-    "econoupTeaser": "econoup — five minutes of economics daily, habit-forming learning app (working title · in planning)"
+    "p3Status": "Experimental · in development",
+    "p3Tag1": "K-content"
   },
   "team": {
     "metaLabel": "Team",
@@ -108,7 +111,10 @@
     "m2Name": "Dongshin Kim",
     "m2Role": "Head of Planning · Co-founder",
     "m2Bio": "Leads service planning and business design. Reflects user feedback into product direction quickly.",
-    "m2Quote": "Planning that learns fast wins."
+    "m2Quote": "Planning that learns fast wins.",
+    "linkedinLabel": "LinkedIn",
+    "m1LinkedInUrl": "https://www.linkedin.com/in/gangsan-kim-875a7a1b1",
+    "m2LinkedInUrl": ""
   },
   "highlights": {
     "metaLabel": "Awards · programs",
@@ -116,7 +122,11 @@
     "h1": "Youth Startup Academy selected",
     "h2": "Startup & IT competition awards",
     "h3": "FIX exhibition booth",
-    "h4": "Government & public grant programs"
+    "h4": "Government & public grant programs",
+    "h1Url": "",
+    "h2Url": "",
+    "h3Url": "",
+    "h4Url": ""
   },
   "updates": {
     "metaLabel": "News",
@@ -126,7 +136,7 @@
     "u2Date": "2026",
     "u2Text": "tolli launched on iOS and Android",
     "u3Date": "2026.01",
-    "u3Text": "Picktory and econoup development kickoff",
+    "u3Text": "Picktory experimental development kickoff",
     "u4Date": "2025.12",
     "u4Text": "FreshMilk founded · Storit development started"
   },

@@ -65,7 +65,6 @@
           <li><a class="nav__link" href="#about" data-nav-link data-i18n="nav.about">회사소개</a></li>
           <li><a class="nav__link" href="#projects" data-nav-link data-i18n="nav.projects">서비스</a></li>
           <li><a class="nav__link" href="#team" data-nav-link data-i18n="nav.team">팀</a></li>
-          <li><a class="nav__link" href="#updates" data-nav-link data-i18n="nav.updates">소식</a></li>
           <li><a class="nav__link" href="#contact" data-nav-link data-i18n="nav.contact">문의</a></li>
         </ul>
       </nav>
@@ -100,7 +99,6 @@
       <a href="#about" data-i18n="nav.about">회사소개</a>
       <a href="#projects" data-i18n="nav.projects">서비스</a>
       <a href="#team" data-i18n="nav.team">팀</a>
-      <a href="#updates" data-i18n="nav.updates">소식</a>
       <a href="#contact" data-i18n="nav.contact">문의</a>
     </nav>
 
@@ -155,7 +153,7 @@
         </div>
 
         <figure class="hero__visual" aria-hidden="true">
-          <img class="hero__screenshot" src="/assets/img/photos/storit.png" alt="" width="240" height="520" loading="eager" decoding="async" />
+          <img class="hero__screenshot" src="/assets/img/photos/storit.png" alt="Storit app preview" width="240" height="520" loading="eager" decoding="async" data-i18n-attr="alt:hero.screenshotAlt" />
         </figure>
       </div>
     </section>
@@ -227,7 +225,7 @@
                 <li class="timeline__item is-done">
                   <span class="timeline__node" aria-hidden="true"></span>
                   <span class="timeline__date" data-i18n="about.tl2Date">2026.01</span>
-                  <span class="timeline__title-row" data-i18n="about.tl2Title">4개 프로젝트 동시 진행</span>
+                  <span class="timeline__title-row" data-i18n="about.tl2Title">tolli 출시 · 픽토리 실험 착수</span>
                 </li>
                 <li class="timeline__item is-now">
                   <span class="timeline__node" aria-hidden="true"></span>
@@ -244,10 +242,18 @@
               <h3 class="about-block__title highlights__title" id="highlights-h" data-i18n="highlights.heading">주요 실적</h3>
             </header>
             <ul class="highlights__list">
-              <li class="highlights__item" data-i18n="highlights.h1">청년창업 사관학교 선정</li>
-              <li class="highlights__item" data-i18n="highlights.h2">창업·IT 경진대회 수상</li>
-              <li class="highlights__item" data-i18n="highlights.h3">FIX 전시회 기업 부스 참여</li>
-              <li class="highlights__item" data-i18n="highlights.h4">정부·지자체 지원사업 수행</li>
+              <li class="highlights__item" data-highlight-item data-i18n-attr="data-url:highlights.h1Url">
+                <span data-i18n="highlights.h1">청년창업 사관학교 선정</span>
+              </li>
+              <li class="highlights__item" data-highlight-item data-i18n-attr="data-url:highlights.h2Url">
+                <span data-i18n="highlights.h2">창업·IT 경진대회 수상</span>
+              </li>
+              <li class="highlights__item" data-highlight-item data-i18n-attr="data-url:highlights.h3Url">
+                <span data-i18n="highlights.h3">FIX 전시회 기업 부스 참여</span>
+              </li>
+              <li class="highlights__item" data-highlight-item data-i18n-attr="data-url:highlights.h4Url">
+                <span data-i18n="highlights.h4">정부·지자체 지원사업 수행</span>
+              </li>
             </ul>
           </aside>
         </div>
@@ -265,9 +271,13 @@
         </header>
 
         <article class="project-main project-main--feature">
-          <div class="project-main__art media-slot media-slot--screenshot">
-            <img class="media-slot__photo" src="/assets/img/photos/storit.png" alt="Storit app screen" loading="lazy" decoding="async" />
-            <img class="media-slot__fallback" src="/assets/img/projects/storit.svg" alt="" aria-hidden="true" loading="lazy" />
+          <div class="project-main__art project-main__gallery" aria-label="Storit app screens">
+            <figure class="project-main__shot">
+              <img src="/assets/img/photos/ranking.png" alt="Storit ranking screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotRankingAlt" />
+            </figure>
+            <figure class="project-main__shot">
+              <img src="/assets/img/photos/daily_mission.png" alt="Storit daily mission screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotMissionAlt" />
+            </figure>
           </div>
           <div class="project-main__body">
             <div class="project-main__head">
@@ -312,6 +322,7 @@
               </span>
               <h3 class="project-card__name"><span data-i18n="projects.p2Name">tolli</span></h3>
               <p class="project-card__copy" data-i18n="projects.p2Copy">매일의 말씀, 손끝의 암송. 성경 암송을 게임처럼.</p>
+              <p class="project-card__stats" data-i18n="projects.p2Stats">누적 352회 다운로드 · App Store 27개 리뷰 5.0 · Play Store 21개 리뷰 5.0</p>
               <div class="project-card__stores">
                 <a class="project-card__store" href="https://buly.kr/ET0munZ" target="_blank" rel="noopener noreferrer" data-i18n="projects.p2StoreAndroid">Android 다운로드</a>
                 <a class="project-card__store" href="https://buly.kr/1n6GoQC" target="_blank" rel="noopener noreferrer" data-i18n="projects.p2StoreIos">iOS 다운로드</a>
@@ -340,7 +351,6 @@
           </article>
         </div>
 
-        <p class="project-teaser" data-i18n="projects.econoupTeaser">econoup — 경제를 매일 5분, 습관형 학습 앱 (가칭 · 기획 중)</p>
         </div>
       </div>
     </section>
@@ -371,7 +381,7 @@
               </p>
               <p class="team-card__line">
                 <span class="dot" style="background:var(--text-subtle)" aria-hidden="true"></span>
-                <a href="tel:+821044437876">010-4443-7876</a>
+                <a href="https://www.linkedin.com/in/gangsan-kim-875a7a1b1" target="_blank" rel="noopener noreferrer" data-i18n-attr="href:team.m1LinkedInUrl" data-i18n="team.linkedinLabel">LinkedIn</a>
               </p>
             </div>
           </article>
@@ -391,41 +401,11 @@
               </p>
               <p class="team-card__line">
                 <span class="dot" style="background:var(--text-subtle)" aria-hidden="true"></span>
-                <a href="tel:+821066883248">010-6688-3248</a>
+                <a href="https://www.linkedin.com/in/gangsan-kim-875a7a1b1" target="_blank" rel="noopener noreferrer" data-i18n-attr="href:team.m2LinkedInUrl" data-i18n="team.linkedinLabel">LinkedIn</a>
               </p>
             </div>
           </article>
         </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Updates ===== -->
-    <section class="section section--surface" id="updates" aria-labelledby="updates-h">
-      <div class="container">
-        <div class="section__stack">
-        <header class="section__head section__head--compact">
-          <span class="meta meta--section" data-i18n="updates.metaLabel">소식</span>
-          <h2 class="h2" id="updates-h" data-i18n="updates.heading">뉴스 & 소식</h2>
-        </header>
-        <ol class="updates-list">
-          <li class="updates-list__item">
-            <time class="updates-list__date" datetime="2026-05" data-i18n="updates.u1Date">2026.05</time>
-            <span class="updates-list__text" data-i18n="updates.u1Text">회사 홈페이지 개편 · 스토릿 베타 준비 본격화</span>
-          </li>
-          <li class="updates-list__item">
-            <time class="updates-list__date" datetime="2026" data-i18n="updates.u2Date">2026</time>
-            <span class="updates-list__text" data-i18n="updates.u2Text">tolli iOS·Android 정식 출시</span>
-          </li>
-          <li class="updates-list__item">
-            <time class="updates-list__date" datetime="2026-01" data-i18n="updates.u3Date">2026.01</time>
-            <span class="updates-list__text" data-i18n="updates.u3Text">픽토리·econoup 개발 착수</span>
-          </li>
-          <li class="updates-list__item">
-            <time class="updates-list__date" datetime="2025-12" data-i18n="updates.u4Date">2025.12</time>
-            <span class="updates-list__text" data-i18n="updates.u4Text">프레시밀크 창업 · 스토릿 프로젝트 킥오프</span>
-          </li>
-        </ol>
         </div>
       </div>
     </section>
@@ -483,7 +463,6 @@
           <a href="#about" data-i18n="nav.about">회사소개</a>
           <a href="#projects" data-i18n="nav.projects">서비스</a>
           <a href="#team" data-i18n="nav.team">팀</a>
-          <a href="#updates" data-i18n="nav.updates">소식</a>
           <a href="#contact" data-i18n="nav.contact">문의</a>
           <a href="/privacy" data-i18n="footer.privacyLink">개인정보처리방침</a>
         </div>

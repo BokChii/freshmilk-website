@@ -23,6 +23,48 @@
     return data;
   }
 
+  function applyHighlightLinks() {
+    document.querySelectorAll('[data-highlight-item]').forEach(item => {
+      const url = item.getAttribute('data-url');
+      let link = item.querySelector('a.highlights__item-link');
+      let textEl = item.querySelector('span');
+
+      if (url) {
+        item.classList.add('highlights__item--link');
+        if (!link) {
+          link = document.createElement('a');
+          link.className = 'highlights__item-link';
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          if (textEl) link.appendChild(textEl);
+          item.appendChild(link);
+        }
+        link.href = url;
+      } else {
+        item.classList.remove('highlights__item--link');
+        if (link && textEl && textEl.parentElement === link) {
+          item.insertBefore(textEl, link);
+          link.remove();
+        }
+      }
+    });
+  }
+
+  function applyTeamSocialLinks(dict) {
+    document.querySelectorAll('[data-i18n-attr*="LinkedInUrl"]').forEach(anchor => {
+      const spec = anchor.getAttribute('data-i18n-attr');
+      const urlKey = spec.match(/href:([^\s,]+)/)?.[1];
+      const url = urlKey ? get(dict, urlKey) : '';
+      const line = anchor.closest('.team-card__line');
+      if (url) {
+        anchor.href = url;
+        if (line) line.hidden = false;
+      } else if (line) {
+        line.hidden = true;
+      }
+    });
+  }
+
   function apply(dict) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -41,9 +83,15 @@
       spec.split(',').forEach(pair => {
         const [attr, key] = pair.split(':').map(s => s.trim());
         const val = get(dict, key);
-        if (typeof val === 'string') el.setAttribute(attr, val);
+        if (typeof val === 'string') {
+          if (val) el.setAttribute(attr, val);
+          else el.removeAttribute(attr);
+        }
       });
     });
+
+    applyHighlightLinks();
+    applyTeamSocialLinks(dict);
 
     // <title> + <meta description>
     const meta = dict.meta || {};
