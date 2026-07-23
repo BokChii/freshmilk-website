@@ -2052,9 +2052,12 @@ body::after {
   height: auto;
   object-fit: contain;
   border-radius: clamp(16px, 2vw, 24px);
-  box-shadow:
-    0 12px 32px -12px color-mix(in srgb, var(--text) 22%, transparent),
-    0 0 0 1px color-mix(in srgb, var(--border) 80%, transparent);
+  box-shadow: 0 10px 26px -14px color-mix(in srgb, var(--text) 30%, transparent);
+}
+
+/* Keep Storit screenshots true to source: neutral backdrop, subtle shadow only */
+.project-main--feature .project-main__art.project-main__gallery {
+  background: var(--bg-pure);
 }
 
 .project-main__gallery--triple {
