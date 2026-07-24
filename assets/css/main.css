@@ -3129,6 +3129,12 @@ picture {
   display: contents;
 }
 
+/* With picture:display:contents, <source> would otherwise become a
+   grid/flex item and consume a cell. Keep it out of layout entirely. */
+picture > source {
+  display: none;
+}
+
 .media-slot__photo,
 .media-slot__fallback {
   width: 100%;
