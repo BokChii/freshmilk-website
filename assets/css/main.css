@@ -2234,9 +2234,10 @@ body::after {
   background:
     radial-gradient(circle at 50% 15%, color-mix(in srgb, var(--brand-soft) 55%, white), var(--surface));
 }
-.project-card__logo {
+.project-card__art--gallery .project-card__logo {
   width: auto;
   height: clamp(40px, 5vw, 56px);
+  max-width: 70%;
   object-fit: contain;
 }
 .project-card__shots {
@@ -2245,10 +2246,11 @@ body::after {
   gap: 8px;
   width: 100%;
 }
-.project-card__shots img {
+.project-card__art--gallery .project-card__shots img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  aspect-ratio: 9 / 19;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow:
     0 6px 18px -8px color-mix(in srgb, var(--text) 22%, transparent),
@@ -3122,6 +3124,11 @@ body::after {
   overflow: hidden;
 }
 
+/* Transparent <picture> wrapper: let the inner <img> lay out as before */
+picture {
+  display: contents;
+}
+
 .media-slot__photo,
 .media-slot__fallback {
   width: 100%;
@@ -3672,6 +3679,29 @@ body::after {
   box-shadow: 0 8px 32px -16px rgba(18, 20, 24, 0.14);
 }
 
+.hero__visual--brand {
+  width: 100%;
+}
+
+.hero__brandcard {
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  place-items: center;
+  padding: clamp(36px, 5vw, 60px) clamp(28px, 4vw, 48px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: radial-gradient(circle at 50% 28%, color-mix(in srgb, var(--brand-soft) 72%, white), var(--surface));
+  box-shadow: var(--shadow-glass);
+}
+
+.hero__wordmark {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
 /* --- About --- */
 .about__lead {
   margin-bottom: 0;
@@ -4141,6 +4171,12 @@ body::after {
     width: min(180px, 48vw);
     max-height: 280px;
   }
+
+  .hero__brandcard {
+    max-width: 340px;
+    padding: clamp(28px, 7vw, 44px);
+  }
+  .hero__wordmark { max-width: 240px; }
 
   .about__grid {
     grid-template-columns: 1fr;

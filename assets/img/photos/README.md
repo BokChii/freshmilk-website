@@ -17,4 +17,15 @@ Drop photos here to replace SVG placeholders automatically (`main.js` → `has-p
 
 Supported: `.jpg`, `.png`, `.webp` (update `index.html` src if using webp).
 
+## Optimized `.webp` (auto-generated)
+
+Each source above has a resized `.webp` sibling used as the primary image via
+`<picture><source type="image/webp"> … <img src="original"></picture>`. WebP is
+served to ~97% of browsers; the original PNG/JPG is the fallback.
+
+To regenerate after replacing a source image, run a `sharp` resize→webp pass
+(widths: screenshots ~560, card shots ~320, logos ~480–640, avatars ~400,
+`workspace` ~1600). The 1200×630 `assets/img/og-image.png` is built by
+compositing `freshmilk.png` onto a brand background.
+
 Team group photo: add as `team.jpg` when ready (slot not wired yet — ask to enable).

@@ -25,11 +25,13 @@
   <meta property="og:title" content="프레시밀크 | 매일 찾게 만드는 콘텐츠 제품" />
   <meta property="og:description" content="웹툰 팬덤 커뮤니티 스토릿을 중심으로 콘텐츠 제품을 개발합니다." />
   <meta property="og:url" content="https://freshmilk.kr/" />
-  <meta property="og:image" content="https://freshmilk.kr/assets/img/og-image.svg" />
+  <meta property="og:image" content="https://freshmilk.kr/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="프레시밀크 | 매일 찾게 만드는 콘텐츠 제품" />
   <meta name="twitter:description" content="웹툰 팬덤 커뮤니티 스토릿을 중심으로 콘텐츠 제품을 개발합니다." />
-  <meta name="twitter:image" content="https://freshmilk.kr/assets/img/og-image.svg" />
+  <meta name="twitter:image" content="https://freshmilk.kr/assets/img/og-image.png" />
 
   <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
@@ -154,8 +156,13 @@
           </div>
         </div>
 
-        <figure class="hero__visual" aria-hidden="true">
-          <img class="hero__screenshot" src="/assets/img/photos/storit.png" alt="Storit app preview" width="240" height="520" loading="eager" decoding="async" data-i18n-attr="alt:hero.screenshotAlt" />
+        <figure class="hero__visual hero__visual--brand" aria-hidden="true">
+          <div class="hero__brandcard">
+            <picture>
+              <source srcset="/assets/img/photos/freshmilk.webp" type="image/webp" />
+              <img class="hero__wordmark" src="/assets/img/photos/freshmilk.png" alt="" width="520" height="109" loading="eager" decoding="async" />
+            </picture>
+          </div>
         </figure>
       </div>
     </section>
@@ -198,7 +205,10 @@
           </div>
 
           <figure class="about-block about-block--photo about__photo media-slot media-slot--wide">
-            <img class="media-slot__photo" src="/assets/img/photos/workspace.jpg" alt="FreshMilk workspace" loading="lazy" decoding="async" />
+            <picture>
+              <source srcset="/assets/img/photos/workspace.webp" type="image/webp" />
+              <img class="media-slot__photo" src="/assets/img/photos/workspace.jpg" alt="FreshMilk workspace" loading="lazy" decoding="async" />
+            </picture>
           </figure>
 
           <div class="about-block about-block--values">
@@ -275,13 +285,22 @@
         <article class="project-main project-main--feature">
           <div class="project-main__art project-main__gallery project-main__gallery--triple" aria-label="Storit app screens">
             <figure class="project-main__shot">
-              <img src="/assets/img/photos/storit.png" alt="Storit home screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotHomeAlt" />
+              <picture>
+                <source srcset="/assets/img/photos/storit.webp" type="image/webp" />
+                <img src="/assets/img/photos/storit.png" alt="Storit home screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotHomeAlt" />
+              </picture>
             </figure>
             <figure class="project-main__shot">
-              <img src="/assets/img/photos/ranking.png" alt="Storit ranking screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotRankingAlt" />
+              <picture>
+                <source srcset="/assets/img/photos/ranking.webp" type="image/webp" />
+                <img src="/assets/img/photos/ranking.png" alt="Storit ranking screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotRankingAlt" />
+              </picture>
             </figure>
             <figure class="project-main__shot">
-              <img src="/assets/img/photos/daily_mission.png" alt="Storit daily mission screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotMissionAlt" />
+              <picture>
+                <source srcset="/assets/img/photos/daily_mission.webp" type="image/webp" />
+                <img src="/assets/img/photos/daily_mission.png" alt="Storit daily mission screen" width="390" height="844" loading="lazy" decoding="async" data-i18n-attr="alt:projects.mainShotMissionAlt" />
+              </picture>
             </figure>
           </div>
           <div class="project-main__body">
@@ -317,12 +336,15 @@
         <div class="projects-grid projects-grid--duo">
           <article class="project-card">
             <div class="project-card__art project-card__art--gallery">
-              <img class="project-card__logo" src="/assets/img/photos/tolli.png" alt="tolli logo" loading="lazy" decoding="async" data-i18n-attr="alt:projects.p2LogoAlt" />
+              <picture>
+                <source srcset="/assets/img/photos/tolli.webp" type="image/webp" />
+                <img class="project-card__logo" src="/assets/img/photos/tolli.png" alt="tolli logo" loading="lazy" decoding="async" data-i18n-attr="alt:projects.p2LogoAlt" />
+              </picture>
               <div class="project-card__shots" aria-label="tolli app screens">
-                <img src="/assets/img/photos/tolli1.png" alt="tolli screen 1" loading="lazy" decoding="async" />
-                <img src="/assets/img/photos/tolli2.png" alt="tolli screen 2" loading="lazy" decoding="async" />
-                <img src="/assets/img/photos/tolli3.png" alt="tolli screen 3" loading="lazy" decoding="async" />
-                <img src="/assets/img/photos/tolli4.png" alt="tolli screen 4" loading="lazy" decoding="async" />
+                <picture><source srcset="/assets/img/photos/tolli1.webp" type="image/webp" /><img src="/assets/img/photos/tolli1.png" alt="tolli screen 1" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/assets/img/photos/tolli2.webp" type="image/webp" /><img src="/assets/img/photos/tolli2.png" alt="tolli screen 2" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/assets/img/photos/tolli3.webp" type="image/webp" /><img src="/assets/img/photos/tolli3.png" alt="tolli screen 3" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/assets/img/photos/tolli4.webp" type="image/webp" /><img src="/assets/img/photos/tolli4.png" alt="tolli screen 4" loading="lazy" decoding="async" /></picture>
               </div>
             </div>
             <div class="project-card__body">
@@ -349,12 +371,15 @@
 
           <article class="project-card">
             <div class="project-card__art project-card__art--gallery">
-              <img class="project-card__logo" src="/assets/img/photos/pictory.png" alt="Picktory logo" loading="lazy" decoding="async" data-i18n-attr="alt:projects.p3LogoAlt" />
+              <picture>
+                <source srcset="/assets/img/photos/pictory.webp" type="image/webp" />
+                <img class="project-card__logo" src="/assets/img/photos/pictory.png" alt="Picktory logo" loading="lazy" decoding="async" data-i18n-attr="alt:projects.p3LogoAlt" />
+              </picture>
               <div class="project-card__shots" aria-label="Picktory app screens">
-                <img src="/assets/img/photos/pictory1.png" alt="Picktory screen 1" loading="lazy" decoding="async" />
-                <img src="/assets/img/photos/pictory2.png" alt="Picktory screen 2" loading="lazy" decoding="async" />
-                <img src="/assets/img/photos/pictory3.png" alt="Picktory screen 3" loading="lazy" decoding="async" />
-                <img src="/assets/img/photos/pictory4.png" alt="Picktory screen 4" loading="lazy" decoding="async" />
+                <picture><source srcset="/assets/img/photos/pictory1.webp" type="image/webp" /><img src="/assets/img/photos/pictory1.png" alt="Picktory screen 1" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/assets/img/photos/pictory2.webp" type="image/webp" /><img src="/assets/img/photos/pictory2.png" alt="Picktory screen 2" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/assets/img/photos/pictory3.webp" type="image/webp" /><img src="/assets/img/photos/pictory3.png" alt="Picktory screen 3" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/assets/img/photos/pictory4.webp" type="image/webp" /><img src="/assets/img/photos/pictory4.png" alt="Picktory screen 4" loading="lazy" decoding="async" /></picture>
               </div>
             </div>
             <div class="project-card__body">
@@ -388,7 +413,10 @@
         <div class="team-grid">
           <article class="team-card">
             <div class="team-card__avatar media-slot media-slot--avatar">
-              <img class="media-slot__photo" src="/assets/img/photos/kgsan.jpg" alt="김강산" loading="eager" fetchpriority="high" decoding="async" />
+              <picture>
+                <source srcset="/assets/img/photos/kgsan.webp" type="image/webp" />
+                <img class="media-slot__photo" src="/assets/img/photos/kgsan.jpg" alt="김강산" loading="eager" fetchpriority="high" decoding="async" />
+              </picture>
               <img class="media-slot__fallback" src="/assets/img/team/kgsan.svg" alt="" aria-hidden="true" />
             </div>
             <div class="team-card__body">
@@ -408,7 +436,10 @@
 
           <article class="team-card">
             <div class="team-card__avatar media-slot media-slot--avatar">
-              <img class="media-slot__photo" src="/assets/img/photos/kdshin.jpg" alt="김동신" loading="eager" decoding="async" />
+              <picture>
+                <source srcset="/assets/img/photos/kdshin.webp" type="image/webp" />
+                <img class="media-slot__photo" src="/assets/img/photos/kdshin.jpg" alt="김동신" loading="eager" decoding="async" />
+              </picture>
               <img class="media-slot__fallback" src="/assets/img/team/kdshin.svg" alt="" aria-hidden="true" />
             </div>
             <div class="team-card__body">
